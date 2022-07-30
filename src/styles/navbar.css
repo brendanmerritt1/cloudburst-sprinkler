@@ -7,35 +7,39 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: #106310;
+    height: 9vh;
 }
 
 .logo {
-    width: 10vw;
-    margin-left: 1em;
+    width: 7vw;
+    margin-left: 4rem;
 }
 
 .navContainer {
-    height: 100%;
-    width: 90vw;
+    list-style: none;
+    width: 100vw;
     display: flex;
     flex-direction: row;
-    font-size: 1.7em;
-    justify-content: space-around;
+    font-size: 1rem;
+    justify-content: flex-end;
+    gap: 11rem;
+    margin-right: 5rem;
 }
 
 .navItem {
-    position: relative;
-    color: white;
+    position: relative; /* for the transition */
+    color: #474747;
+    cursor: pointer;
+    letter-spacing: 1px;
 }
 
 .navItem::after {
-    background-color: white;
+    background-color: #474747;
     content: "";
     width: 0;
-    height: 0.15em;
+    height: 0.15rem;
     left: 0;
-    bottom: -0.15em;
+    bottom: -0.15rem;
     position: absolute;
     transition: width 0.35s ease 0s;
 }

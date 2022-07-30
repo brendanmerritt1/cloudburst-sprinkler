@@ -1,0 +1,96 @@
+.contactContainer {
+  width: 100%;
+  height: 100%;
+  color: #313131;
+}
+
+.flowers {
+  width: 100%;
+  height: 90vh;
+  object-fit: cover;
+  display: block;
+}
+
+#gray.navigateButton {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 3rem;
+  border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s ease;
+  background: linear-gradient(to left, #474747 50%, #23561c 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+
+#green.navigateButton {
+  font-size: 1.6rem;
+  background-color: #23561c;
+  border: none;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 18rem;
+  height: 4rem;
+  border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+  cursor: pointer;
+}
+
+#gray.navigateButton:hover,
+button:hover {
+  outline: 0;
+  color: #fff;
+  background-position: left bottom;
+}
+
+#gray.navigateButton:active,
+button:active {
+  outline: 0;
+  color: #fff;
+}
+
+.contactFormContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  top: 7rem;
+  left: 4rem;
+  width: 40%;
+  height: 75%;
+  border-radius: 5%;
+}
+
+.contactFormTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+  top: 3rem;
+}
+
+.contactFormFields {
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 70%;
+  height: 35%;
+  column-gap: 8rem;
+  row-gap: 1.5rem;
+}
+
+.contactFormSubtitle {
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}

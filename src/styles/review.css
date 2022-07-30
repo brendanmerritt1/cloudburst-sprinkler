@@ -1,0 +1,24 @@
+.reviewContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviewTitle {
+    color: #23561c;
+    font-size: 2.3rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.reviewContent {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 0.8rem;
+}
+
+.reviewAuthor {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+}

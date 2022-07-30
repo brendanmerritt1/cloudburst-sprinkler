@@ -1,0 +1,53 @@
+.homeContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homePicContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.homePic {
+    width: 100%;
+    height: 100vh;
+    /* object-fit: cover;  */ /* need correct size img, looks smushed */
+    display: block;
+}
+
+.homeCaptions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    color: #474747;
+    top: 13rem;
+    gap: 1rem;
+    /* height: auto; */
+}
+
+.homeCaptionTitle {
+    font-size: 3.25rem;
+    font-weight: 900;
+    letter-spacing: 4px;
+}
+
+.homeSubCaption {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+#margin.homeSubCaption {
+    margin-bottom: 3rem;
+}
+
+.homeButtons {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+}
