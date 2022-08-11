@@ -1,12 +1,9 @@
 import "../styles/services.css";
 import Slider from "react-slick";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
-import carousel1 from "../assets/carouselpic1.png";
-import carousel2 from "../assets/carouselpic2.png";
-import carousel3 from "../assets/carouselpic3.png";
 import Sitemap from "../components/sitemapFooter/Sitemap";
-
-const images = [carousel1, carousel2, carousel3];
+import Navbar from "../components/navbar/Navbar";
+import { loadImage } from "../utils/imageLoader";
 
 export default function Commercial() {
   const NextArrow = ({ onClick }) => {
@@ -37,10 +34,11 @@ export default function Commercial() {
 
   return (
     <div className="servicesNavContainer">
+      <Navbar color="black"/>
       <div className="servicesContainer">
         <Slider {...settings}>
-          {images.map((img, idx) => (
-            <div>
+          {loadImage("carousel").map((img, idx) => (
+            <div key={idx}>
                 <img src={img} alt={img} className="carouselPic"/>
             </div>
           ))}

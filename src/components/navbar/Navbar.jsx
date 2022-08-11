@@ -1,14 +1,15 @@
 import "../../styles/navbar.css";
 import { useNavigate } from "react-router-dom";
+import { loadImage } from "../../utils/imageLoader";
 
-export default function Navbar() {
+export default function Navbar(props) {
   let navigate = useNavigate();
 
   return (
     <div className="navbar">
       <div className="logoContainer">
         <img
-          src={require("../../assets/cloudburst_black.png")}
+          src={loadImage(props.color)}
           alt="Cloudburst Lawn Sprinkler Systems"
           className="logo"
         />
@@ -19,6 +20,7 @@ export default function Navbar() {
             navigate("/");
           }}
           className="navItem"
+          id={props.color}
         >
           HOME
         </li>
@@ -27,6 +29,7 @@ export default function Navbar() {
             navigate("/commercial");
           }}
           className="navItem"
+          id={props.color}
         >
           COMMERCIAL
         </li>
@@ -35,6 +38,7 @@ export default function Navbar() {
             navigate("/residential");
           }}
           className="navItem"
+          id={props.color}
         >
           RESIDENTIAL
         </li>
@@ -43,6 +47,7 @@ export default function Navbar() {
             navigate("/gallery");
           }}
           className="navItem"
+          id={props.color}
         >
           GALLERY
         </li>
@@ -51,6 +56,7 @@ export default function Navbar() {
             navigate("/about");
           }}
           className="navItem"
+          id={props.color}
         >
           ABOUT US
         </li>
@@ -59,6 +65,7 @@ export default function Navbar() {
             navigate("/contact");
           }}
           className="navItem"
+          id={props.color}
         >
           CONTACT US
         </li>

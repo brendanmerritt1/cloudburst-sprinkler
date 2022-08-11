@@ -28,13 +28,19 @@
 
 .navItem {
     position: relative; /* for the transition */
-    color: #474747;
     cursor: pointer;
     letter-spacing: 1px;
 }
 
+#black.navItem {
+    color: #474747;
+}
+
+#white.navItem {
+    color: white;
+}
+
 .navItem::after {
-    background-color: #474747;
     content: "";
     width: 0;
     height: 0.15rem;
@@ -42,6 +48,14 @@
     bottom: -0.15rem;
     position: absolute;
     transition: width 0.35s ease 0s;
+}
+
+#black.navItem::after {
+    background-color: #474747;
+}
+
+#white.navItem::after {
+    background-color: white;
 }
 
 .navItem:hover::after {

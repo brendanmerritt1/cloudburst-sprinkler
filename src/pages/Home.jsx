@@ -1,9 +1,11 @@
 import "../styles/home.css";
 import NavigateButton from "../components/services/NavigateButton";
+import Navbar from "../components/navbar/Navbar";
 
 export default function Home() {
   return (
     <div className="homeContainer">
+      <Navbar color="black"/>
       <div className="homePicContainer">
         <img
           src={require("../assets/homePic.jpg")}

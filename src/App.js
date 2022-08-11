@@ -2,12 +2,10 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Commercial from "./pages/Commercial";
 import Home from "./pages/Home";
-import Navbar from "./components/navbar/Navbar";
 
 function App() {
   return (
     <div>
-      <Navbar />
       <div>
         <Routes>
           <Route exact path="/" element={<Home />} />
