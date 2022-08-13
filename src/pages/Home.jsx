@@ -1,6 +1,7 @@
 import "../styles/home.css";
 import NavigateButton from "../components/services/NavigateButton";
 import Navbar from "../components/navbar/Navbar";
+import { loadImage } from "../utils/imageLoader";
 
 export default function Home() {
   return (
@@ -8,7 +9,7 @@ export default function Home() {
       <Navbar color="black"/>
       <div className="homePicContainer">
         <img
-          src={require("../assets/homePic.jpg")}
+          src={loadImage("home_1920")}
           alt=""
           className="homePic"
         />

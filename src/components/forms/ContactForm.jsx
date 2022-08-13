@@ -13,52 +13,77 @@ import {
   Dialog,
 } from "@mui/material";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useRef } from "react";
 
 export default function ContactForm() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [customer, setCustomer] = useState("");
-  const [project, setProject] = useState("");
-  const [message, setMessage] = useState("");
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    company: "",
+    customer: "",
+    project: "",
+    message: "",
+  });
 
   const [openSuccess, setOpenSuccess] = useState(false);
   const [openError, setOpenError] = useState(false);
 
   const [verified, setVerified] = useState(false);
+  const captchaRef = useRef(null);
 
-  const handleSubmit = (e) => {
+  const submitEmail = async () => {
+    await axios
+      .post(process.env.REACT_APP_SUBMIT_URL, { formState })
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (
-      firstName === "" ||
-      lastName === "" ||
-      phone === "" ||
-      email === "" ||
-      message === ""
-    ) {
+    if (!verified) {
       setOpenError(true);
     } else {
-      setOpenSuccess(true);
-      console.log(
-        firstName,
-        lastName,
-        phone,
-        email,
-        company,
-        customer,
-        project,
-        message
-      );
+      const token = captchaRef.current.getValue();
+      await axios
+        .post(process.env.REACT_APP_API_URL, { token })
+        .then((res) => {
+          if (res.status) {
+            setOpenSuccess(true);
+          } else {
+            setOpenError(true);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+      submitEmail();
+      setFormState({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        company: "",
+        customer: "",
+        project: "",
+        message: "",
+      });
     }
+    captchaRef.current.reset();
+  };
+
+  const handleStateChange = (e) => {
+    setFormState((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
   };
 
   const handleCaptcha = (e) => {
-    console.log("Captcha value: ", e);
     if (e !== null) {
       setVerified(true);
+    } else {
+      setVerified(false);
     }
   };
 
@@ -111,7 +136,9 @@ export default function ContactForm() {
             id="standard-basic"
             label="First Name"
             variant="standard"
-            onChange={(e) => setFirstName(e.target.value)}
+            name="firstName"
+            onChange={handleStateChange}
+            value={formState.firstName}
             sx={{ mt: "1rem" }}
           />
           <TextField
@@ -119,7 +146,9 @@ export default function ContactForm() {
             id="standard-basic"
             label="Last Name"
             variant="standard"
-            onChange={(e) => setLastName(e.target.value)}
+            name="lastName"
+            onChange={handleStateChange}
+            value={formState.lastName}
             sx={{ mt: "1rem" }}
           />
           <TextField
@@ -127,7 +156,9 @@ export default function ContactForm() {
             id="standard-basic"
             label="Phone"
             variant="standard"
-            onChange={(e) => setPhone(e.target.value)}
+            name="phone"
+            onChange={handleStateChange}
+            value={formState.phone}
             sx={{ mt: "1rem" }}
           />
           <TextField
@@ -135,14 +166,18 @@ export default function ContactForm() {
             id="standard-basic"
             label="Email"
             variant="standard"
-            onChange={(e) => setEmail(e.target.value)}
+            name="email"
+            onChange={handleStateChange}
+            value={formState.email}
             sx={{ mt: "1rem" }}
           />
           <TextField
             id="standard-basic"
             label="Company"
             variant="standard"
-            onChange={(e) => setCompany(e.target.value)}
+            name="company"
+            onChange={handleStateChange}
+            value={formState.company}
             sx={{ mt: "1rem" }}
           />
 
@@ -151,35 +186,37 @@ export default function ContactForm() {
               Are you a current Cloudburst Sprinkler customer?
             </FormLabel>
             <RadioGroup
-              value={customer}
-              onChange={(e) => setCustomer(e.target.value)}
+              value={formState.customer}
+              name="customer"
+              onChange={handleStateChange}
             >
               <FormControlLabel
                 control={<Radio required />}
                 label="Yes"
-                value="yes"
+                value="Yes"
               />
               <FormControlLabel
                 control={<Radio required />}
                 label="No"
-                value="no"
+                value="No"
               />
             </RadioGroup>
 
             <FormLabel sx={{ mt: "2rem" }}>Project Type</FormLabel>
             <RadioGroup
-              value={project}
-              onChange={(e) => setProject(e.target.value)}
+              value={formState.project}
+              name="project"
+              onChange={handleStateChange}
             >
               <FormControlLabel
                 control={<Radio />}
-                label="Residential"
-                value="residential"
+                label="Residential Service"
+                value="Residential Service"
               />
               <FormControlLabel
                 control={<Radio />}
-                label="Commercial"
-                value="commercial"
+                label="New Residential Construction"
+                value="New Residential Construction"
               />
             </RadioGroup>
           </FormControl>
@@ -193,27 +230,29 @@ export default function ContactForm() {
             rows={7}
             label="Comments / Project Description (500 character limit)"
             inputProps={{ maxLength: 500 }}
-            onChange={(e) => setMessage(e.target.value)}
+            name="message"
+            onChange={handleStateChange}
+            value={formState.message}
           />
 
           <ReCAPTCHA
-            sitekey="6LcNT0EhAAAAAPl943HZ9YEbqdKgEGeZWLsw3nem"
+            sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
             style={{ marginLeft: "6rem" }}
             onChange={handleCaptcha}
+            ref={captchaRef}
           />
 
           <Button
             type="submit"
             color="primary"
             variant="contained"
-            onClick={handleSubmit}
-            disabled={!verified}
             sx={{
               ml: "8rem",
               width: "13vw",
               height: "7vh",
               borderRadius: "10% 10% 10% 10% / 50% 50% 50% 50%",
               fontSize: "1.5rem",
+              backgroundColor: "#222222",
             }}
           >
             SUBMIT
@@ -229,8 +268,8 @@ export default function ContactForm() {
             }}
           >
             <Alert severity="success">
-              Your request has successfully been processed. Our team will get
-              back to you shortly.
+              Your request has successfully been processed. Our team will email
+              you back shortly.
             </Alert>
           </Dialog>
 
@@ -245,11 +284,12 @@ export default function ContactForm() {
           >
             <Alert severity="error">
               An error occurred while submitting your request. Please check that
-              all required fields are filled.
+              the reCAPTCHA box has been clicked.
             </Alert>
           </Dialog>
         </form>
       </div>
     </ThemeProvider>
+    
   );
 }

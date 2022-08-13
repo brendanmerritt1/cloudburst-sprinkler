@@ -11,8 +11,9 @@
 }
 
 .logo {
-    width: 7vw;
+    width: 80%;
     margin-left: 4rem;
+    margin-top: 2rem;
 }
 
 .navContainer {
@@ -22,7 +23,7 @@
     flex-direction: row;
     font-size: 1rem;
     justify-content: flex-end;
-    gap: 11rem;
+    gap: 8rem;
     margin-right: 5rem;
 }
 
@@ -33,7 +34,7 @@
 }
 
 #black.navItem {
-    color: #474747;
+    color: #222222; /* #474747 */
 }
 
 #white.navItem {

@@ -1,10 +1,14 @@
 import "../../styles/sitemap.css";
-import { Phone } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import ScrollArrow from "./ScrollArrow";
+import { loadImage } from "../../utils/imageLoader";
 
 export default function Sitemap() {
   let navigate = useNavigate();
+
+  const scrollTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div className="sitemapContainer">
@@ -12,10 +16,16 @@ export default function Sitemap() {
         <div className="topContainer">
           <div className="contactInfo">
             <img
-              src={require("../../assets/cloudburst_white.png")}
+              src={loadImage("white_281")}
               alt="Cloudburst Lawn Sprinklers Systems"
               className="logo2"
             />
+            <div className="phoneIconContainer">
+              <div className="phoneNumbers">
+                <span>Delaware 302.798.5999</span>
+                <span>Pennsylvania 610.640.4067</span>
+              </div>
+            </div>
           </div>
           <div className="linkContainer">
             <ul className="links">
@@ -23,6 +33,7 @@ export default function Sitemap() {
                 className="link"
                 onClick={() => {
                   navigate("/");
+                  scrollTop();
                 }}
               >
                 HOME
@@ -31,6 +42,7 @@ export default function Sitemap() {
                 className="link"
                 onClick={() => {
                   navigate("/");
+                  scrollTop();
                 }}
               >
                 ABOUT CLOUDBURST
@@ -38,15 +50,26 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/commercial");
+                  scrollTop();
                 }}
               >
-                OUR SERVICES
+                COMMERCIAL
               </li>
               <li
                 className="link"
                 onClick={() => {
                   navigate("/");
+                  scrollTop();
+                }}
+              >
+                RESIDENTIAL
+              </li>
+              <li
+                className="link"
+                onClick={() => {
+                  navigate("/");
+                  scrollTop();
                 }}
               >
                 GALLERY
@@ -54,34 +77,30 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
-                }}
-              >
-                CAREERS
-              </li>
-              <li
-                className="link"
-                onClick={() => {
                   navigate("/contact");
+                  scrollTop();
                 }}
               >
                 CONTACT US
               </li>
+              <li
+                className="link"
+                onClick={() => {
+                  navigate("/");
+                  scrollTop();
+                }}
+              >
+                PRIVACY POLICY
+              </li>
             </ul>
-          </div>
-          <div className="phoneIconContainer">
-            <Phone />
-            <div className="phoneNumbers">
-              <span>Delaware 302.798.5999</span>
-              <span>Pennsylvania 610.640.4067</span>
-            </div>
           </div>
         </div>
 
         <div className="bottomContainer">
           <div className="trademark">
             <span>
-              &copy; CLOUDBURST LAWN SPRINKERS SYSTEMS <big>&#124;</big> ALL RIGHTS RESERVED
+              &copy; {new Date().getFullYear()} CLOUDBURST LAWN SPRINKER SYSTEMS{" "}
+              <big>&#124;</big> ALL RIGHTS RESERVED
             </span>
           </div>
         </div>

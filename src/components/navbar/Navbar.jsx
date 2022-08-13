@@ -4,12 +4,13 @@ import { loadImage } from "../../utils/imageLoader";
 
 export default function Navbar(props) {
   let navigate = useNavigate();
+  const img = props.color === "black" ? "black_281" : "white_281"
 
   return (
     <div className="navbar">
       <div className="logoContainer">
         <img
-          src={loadImage(props.color)}
+          src={loadImage(img)}
           alt="Cloudburst Lawn Sprinkler Systems"
           className="logo"
         />
@@ -63,6 +64,7 @@ export default function Navbar(props) {
         <li
           onClick={() => {
             navigate("/contact");
+            window.location.reload(false); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
           }}
           className="navItem"
           id={props.color}
