@@ -41,7 +41,7 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/about");
                   scrollTop();
                 }}
               >
@@ -79,6 +79,7 @@ export default function Sitemap() {
                 onClick={() => {
                   navigate("/contact");
                   scrollTop();
+                  setTimeout(() => {window.location.reload(false)}, 800); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
                 }}
               >
                 CONTACT US

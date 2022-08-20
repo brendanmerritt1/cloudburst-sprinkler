@@ -36,6 +36,10 @@
     gap: 1rem;
 }
 
+.logo2 {
+    width: 45%;
+}
+
 .phoneIconContainer {
     display: flex;
     flex-direction: row;
@@ -87,7 +91,7 @@
 
 .trademark {
     color: #878787;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     margin-left: 1rem;
 }
 

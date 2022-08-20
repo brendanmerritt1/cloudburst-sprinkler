@@ -13,6 +13,9 @@ export default function NavigateButton(props) {
       onClick={() => {
         navigate(props.nav)
         scrollTop();
+        if (props.nav === "/contact") {
+          window.location.reload(false); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
+        }
       }}
       className="navigateButton"
       id={props.color}
