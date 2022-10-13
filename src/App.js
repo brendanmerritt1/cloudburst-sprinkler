@@ -3,6 +3,7 @@ import Contact from "./pages/Contact";
 import Commercial from "./pages/Commercial";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
+import JoinUs from "./pages/JoinUs";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           {/* <Route path="/employment" element={<Contact />} /> */}
           <Route path="/contact" element={<Contact />} />
+          <Route path="/join-us" element={<JoinUs />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </div>

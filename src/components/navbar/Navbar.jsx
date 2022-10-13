@@ -8,7 +8,7 @@ export default function Navbar(props) {
 
   return (
     <div className="navbar">
-      <div className="logoContainer">
+      <div>
         <img
           src={loadImage(img)}
           alt="Cloudburst Lawn Sprinkler Systems"
@@ -70,6 +70,15 @@ export default function Navbar(props) {
           id={props.color}
         >
           CONTACT US
+        </li>
+        <li
+          onClick={() => {
+            navigate("/join-us");
+          }}
+          className="navItem"
+          id={props.color}
+        >
+          JOIN US
         </li>
       </ul>
     </div>

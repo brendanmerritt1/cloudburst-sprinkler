@@ -2,40 +2,138 @@
 @import "~slick-carousel/slick/slick-theme.css";
 
 .servicesNavContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .servicesContainer {
-    width: 70%;
-    height: 50rem;
-    position: relative;
-    top: 5rem;
-    margin: 5rem auto;
-    /* background-color: blue; */
-}
-
-.carouselPic {
-    width: 100%;
-    height: 30%;
+  margin: 5rem 9rem;
+  color: #474747;
+  font-weight: 300;
+  font-size: 1.7rem;
+  word-spacing: 0.15rem;
+  line-height: 3rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
 }
 
 .arrow {
-    color: #a5a5a5;
-    cursor: pointer;
-    position: absolute;
-    font-size: 3rem;
-    z-index: 1;
+  color: #a5a5a5;
+  cursor: pointer;
+  position: absolute;
+  font-size: 3rem;
+  z-index: 1;
 }
 
 .next {
-    right: -5%;
-    top: 50%;
+  right: -5%;
+  top: 50%;
 }
 
 .prev {
-    left: -5%;
-    top: 50%;
+  left: -5%;
+  top: 50%;
+}
+
+.commPicContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.commCaptionContainer {
+  width: 32%;
+  position: absolute;
+  color: white;
+  margin-left: 10rem;
+  margin-top: 25rem;
+}
+
+.commCaptionTitle {
+  font-size: 4.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.commCaption {
+  font-size: 2rem;
+  margin-top: 1rem;
+  letter-spacing: 1px;
+}
+
+.commLocContainer {
+  position: absolute;
+  color: white;
+  margin-left: 3rem;
+  margin-top: 55rem;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.commTextBody {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#center.commTextBody {
+  align-items: center;
+  text-align: center;
+}
+
+#two.commTextParagraph {
+  margin: 0 3rem;
+}
+
+.commCTATitle {
+  font-weight: 900;
+  font-size: 2.1rem;
+  margin-top: 3rem;
+}
+
+#bottom.commCTATitle {
+  margin-top: -2rem;
+}
+
+.commButtonContact {
+  margin-bottom: 5rem;
+}
+
+.commGalleryRedir {
+  letter-spacing: 0px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.commParaTitle {
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: -2rem;
+  margin-top: 3rem;
+}
+
+.commIndentedList {
+  margin-left: 5rem;
+}
+
+.certs {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.certPic {
+  height: 18vh;
+}
+
+#pic1.certPic {
+  margin-left: -7rem;
 }

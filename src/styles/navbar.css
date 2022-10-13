@@ -1,5 +1,5 @@
 .navbar {
-    font-size: 100%;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -7,13 +7,14 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 9vh;
+    height: 15vh;
+    /* background-color: blue; */
 }
 
 .logo {
-    width: 80%;
+    width: 100%;
     margin-left: 4rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .navContainer {
@@ -21,16 +22,15 @@
     width: 100vw;
     display: flex;
     flex-direction: row;
-    font-size: 1rem;
     justify-content: flex-end;
-    gap: 8rem;
-    margin-right: 5rem;
+    gap: 4.5rem;
+    margin-right: 6rem;
 }
 
 .navItem {
     position: relative; /* for the transition */
     cursor: pointer;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
 }
 
 #black.navItem {

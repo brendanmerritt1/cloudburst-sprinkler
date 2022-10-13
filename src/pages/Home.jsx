@@ -15,7 +15,7 @@ export default function Home() {
         />
         <div className="homeCaptions">
           <span className="homeCaptionTitle">
-            We'll Help You Bring Your Vision to Life
+            Protect and Enhance Your Landscape Investment
           </span>
           <span className="homeSubCaption">
             Experts in commercial and residential smart irrigation systems,

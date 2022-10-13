@@ -31,25 +31,24 @@ export default function AboutUs() {
           To help others achieve a beautiful outdoor space they can be proud of.
         </p>
         <p className="aboutParagraph">
-          Cloudburst has grown into a full-service licensed residential and
-          commercial irrigation company. Today, it's still a family-owned
-          business with the same mission &#8212; to help customers create
-          outdoor spaces they can be proud of. From planning and design to
-          installation and maintenance, Cloudburst has become a reputable leader
-          in the industry.
+          Today, Cloudburst is a full-service, licensed residential and
+          commercial irrigation company. It's still a family-owned business with
+          the same mission &#8212; to help customers create outdoor spaces they
+          can be proud of. From planning and design to installation and
+          maintenance, Cloudburst is a reputable leader in the industry.
         </p>
         <p className="aboutParagraph">
           We've been helping homeowners and commercial businesses achieve
           beautiful results for over 30 years.
         </p>
-      </div>
-      <div className="aboutViewContainer" id="bottom">
-        <p className="aboutParagraph" id="center">
+        <p className="aboutParagraph">
           Thousands of customers have trusted Cloudburst to help them create a
-          thriving landscape with a reliable sprinkler system. Are you ready to
-          bring your vision to life?
+          thriving landscape with a reliable sprinkler system. We can help you
+          too.
         </p>
-        <NavigateButton color="lightgray" desc="CONTACT US" nav="/contact"/>
+        <div className="aboutButtonCenter">
+          <NavigateButton color="lightgray" desc="CONTACT US" nav="/contact" />
+        </div>
       </div>
       <Sitemap />
     </div>
