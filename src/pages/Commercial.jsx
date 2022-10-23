@@ -41,7 +41,7 @@ export default function Commercial() {
       <Navbar color="white" />
       <div className="commPicContainer">
         <img src={loadImage("commercial")} alt="" style={{ width: "100%" }} />
-        <div className="commCaptionContainer">
+        <div className="captionContainer" id="comm">
           <p className="commCaptionTitle">Commercial</p>
           <p className="commCaption">
             Cloudburst is a licensed commercial irrigation company, and we're
@@ -55,13 +55,13 @@ export default function Commercial() {
       </div>
       <div className="servicesContainer">
         <div className="commTextBody" id="center">
-          <p className="commTextParagraph">
+          <p className="servTextParagraph">
             Cloudburst is invested in your success. We're a premier irrigation
             company that has supported and collaborated with the commercial
             industry for over 30 years. We service Delaware, Maryland, New
             Jersey, and Pennsylvania.
           </p>
-          <p className="commTextParagraph" id="two">
+          <p className="servTextParagraph" id="comm">
             From designing and installing a commercial-grade irrigation system
             to troubleshooting and maintenance, you can count on Cloudburst to
             get the job done right and on time.
@@ -84,7 +84,7 @@ export default function Commercial() {
             </Slider>
           </div>
           <p
-            className="commGalleryRedir"
+            className="servGalleryRedir"
             onClick={() => {
               navigate("/gallery");
             }}
@@ -93,7 +93,7 @@ export default function Commercial() {
           </p>
         </div>
         <div className="commTextBody">
-          <p className="commParaTitle">New Construction and Development</p>
+          <p className="servParaTitle">New Construction and Development</p>
           <p>
             New construction irrigation projects demand significant
             coordination, resources, and experience. You can count on our
@@ -119,20 +119,20 @@ export default function Commercial() {
             <p>Municipal Buildings</p>
             <p>Parks and Recreation</p>
           </div>
-          <p className="commParaTitle"> Two-Wire Installations</p>
+          <p className="servParaTitle"> Two-Wire Installations</p>
           <p>
             As a leader in the industry, we're certified experts in installing
             and troubleshooting two-wire landscape irrigation systems. Our
             technicians have mastered today's sophisticated control systems and
             will develop solutions to ensure that project goals are met.
           </p>
-          <p className="commParaTitle">Backflow Testing & Repairs</p>
+          <p className="servParaTitle">Backflow Testing & Repairs</p>
           <p>
             Our Certified Backflow Prevention Assembly Testers will test and
             certify new or existing back flow preventers and troubleshoot any
             necessary repairs.
           </p>
-          <p className="commParaTitle">
+          <p className="servParaTitle">
             Repairs, Retrofitting, and Renovations
           </p>
           <p>
@@ -143,17 +143,17 @@ export default function Commercial() {
             reconfigure, or retrofit your sprinkler system to keep it running
             smoothly.
           </p>
-          <p className="commParaTitle">Green Roof Installations</p>
+          <p className="servParaTitle">Green Roof Installations</p>
           <p>
             If you're interested in going green, we can help design, construct,
             and maintain your green roof project.
           </p>
-          <p className="commParaTitle">Commercial Maintenance Contracts</p>
+          <p className="servParaTitle">Commercial Maintenance Contracts</p>
           <p>
             To keep your system running its best, we offer commercial
             maintenance contracts. Contact us to learn more.
           </p>
-          <p className="commParaTitle">
+          <p className="servParaTitle">
             Commercial Projects Completed by Cloudburst
           </p>
           <p>Join our growing list of projects that we're proud of.</p>
@@ -165,9 +165,10 @@ export default function Commercial() {
             </p>
             <p>Mormon Tabernacle Church (PA)</p>
             <p>Riverfront Wilmington (DE)</p>
+            <p>The Lofts at Valley Forge (PA)</p>
           </div>
         </div>
-        <div className="commTextBody" id="center">
+        <div className="commTextBody" id="center" style={{marginTop: "4rem"}}>    {/*change inline style later. bad 4 diff resolutions*/}
           <p className="commCTATitle" id="bottom">
             Ready to collaborate?
           </p>
@@ -181,7 +182,7 @@ export default function Commercial() {
           <div className="certs">
             {loadImage("certifications").map((img, idx) => (
               <div key={idx}>
-                <img src={img} alt={img} className="certPic" id={"pic" + idx}/>
+                <img src={img} alt={img} className="certPic"/>
               </div>
             ))}
           </div>

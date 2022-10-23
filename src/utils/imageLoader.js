@@ -11,15 +11,15 @@ const images = {
   gallery: require("../assets/residential-lawn-sprinklers-1920.jpg"),
   residential: require("../assets/residential-backyard-sprinklers-1920.jpg"),
   join_us: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
+  res_grass: require("../assets/dewy-grass-temp.jpeg"),
   carousel: [
     require("../assets/carouselpic1.png"),
     require("../assets/carouselpic2.png"),
     require("../assets/carouselpic3.png"),
   ],
   certifications: [
-    require("../assets/bbb-logo.png"),
-    require("../assets/IA-Logo.png"),
-    require("../assets/IA-of-NJ-logo.png"),
+    require("../assets/IA-Logo.jpg"),
+    require("../assets/IAofNJ-Logo.jpg"),
   ],
 };
 

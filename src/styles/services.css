@@ -18,7 +18,7 @@
   letter-spacing: 0.5px;
   display: flex;
   flex-direction: column;
-  gap: 6rem;
+  gap: 2rem;
 }
 
 .arrow {
@@ -39,30 +39,61 @@
   top: 50%;
 }
 
-.commPicContainer {
+.servPicContainer {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.commCaptionContainer {
-  width: 32%;
+.captionContainer {
   position: absolute;
   color: white;
+}
+
+#comm.captionContainer {
+  width: 32%;
   margin-left: 10rem;
   margin-top: 25rem;
 }
 
-.commCaptionTitle {
+#res.captionContainer {
+  width: 46%;
+  margin-left: 15rem;
+  margin-top: 25rem;
+}
+
+#bottom.captionContainer {
+  width: 50%;
+  margin-top: 3rem;
+}
+
+.servCaptionTitle {
   font-size: 4.5rem;
   font-weight: 700;
   letter-spacing: 2px;
 }
 
-.commCaption {
+#bottom.servCaptionTitle {
+  font-size: 3rem;
+  letter-spacing: 3px;
+}
+
+.servCaption {
   font-size: 2rem;
   margin-top: 1rem;
   letter-spacing: 1px;
+}
+
+#res.servCaption {
+  line-height: 3rem;
+}
+
+#bottom.servCaption {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  margin-top: 3rem;
+  letter-spacing: 1.5px;
 }
 
 .commLocContainer {
@@ -88,9 +119,14 @@
   text-align: center;
 }
 
-#two.commTextParagraph {
+#comm.servTextParagraph {
   margin: 0 3rem;
 }
+
+#res.servTextParagraph {
+  margin: 0 10rem;
+}
+
 
 .commCTATitle {
   font-weight: 900;
@@ -103,17 +139,17 @@
 }
 
 .commButtonContact {
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
 }
 
-.commGalleryRedir {
+.servGalleryRedir {
   letter-spacing: 0px;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   cursor: pointer;
 }
 
-.commParaTitle {
+.servParaTitle {
   font-weight: 700;
   font-size: 2rem;
   margin-bottom: -2rem;
@@ -127,13 +163,50 @@
 .certs {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 3rem;
 }
 
 .certPic {
-  height: 18vh;
+  height: 18rem;
 }
 
-#pic1.certPic {
-  margin-left: -7rem;
+.resGrass {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.resGrass img {
+  min-width: 100%;
+}
+
+.contractBox {
+  width: 70%;
+  height: 22%;
+  background-color: white;
+  position: absolute;
+  margin-top: 20rem;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+}
+
+.contractMUI {
+  width: 20%;
+}
+
+.contractParagraph {
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+  justify-content: center;
+  color: #222222;
+}
+
+.contractTitle {
+  font-weight: 700;
+}
+
+.contractCaption {
+  font-size: 1.5rem;
 }
