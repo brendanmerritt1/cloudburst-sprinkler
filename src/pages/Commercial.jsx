@@ -42,8 +42,8 @@ export default function Commercial() {
       <div className="commPicContainer">
         <img src={loadImage("commercial")} alt="" style={{ width: "100%" }} />
         <div className="captionContainer" id="comm">
-          <p className="commCaptionTitle">Commercial</p>
-          <p className="commCaption">
+          <p className="servCaptionTitle">Commercial</p>
+          <p className="servCaption">
             Cloudburst is a licensed commercial irrigation company, and we're
             ready to meet your needs.
           </p>

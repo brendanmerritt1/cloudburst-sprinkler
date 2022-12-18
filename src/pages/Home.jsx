@@ -29,6 +29,7 @@ export default function Home() {
             <NavigateButton color="gray" desc="RESIDENTIAL" nav="/residential"/>
           </div>
         </div>
+        <span className="copyright">&copy; 2022 CLOUDBURST LAWN SPRINKLER SYSTEMS | ALL RIGHTS RESERVED</span>
       </div>
     </div>
   );

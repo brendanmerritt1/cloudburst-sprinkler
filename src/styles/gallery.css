@@ -1,0 +1,13 @@
+.galleryCaptionTitle {
+  position: absolute;
+  color: white;
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  inset: auto auto 10rem 10rem
+}
+
+.galleryContainer {
+    height: 50rem;
+    padding: 5rem;
+}

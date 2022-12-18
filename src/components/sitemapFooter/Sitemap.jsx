@@ -59,7 +59,7 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/residential");
                   scrollTop();
                 }}
               >
@@ -68,7 +68,7 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/gallery");
                   scrollTop();
                 }}
               >

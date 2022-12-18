@@ -6,6 +6,8 @@ import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
+import { FaFaucet, FaSnowflake } from "react-icons/fa";
+import { GiGrass } from "react-icons/gi";
 
 export default function Residential() {
   let navigate = useNavigate();
@@ -84,7 +86,7 @@ export default function Residential() {
             </Slider>
           </div>
           <p
-            className="commGalleryRedir"
+            className="servGalleryRedir"
             onClick={() => {
               navigate("/gallery");
             }}
@@ -144,14 +146,43 @@ export default function Residential() {
                 more.
               </p>
             </div>
-            <div className="contractBox">
-              <div className="contractMUI">mui</div>
-              <div className="contractParagraph">
-                <p className="contractTitle">Spring Start-Up</p>
-                <p className="contractCaption">
-                  We'll make sure you're ready for spring with a complete
-                  inspection and service to get your system up and running.
-                </p>
+            <div className="contractBoxContainer">
+              <div className="contractBox">
+                <div className="contractMUI">
+                  <FaFaucet color="#000000" size={"6rem"} />
+                </div>
+                <div className="contractParagraph">
+                  <p className="contractTitle">Spring Start-Up</p>
+                  <p className="contractCaption">
+                    We'll make sure you're ready for spring with a complete
+                    inspection and service to get your system up and running.
+                  </p>
+                </div>
+              </div>
+              <div className="contractBox">
+                <div className="contractMUI">
+                  <GiGrass color="#000000" size={"6rem"} />
+                </div>
+                <div className="contractParagraph">
+                  <p className="contractTitle">Mid-Year</p>
+                  <p className="contractCaption">
+                    With a mid-year check-up, we'll inspect rain sensors,
+                    valves, pipes, and sprinkler heads to make certain they're
+                    performing at their best.
+                  </p>
+                </div>
+              </div>
+              <div className="contractBox">
+                <div className="contractMUI">
+                  <FaSnowflake color="#000000" size={"6rem"} />
+                </div>
+                <div className="contractParagraph">
+                  <p className="contractTitle">Winterization</p>
+                  <p className="contractCaption">
+                    To avoid water damage and pipe bursts, we'll clear the
+                    irrigation line and get your system ready for winter.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

@@ -52,13 +52,14 @@
 
 #comm.captionContainer {
   width: 32%;
+  top: 0;
   margin-left: 10rem;
-  margin-top: 25rem;
+  margin-top: 37rem;
 }
 
 #res.captionContainer {
   width: 46%;
-  margin-left: 15rem;
+  margin-left: 10rem;
   margin-top: 25rem;
 }
 
@@ -99,8 +100,9 @@
 .commLocContainer {
   position: absolute;
   color: white;
+  top: 0;
   margin-left: 3rem;
-  margin-top: 55rem;
+  margin-top: 60rem;
   letter-spacing: 1px;
   font-size: 0.9rem;
   display: flex;
@@ -174,31 +176,52 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  background-color: blue;
 }
 
 .resGrass img {
   min-width: 100%;
 }
 
+.contractBoxContainer {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 110%;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
 .contractBox {
   width: 70%;
   height: 22%;
   background-color: white;
-  position: absolute;
-  margin-top: 20rem;
+  /* position: absolute; */
+  /* margin-top: 20rem; */
   border-radius: 15px;
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .contractMUI {
-  width: 20%;
+  aspect-ratio: 1 / 1;
+  height: 70%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2rem 0 4rem;
 }
 
 .contractParagraph {
+  width: 75%;
   display: flex;
   flex-direction: column;
-  /* align-items: flex-start; */
+  text-align: left;
   justify-content: center;
   color: #222222;
 }
@@ -208,5 +231,6 @@
 }
 
 .contractCaption {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  text-align: left;
 }
