@@ -11,7 +11,7 @@ const images = {
   gallery: require("../assets/home-lawn-sprinklers-1920.jpg"),
   residential: require("../assets/residential-backyard-sprinklers-1920.jpg"),
   join_us: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
-  res_grass: require("../assets/dewy-grass-temp.jpeg"),
+  res_grass: require("../assets/dewy-grass-maintenance.jpg"),
   carousel: [
     require("../assets/carouselpic1.png"),
     require("../assets/carouselpic2.png"),
@@ -53,7 +53,7 @@ const images = {
       height: 2,
     },
     {
-      src: require("../assets/dewy-grass-temp.jpeg"),
+      src: require("../assets/dewy-grass-maintenance.jpg"),
       width: 3,
       height: 2,
     },
