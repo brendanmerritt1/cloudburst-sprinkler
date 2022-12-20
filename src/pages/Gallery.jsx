@@ -2,15 +2,11 @@ import "../styles/gallery.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import { loadImage, loadGallery } from "../utils/imageLoader";
-import Gallery from "react-photo-gallery";
-import mediumZoom from "medium-zoom";
-import { useEffect } from "react";
-
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 export default function PhotoGallery() {
-  useEffect(() => {
-    mediumZoom("[src]")
-  }, [])
+  const pics = loadGallery();
   return (
     <div>
       <Navbar color="white" />
@@ -19,9 +15,18 @@ export default function PhotoGallery() {
         <span className="galleryCaptionTitle">Gallery</span>
       </div>
       <div className="galleryContainer">
-        <Gallery
-          photos={loadGallery()}
-        />
+        {pics.map((pic) => (
+          <Zoom>
+            <div
+              aria-label="Cloudburst Sprinklers Gallery"
+              role="img"
+              className="galleryBoxH"
+              key={pic.alt}
+              style={{ backgroundImage: "url(" + pic.src + ")" }}
+            >
+            </div>
+          </Zoom>
+        ))}
       </div>
       <Sitemap />
     </div>

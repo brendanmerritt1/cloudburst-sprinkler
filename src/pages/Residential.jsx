@@ -78,7 +78,7 @@ export default function Residential() {
           </div>
           <div style={{ width: "70%" }}>
             <Slider {...settings}>
-              {loadImage("carousel").map((img, idx) => (
+              {loadImage("residentialCarousel").map((img, idx) => (
                 <div key={idx}>
                   <img src={img} alt={img} style={{ width: "100%" }} />
                 </div>
@@ -89,6 +89,7 @@ export default function Residential() {
             className="servGalleryRedir"
             onClick={() => {
               navigate("/gallery");
+              window.scrollTo({ top: 0, behavior: "smooth" });
             }}
           >
             View All Projects In Gallery

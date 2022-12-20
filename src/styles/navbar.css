@@ -8,7 +8,6 @@
     left: 0;
     right: 0;
     height: 15vh;
-    /* background-color: blue; */
 }
 
 .logo {
@@ -38,7 +37,7 @@
 }
 
 #white.navItem {
-    color: white;
+    color: #ffffff;
 }
 
 .navItem::after {

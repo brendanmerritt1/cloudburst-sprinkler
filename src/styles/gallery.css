@@ -8,6 +8,21 @@
 }
 
 .galleryContainer {
-    height: 50rem;
-    padding: 5rem;
+  /* height: 50rem; */
+  padding: 5rem;
+  /* background-color: lightgreen; */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 3vw;
+  row-gap: 2vw;
+}
+
+.galleryBoxH {
+  background-color: lightblue;
+  width: 25vw;
+  height: 30vh;
+  border-radius: 15px;
+  background-size: cover;
 }

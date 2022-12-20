@@ -12,55 +12,68 @@ const images = {
   residential: require("../assets/residential-backyard-sprinklers-1920.jpg"),
   join_us: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
   res_grass: require("../assets/dewy-grass-maintenance.jpg"),
-  carousel: [
-    require("../assets/carouselpic1.png"),
-    require("../assets/carouselpic2.png"),
-    require("../assets/carouselpic3.png"),
+  residentialCarousel: [
+    require("../assets/residential-slide-1000px-01.jpg"),
+    require("../assets/residential-slide-1000px-02.jpg"),
+    require("../assets/residential-slide-1000px-03.jpg"),
+    require("../assets/residential-slide-1000px-04.jpg"),
+  ],
+  commercialCarousel: [
+    require("../assets/Commercial-slide-1000px-01.jpg"),
+    require("../assets/Commercial-slide-1000px-02.jpg"),
+    require("../assets/Commercial-slide-1000px-03.jpg"),
+    require("../assets/Commercial-slide-1000px-04.jpg"),
   ],
   certifications: [
     require("../assets/IA-Logo.jpg"),
     require("../assets/IAofNJ-Logo.jpg"),
   ],
-  masonryGallery: [
+  galleryPage: [
     {
-      src: require("../assets/neighborhood-sprinkler-system-1920.jpg"),
-      width: 4,
-      height: 3,
+      src: require("../assets/residential-slide-1000px-01.jpg"),
+      alt: "residential-slideshow-01"
     },
     {
-      src: require("../assets/sprinkler-system-garden-1920.jpg"),
-      width: 3,
-      height: 4,
+      src: require("../assets/residential-slide-1000px-02.jpg"),
+      alt: "residential-slideshow-02"
+    },
+    {
+      src: require("../assets/residential-slide-1000px-03.jpg"),
+      alt: "residential-slideshow-03"
+    },
+    {
+      src: require("../assets/residential-slide-1000px-04.jpg"),
+      alt: "sprinkler-system-garden"
+    },
+    {
+      src: require("../assets/neighborhood-sprinkler-system-1920.jpg"),
+      alt: "neighborhood-sprinkler-system"
+      // width: 4,
+      // height: 3,
     },
     {
       src: require("../assets/commercial-property-irrigation-1920.jpg"),
-      width: 3,
-      height: 2,
+      alt: "commercial-property-irrigation"
+      // width: 3,
+      // height: 2,
     },
     {
       src: require("../assets/residential-sprinkler-1920.jpg"),
-      width: 2,
-      height: 1,
+      alt: "residential-sprinkler"
+      // width: 2,
+      // height: 1,
     },
     {
       src: require("../assets/residential-backyard-sprinklers-1920.jpg"),
-      width: 2,
-      height: 1,
+      alt: "residential-backyard-sprinklers"
+      // width: 2,
+      // height: 1,
     },
     {
       src: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
-      width: 3,
-      height: 2,
-    },
-    {
-      src: require("../assets/dewy-grass-maintenance.jpg"),
-      width: 3,
-      height: 2,
-    },
-    {
-      src: require("../assets/carouselpic1.png"),
-      width: 2,
-      height: 1,
+      alt: "cloudburst-commercial-irrigation"
+      // width: 3,
+      // height: 2,
     },
   ],
 };
@@ -70,5 +83,5 @@ export function loadImage(imageName) {
 }
 
 export function loadGallery() {
-  return images.masonryGallery;
+  return images.galleryPage;
 }

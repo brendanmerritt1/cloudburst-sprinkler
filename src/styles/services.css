@@ -176,7 +176,6 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  background-color: blue;
 }
 
 .resGrass img {
@@ -187,10 +186,11 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  height: 110%;
+  height: 100%;
   align-items: center;
   justify-content: flex-end;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .contractBox {
