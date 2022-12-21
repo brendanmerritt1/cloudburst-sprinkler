@@ -30,20 +30,19 @@
 
 #gray.navigateButton {
   transition: 0.5s ease;
-  background: linear-gradient(to left, #222222 50%, #23561c 50%);
+  background: linear-gradient(to left, #222222 50%, #b7b9ce 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
 
 #lightgray.navigateButton {
   font-weight: 500;
-  background-color: #313131;
+  background-color: #222222;
 }
 
-#gray.navigateButton:hover,
-button:hover {
+#gray.navigateButton:hover {
   outline: 0;
-  color: #fff;
+  color: #222222;
   background-position: left bottom;
 }
 
@@ -52,8 +51,6 @@ button:active {
   outline: 0;
   color: #fff;
 }
-
-
 
 .contactFormContainer {
   position: absolute;

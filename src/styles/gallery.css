@@ -10,7 +10,6 @@
 .galleryContainer {
   /* height: 50rem; */
   padding: 5rem;
-  /* background-color: lightgreen; */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -20,9 +19,20 @@
 }
 
 .galleryBoxH {
-  background-color: lightblue;
   width: 25vw;
   height: 30vh;
   border-radius: 15px;
   background-size: cover;
+  background-position: center;
+}
+
+.galleryBoxH:hover {
+  filter: blur(1px) brightness(80%);
+}
+
+.galleryCaption {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  color: #ffffff;
 }

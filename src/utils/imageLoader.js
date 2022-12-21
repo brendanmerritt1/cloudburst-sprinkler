@@ -31,49 +31,68 @@ const images = {
   galleryPage: [
     {
       src: require("../assets/residential-slide-1000px-01.jpg"),
-      alt: "residential-slideshow-01"
+      alt: "landscaping-wilmington-de",
+      idx: 0
     },
     {
       src: require("../assets/residential-slide-1000px-02.jpg"),
-      alt: "residential-slideshow-02"
+      alt: "residential-slideshow-02",
+      idx: 1
     },
     {
       src: require("../assets/residential-slide-1000px-03.jpg"),
-      alt: "residential-slideshow-03"
+      alt: "residential-slideshow-03",
+      idx: 2
     },
     {
       src: require("../assets/residential-slide-1000px-04.jpg"),
-      alt: "sprinkler-system-garden"
+      alt: "sprinkler-system-garden",
+      idx: 3
     },
     {
-      src: require("../assets/neighborhood-sprinkler-system-1920.jpg"),
-      alt: "neighborhood-sprinkler-system"
-      // width: 4,
-      // height: 3,
+      src: require("../assets/Commercial-slide-1000px-01.jpg"),
+      alt: "commercial-slideshow-01",
+      idx: 4
     },
     {
-      src: require("../assets/commercial-property-irrigation-1920.jpg"),
-      alt: "commercial-property-irrigation"
-      // width: 3,
-      // height: 2,
+      src: require("../assets/Commercial-slide-1000px-02.jpg"),
+      alt: "commercial-slideshow-02",
+      idx: 5
     },
     {
-      src: require("../assets/residential-sprinkler-1920.jpg"),
-      alt: "residential-sprinkler"
-      // width: 2,
-      // height: 1,
-    },
-    {
-      src: require("../assets/residential-backyard-sprinklers-1920.jpg"),
-      alt: "residential-backyard-sprinklers"
-      // width: 2,
-      // height: 1,
+      src: require("../assets/Commercial-slide-1000px-03.jpg"),
+      alt: "commercial-slideshow-03",
+      idx: 6
     },
     {
       src: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
-      alt: "cloudburst-commercial-irrigation"
-      // width: 3,
-      // height: 2,
+      alt: "cloudburst-commercial-irrigation",
+      idx: 7
+    },
+    {
+      src: require("../assets/Commercial-slide-1000px-04.jpg"),
+      alt: "landscaping-eagleville-pa",
+      idx: 8
+    },
+    {
+      src: require("../assets/neighborhood-sprinkler-system-1920.jpg"),
+      alt: "neighborhood-sprinkler-system",
+      idx: 9
+    },
+    {
+      src: require("../assets/commercial-property-irrigation-1920.jpg"),
+      alt: "commercial-property-irrigation",
+      idx: 10
+    },
+    {
+      src: require("../assets/residential-sprinkler-1920.jpg"),
+      alt: "residential-sprinkler",
+      idx: 11
+    },
+    {
+      src: require("../assets/residential-backyard-sprinklers-1920.jpg"),
+      alt: "residential-backyard-sprinklers",
+      idx: 12
     },
   ],
 };
