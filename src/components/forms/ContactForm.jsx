@@ -284,7 +284,7 @@ export default function ContactForm() {
           >
             <Alert severity="error">
               An error occurred while submitting your request. Please check that
-              the reCAPTCHA box has been clicked.
+              the reCAPTCHA verification was successful.
             </Alert>
           </Dialog>
         </form>

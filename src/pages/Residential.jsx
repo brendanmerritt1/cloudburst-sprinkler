@@ -6,8 +6,6 @@ import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
-import { FaFaucet, FaSnowflake } from "react-icons/fa";
-import { GiGrass } from "react-icons/gi";
 
 export default function Residential() {
   let navigate = useNavigate();
@@ -149,9 +147,6 @@ export default function Residential() {
             </div>
             <div className="contractBoxContainer">
               <div className="contractBox">
-                <div className="contractMUI">
-                  <FaFaucet color="#000000" size={"6rem"} />
-                </div>
                 <div className="contractParagraph">
                   <p className="contractTitle">Spring Start-Up</p>
                   <p className="contractCaption">
@@ -161,9 +156,6 @@ export default function Residential() {
                 </div>
               </div>
               <div className="contractBox">
-                <div className="contractMUI">
-                  <GiGrass color="#000000" size={"6rem"} />
-                </div>
                 <div className="contractParagraph">
                   <p className="contractTitle">Mid-Year</p>
                   <p className="contractCaption">
@@ -174,9 +166,6 @@ export default function Residential() {
                 </div>
               </div>
               <div className="contractBox">
-                <div className="contractMUI">
-                  <FaSnowflake color="#000000" size={"6rem"} />
-                </div>
                 <div className="contractParagraph">
                   <p className="contractTitle">Winterization</p>
                   <p className="contractCaption">
