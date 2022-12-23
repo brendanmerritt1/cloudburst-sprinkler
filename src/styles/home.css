@@ -26,7 +26,7 @@
     align-items: center;
     position: absolute;
     color: #222222;
-    top: 13rem;
+    top: 11vw;
     gap: 1rem;
 }
 
@@ -57,7 +57,25 @@
     font-weight: 300;
     font-size: 1.1rem;
     position: absolute;
-    bottom: 0;
+    bottom: 5px;
     word-spacing: 2px;
     letter-spacing: 1px;
+}
+
+@media screen and (min-width: 2560px) {
+    .homeCaptions {
+        top: 14vw;
+    }
+
+    .homeCaptionTitle {
+        font-size: 4.5rem;
+    }
+
+    .homeSubCaption {
+        font-size: 2.3rem;
+    }
+
+    .copyright {
+        font-size: 1.3rem;
+    }
 }
