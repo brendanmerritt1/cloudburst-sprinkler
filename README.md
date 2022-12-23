@@ -2,6 +2,8 @@
 A website made using React for Cloudburst Lawn Sprinkler Systems, who serve the Delaware, Pennsylvania and Maryland areas.
 
 ### WORK IN PROGRESS - Pages may change significantly at any time.
+The website is now live on [*Heroku*](https://cloudburstsprinklers.herokuapp.com/) for testing purposes. It is optimized for 1920p and may not view correctly on various other screen sizes.
+## Screenshots of past commits
 ![homepage](https://user-images.githubusercontent.com/69825805/195685556-8a3ea382-2931-406b-baae-8a8cd57d7d58.jpg)*Homepage*
 &nbsp;
 
