@@ -19,7 +19,6 @@ export default function NavigateButton(props) {
       }}
       className="navigateButton"
       id={props.color}
-      title={props.desc}
     >
       {props.desc}
     </button>

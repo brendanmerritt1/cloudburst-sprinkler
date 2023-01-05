@@ -31,13 +31,13 @@
 }
 
 .homeCaptionTitle {
-    font-size: 3.5rem;
+    font-size: 2.5vw;
     font-weight: 900;
     letter-spacing: 4px;
 }
 
 .homeSubCaption {
-    font-size: 1.7rem;
+    font-size: 1.3vw;
     letter-spacing: 1px;
     word-spacing: 2px;
 }
@@ -55,7 +55,7 @@
 .copyright {
     color: #ffffff;
     font-weight: 300;
-    font-size: 1.1rem;
+    font-size: 0.7vw;
     position: absolute;
     bottom: 5px;
     word-spacing: 2px;

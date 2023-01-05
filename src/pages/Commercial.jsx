@@ -39,7 +39,7 @@ export default function Commercial() {
   return (
     <div className="servicesNavContainer">
       <Navbar color="white" />
-      <div className="commPicContainer">
+      <div>
         <img src={loadImage("commercial")} alt="" style={{ width: "100%" }} />
         <div className="captionContainer" id="comm">
           <p className="servCaptionTitle">Commercial</p>
@@ -55,10 +55,10 @@ export default function Commercial() {
       </div>
       <div className="servicesContainer">
         <div className="commTextBody" id="center">
-          <p className="servTextParagraph">
-            Cloudburst is invested in your success. We're a premier irrigation
+          <p className="servTextParagraph" id="comm">
+            Cloudburst is invested in your success. &nbsp;We're a premier irrigation
             company that has supported and collaborated with the commercial
-            industry for over 30 years. We service Delaware, Maryland, New
+            industry for over 30 years. &nbsp;We service Delaware, Maryland, New
             Jersey, and Pennsylvania.
           </p>
           <p className="servTextParagraph" id="comm">
@@ -97,7 +97,7 @@ export default function Commercial() {
           <p className="servParaTitle">New Construction and Development</p>
           <p>
             New construction irrigation projects demand significant
-            coordination, resources, and experience. You can count on our
+            coordination, resources, and experience. &nbsp;You can count on our
             talented teams at Cloudburst to navigate common challenges and
             develop solutions to ensure your project goals are met to your
             satisfaction and in a timely manner.
@@ -123,7 +123,7 @@ export default function Commercial() {
           <p className="servParaTitle"> Two-Wire Installations</p>
           <p>
             As a leader in the industry, we're certified experts in installing
-            and troubleshooting two-wire landscape irrigation systems. Our
+            and troubleshooting two-wire landscape irrigation systems. &nbsp;Our
             technicians have mastered today's sophisticated control systems and
             will develop solutions to ensure that project goals are met.
           </p>
@@ -139,7 +139,7 @@ export default function Commercial() {
           <p>
             Mainline repairs, retrofits, a hardscape upgrade - we understand
             that over the years there may be landscape renovations and
-            improvements that can impact your existing irrigation system. Our
+            improvements that can impact your existing irrigation system. &nbsp;Our
             experienced team will find the best plan to troubleshoot,
             reconfigure, or retrofit your sprinkler system to keep it running
             smoothly.

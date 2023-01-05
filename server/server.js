@@ -47,9 +47,12 @@ let transporter = nodemailer.createTransport({
 });
 
 transporter.verify((err, success) => {
-  err
-    ? console.log(err)
-    : console.log(`=== Server is ready to take messages: ${success} ===`);
+  if (err) {
+    console.log(err);
+
+  } else {
+    console.log(`=== Server is ready to take messages: ${success} ===`);
+  }
 });
 
 app.post(process.env.REACT_APP_SUBMIT_URL, (req, res) => {

@@ -13,7 +13,7 @@
 }
 
 .navigateButton {
-  font-size: 1rem;
+  font-size: 0.8vw;
   font-weight: 300;
   letter-spacing: 1px;
   color: white;
@@ -23,14 +23,14 @@
   align-items: center;
   cursor: pointer;
   border: none;
-  width: 14rem;
-  height: 3.5rem;
+  width: 11vw;
+  height: 2.75vw;
   border-radius: 13% 13% 13% 13% / 50% 50% 50% 50%;
 }
 
 #gray.navigateButton {
   transition: 0.5s ease;
-  background: linear-gradient(to left, #222222 50%, #b7b9ce 50%);
+  background: linear-gradient(to left, #222222 50%, #e4e4e4 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }

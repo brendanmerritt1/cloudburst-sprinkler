@@ -12,7 +12,7 @@
   margin: 5rem 9rem;
   color: #474747;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.3vw;
   word-spacing: 0.15rem;
   line-height: 3rem;
   letter-spacing: 0.5px;
@@ -39,22 +39,16 @@
   top: 50%;
 }
 
-.servPicContainer {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
 .captionContainer {
   position: absolute;
   color: white;
 }
 
 #comm.captionContainer {
-  width: 32%;
+  width: 23%;
   top: 0;
   margin-left: 10rem;
-  margin-top: 37rem;
+  margin-top: 37vw;
 }
 
 #res.captionContainer {
@@ -69,7 +63,7 @@
 }
 
 .servCaptionTitle {
-  font-size: 4.5rem;
+  font-size: 2.5vw;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -80,7 +74,7 @@
 }
 
 .servCaption {
-  font-size: 2rem;
+  font-size: 1.3vw;
   margin-top: 1rem;
   letter-spacing: 1px;
 }
@@ -102,9 +96,9 @@
   color: white;
   top: 0;
   margin-left: 3rem;
-  margin-top: 60rem;
+  margin-top: 55vw;
   letter-spacing: 1px;
-  font-size: 0.9rem;
+  font-size: 0.7vw;
   display: flex;
   flex-direction: column;
   gap: 0.15rem;
@@ -114,6 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  font-size: 1em;
 }
 
 #center.commTextBody {
@@ -129,10 +124,9 @@
   margin: 0 10rem;
 }
 
-
 .commCTATitle {
   font-weight: 900;
-  font-size: 2.1rem;
+  font-size: 1.2em;
   margin-top: 3rem;
 }
 
@@ -146,14 +140,30 @@
 
 .servGalleryRedir {
   letter-spacing: 0px;
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
+  /* text-decoration: underline; */
+  /* text-decoration-thickness: 1px; */
   cursor: pointer;
+  position: relative;
+}
+
+.servGalleryRedir::after {
+  content: "";
+  width: 0;
+  height: 0.05rem;
+  left: 0;
+  bottom: -0.15rem;
+  position: absolute;
+  transition: width 0.35s ease 0s;
+  background-color: #222222;
+}
+
+.servGalleryRedir:hover::after {
+  width: 100%;
 }
 
 .servParaTitle {
   font-weight: 700;
-  font-size: 2rem;
+  font-size: 1.1em;
   margin-bottom: -2rem;
   margin-top: 3rem;
 }
@@ -169,7 +179,7 @@
 }
 
 .certPic {
-  height: 18rem;
+  height: 15vw;
 }
 
 .resGrass {
