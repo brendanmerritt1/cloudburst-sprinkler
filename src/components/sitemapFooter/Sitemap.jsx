@@ -87,7 +87,7 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
-                  navigate("/");
+                  navigate("/privacy-policy");
                   scrollTop();
                 }}
               >

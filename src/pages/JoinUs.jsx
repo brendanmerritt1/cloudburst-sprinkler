@@ -11,14 +11,16 @@ export default function JoinUs() {
         <img src={loadImage("join_us")} alt="" className="joinImg" />
         <div className="joinCaption">
           <span className="joinCaptionTitle">Join Our Team</span>
-          <span className="joinCaptionSub">and work for a premier irrigation company.</span>
+          <span className="joinCaptionSub">
+            and work for a premier irrigation company.
+          </span>
         </div>
       </div>
       <div className="joinViewContainer">
         <p className="joinParagraph">
           Cloudburst is committed to providing the highest quality of irrigation
           services, but it takes the right people to create a successful team.
-          We're always searching for experienced irrigation service and
+          &nbsp;We're always searching for experienced irrigation service and
           installation technicians with a strong work ethic and great attitude.
         </p>
         <p className="joinParagraph">
@@ -32,12 +34,8 @@ export default function JoinUs() {
           </p>
           <p className="joinParagraph">Delaware (302) 798-5999</p>
           <p className="joinParagraph">Pennsylvania (610) 640-4067</p>
-          <p className="joinParagraphCaption">
-            Or send us an email.
-          </p>
-          <p className="joinParagraph">
-            sales@cloudburstsprinkler.com
-          </p>
+          <p className="joinParagraphCaption">Or send us an email.</p>
+          <p className="joinParagraph">sales@cloudburstsprinkler.com</p>
         </div>
       </div>
       <Sitemap />

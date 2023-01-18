@@ -1,0 +1,40 @@
+.privacyContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.privacyNav {
+  height: 8rem; /* 8rem for nav height */
+}
+
+.privacyViewContainer {
+  color: #474747;
+  height: 50rem;
+  padding: 5rem 7rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.privacyHeading {
+  width: 100%;
+  font-size: 2.5vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 20px;
+}
+
+.privacyTitle {
+  font-size: 1.2vw;
+  font-weight: 300;
+  margin-top: 1rem;
+}
+
+.privacyBody {
+  font-size: 1vw;
+  font-weight: 300;
+  word-spacing: 0.15rem;
+  line-height: 1.6vw;
+  letter-spacing: 1px;
+  margin: 1rem 0;
+}
