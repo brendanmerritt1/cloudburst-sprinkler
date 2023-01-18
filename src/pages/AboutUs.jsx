@@ -12,14 +12,14 @@ export default function AboutUs() {
       <div className="aboutPicContainer">
         <img src={loadImage("about_us")} alt="" className="aboutImg" />
         <div className="aboutCaptions">
-          <span className="aboutCaptionTitle">
+          <p className="aboutCaptionTitle">
             Supporting Beautiful Landscapes
-          </span>
-          <span className="aboutSubCaption">Since 1988</span>
+          </p>
+          <p className="aboutSubCaption">in Delaware, Maryland, New Jersey, and Pennsylvania since 1988.</p>
         </div>
       </div>
-      <div className="aboutViewContainer" id="top">
-        <span className="aboutParagraphCaption">How We Got Started</span>
+      <div className="aboutViewContainer">
+        <p className="aboutParagraphCaption">How We Got Started</p>
         <p className="aboutParagraph">
           Cloudburst's humble beginnings started back in 1982 when founder and
           owner Brett Forrest built his own sprinkler system in his front yard.

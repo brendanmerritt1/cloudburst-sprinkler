@@ -33,17 +33,19 @@
 .homeCaptionTitle {
     font-size: 2.5vw;
     font-weight: 900;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
 }
 
 .homeSubCaption {
-    font-size: 1.3vw;
+    font-size: 1.2vw;
     letter-spacing: 1px;
     word-spacing: 2px;
+    font-weight: 300;
 }
 
 #margin.homeSubCaption {
     margin-bottom: 3rem;
+    margin-top: -0.5rem; /*change later?*/
 }
 
 .homeButtons {
@@ -57,25 +59,13 @@
     font-weight: 300;
     font-size: 0.7vw;
     position: absolute;
-    bottom: 5px;
+    bottom: 1rem;
     word-spacing: 2px;
     letter-spacing: 1px;
 }
 
-@media screen and (min-width: 2560px) {
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
     .homeCaptions {
-        top: 14vw;
-    }
-
-    .homeCaptionTitle {
-        font-size: 4.5rem;
-    }
-
-    .homeSubCaption {
-        font-size: 2.3rem;
-    }
-
-    .copyright {
-        font-size: 1.3rem;
+        top: 12vw;
     }
 }

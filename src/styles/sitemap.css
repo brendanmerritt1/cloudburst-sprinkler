@@ -16,7 +16,6 @@
 .topContainer {
     display: flex;
     flex-direction: row;
-    /* background-color: blue; */
     height: 80%;
     width: 100%;
     justify-content: center;
@@ -29,7 +28,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* background-color: red; */
     width: 30vw;
     height: 100%;
     color: white;
@@ -37,14 +35,13 @@
 }
 
 .logo2 {
-    width: 45%;
+    width: 40%;
 }
 
 .phoneIconContainer {
     display: flex;
     flex-direction: row;
     color: white;
-    /* background-color: darkred; */
     align-items: center;
     width: 100%;
     justify-content: center;
@@ -54,14 +51,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: green; */
     gap: 0.5rem;
     word-spacing: 5px;
 }
 
 .linkContainer {
     display: flex;
-    /* background-color: purple; */
     width: 30vw;
     height: 100%;
     align-items: center;
@@ -73,10 +68,9 @@
     flex-flow: column wrap;
     list-style: none;
     color: white;
-    gap: 1.5rem;
+    gap: 1.7rem;
     column-gap: 5rem;
     cursor: pointer;
-    /* background-color: maroon; */
     height: 80%;
     width: 100%;
 }
@@ -84,7 +78,6 @@
 .bottomContainer {
     display: flex;
     height: 15%;
-    /* background-color: green; */
     align-items: center;
     justify-content: center;
 }
@@ -97,5 +90,4 @@
 
 .arrowContainer {
     width: 5vw;
-    /* background-color: teal; */
 }

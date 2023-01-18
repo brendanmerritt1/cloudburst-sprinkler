@@ -39,32 +39,31 @@ export default function Residential() {
   return (
     <div className="servicesNavContainer">
       <Navbar color="white" />
-      <div className="servPicContainer">
+      <div>
         <img src={loadImage("residential")} alt="" style={{ width: "100%" }} />
         <div className="captionContainer" id="res">
           <p className="servCaptionTitle">Residential</p>
-          <p className="servCaption" id="res">
-            A beautiful, healthy lawn with great curb appeal starts with a
-            reliable sprinkler system by Cloudburst.
+          <p className="servCaption">
+            A beautiful lawn starts with Cloudburst.
           </p>
         </div>
       </div>
       <div className="servicesContainer">
         <div className="commTextBody" id="center">
           <p className="servTextParagraph">
-            Walking barefoot across a lush lawn. Kids playing tag in the back
-            yard. What's your vision?
+            Walking barefoot across a lush lawn. &nbsp;Kids playing tag in the back
+            yard. &nbsp;What's your vision?
           </p>
           <p className="servTextParagraph">
             For over 30 years, Cloudburst has been helping homeowners enhance
-            their landscape with a reliable irrigation system. Whether you're
+            their landscape with a reliable irrigation system. &nbsp;Whether you're
             upgrading an aging sprinkler system or you're ready to outfit your
             dream backyard oasis with a new sprinkler system, you can rely on
             our experienced teams for your project.
           </p>
-          <p className="servTextParagraph" id="res">
+          <p className="servTextParagraph">
             Cloudburst is a full-service residential irrigation company that's
-            fully licensed and insured. We service Delaware, Maryland, New
+            fully licensed and insured. &nbsp;We service Delaware, Maryland, New
             Jersey, and Pennsylvania.
           </p>
           <div className="commButtonContact">
@@ -95,29 +94,29 @@ export default function Residential() {
         </div>
         <div className="commTextBody">
           <p className="servParaTitle">Customer Service</p>
-          <p>
-            We prioritize communication and being responsive. With every job,
+          <p className="servParagraph">
+            We prioritize communication and being responsive. &nbsp;With every job,
             we'll keep you up to date and informed about appointments, when to
             expect a technician, and our progress along the way.
           </p>
-          <p>
+          <p className="servParagraph">
             You can count on our on-call service to be prompt and reliable to
             troubleshoot your sprinkler system.
           </p>
           <p className="servParaTitle"> Smart WiFi Controller Upgrades</p>
-          <p>
-            An efficient sprinkler system can save you money. Upgrade today with
+          <p className="servParagraph">
+            An efficient sprinkler system can save you money. &nbsp;Upgrade today with
             a smart controller and save on average up to 30% on water usage.
-            Smart controllers use the latest technology and real-time weather
+            &nbsp;Smart controllers use the latest technology and real-time weather
             data to adjust the frequency of watering to ensure a consistent
-            schedule and prevent overwatering. Contact us to learn more.
+            schedule and prevent overwatering. &nbsp;Contact us to learn more.
           </p>
           <p className="servParaTitle">Free Estimates, No Obligation</p>
-          <p>
-            We'll meet with you at your home to discuss your needs. Every
+          <p className="servParagraph">
+            We'll meet with you at your home to discuss your needs. &nbsp;Every
             proposal includes a comprehensive digital plan outlining a custom
             design with detailed measurements, zones, and recommended equipment
-            unique to your landscape requirements. All new installations are
+            unique to your landscape requirements. &nbsp;All new installations are
             backed by a 5-year warranty on parts and labor.
           </p>
         </div>
@@ -140,8 +139,8 @@ export default function Residential() {
                 Residential Maintenance Contracts
               </p>
               <p className="servCaption" id="bottom">
-                Protect your investment with a maintenance plan. We'll maintain
-                your sprinkler system like it's our own. Contact us to learn
+                Protect your investment with a maintenance plan. &nbsp;We'll maintain
+                your sprinkler system like it's our own. &nbsp;Contact us to learn
                 more.
               </p>
             </div>

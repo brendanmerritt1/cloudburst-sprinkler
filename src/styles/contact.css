@@ -110,10 +110,6 @@ button:active {
   color: red;
 }
 
-@media screen and (min-width: 2560px) {
-  .navigateButton {
-    font-size: 1.3rem;
-    width: 16rem;
-    height: 4rem;
-  }
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
+
 }

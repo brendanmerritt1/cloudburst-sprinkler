@@ -15,7 +15,7 @@ export default function Home() {
           className="homePic"
         />
         <div className="homeCaptions">
-          <span className="homeCaptionTitle animate__animated animate__fadeInLeft animate__slow">
+          <span className="homeCaptionTitle animate__animated animate__fadeInLeft animate__slower">
             Protect and Enhance Your Landscape Investment
           </span>
           <span className="homeSubCaption animate__animated animate__fadeInUp animate__slower animate__delay-1s">

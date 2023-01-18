@@ -44,8 +44,7 @@ export default function Commercial() {
         <div className="captionContainer" id="comm">
           <p className="servCaptionTitle">Commercial</p>
           <p className="servCaption">
-            Cloudburst is a licensed commercial irrigation company, and we're
-            ready to meet your needs.
+            We're ready to meet your needs.
           </p>
         </div>
         <div className="commLocContainer">
@@ -56,15 +55,17 @@ export default function Commercial() {
       <div className="servicesContainer">
         <div className="commTextBody" id="center">
           <p className="servTextParagraph" id="comm">
-            Cloudburst is invested in your success. &nbsp;We're a premier irrigation
-            company that has supported and collaborated with the commercial
-            industry for over 30 years. &nbsp;We service Delaware, Maryland, New
-            Jersey, and Pennsylvania.
+            Cloudburst is invested in your success. &nbsp;We're a premier
+            irrigation company that has supported and collaborated with the
+            commercial industry for over 30 years.
           </p>
           <p className="servTextParagraph" id="comm">
             From designing and installing a commercial-grade irrigation system
             to troubleshooting and maintenance, you can count on Cloudburst to
             get the job done right and on time.
+          </p>
+          <p className="servTextParagraph" id="comm">
+            We service Delaware, Maryland, New Jersey, and Pennsylvania.
           </p>
           <p className="commCTATitle">How can we support you?</p>
           <div className="commButtonContact">
@@ -78,7 +79,7 @@ export default function Commercial() {
             <Slider {...settings}>
               {loadImage("commercialCarousel").map((img, idx) => (
                 <div key={idx}>
-                  <img src={img} alt={img} style={{width: "100%"}} />
+                  <img src={img} alt={img} style={{ width: "100%" }} />
                 </div>
               ))}
             </Slider>
@@ -95,18 +96,18 @@ export default function Commercial() {
         </div>
         <div className="commTextBody">
           <p className="servParaTitle">New Construction and Development</p>
-          <p>
+          <p className="servParagraph">
             New construction irrigation projects demand significant
             coordination, resources, and experience. &nbsp;You can count on our
             talented teams at Cloudburst to navigate common challenges and
             develop solutions to ensure your project goals are met to your
             satisfaction and in a timely manner.
           </p>
-          <p>
+          <p className="servParagraph">
             We have the capabilities to handle union work and accept bids for
             prevailing wage rate work.
           </p>
-          <p>
+          <p className="servParagraph">
             We service a wide range of businesses including, but not limited to:
           </p>
           <div className="commIndentedList">
@@ -121,14 +122,14 @@ export default function Commercial() {
             <p>Parks and Recreation</p>
           </div>
           <p className="servParaTitle"> Two-Wire Installations</p>
-          <p>
+          <p className="servParagraph">
             As a leader in the industry, we're certified experts in installing
             and troubleshooting two-wire landscape irrigation systems. &nbsp;Our
             technicians have mastered today's sophisticated control systems and
             will develop solutions to ensure that project goals are met.
           </p>
           <p className="servParaTitle">Backflow Testing & Repairs</p>
-          <p>
+          <p className="servParagraph">
             Our Certified Backflow Prevention Assembly Testers will test and
             certify new or existing back flow preventers and troubleshoot any
             necessary repairs.
@@ -136,28 +137,28 @@ export default function Commercial() {
           <p className="servParaTitle">
             Repairs, Retrofitting, and Renovations
           </p>
-          <p>
+          <p className="servParagraph">
             Mainline repairs, retrofits, a hardscape upgrade - we understand
             that over the years there may be landscape renovations and
-            improvements that can impact your existing irrigation system. &nbsp;Our
-            experienced team will find the best plan to troubleshoot,
+            improvements that can impact your existing irrigation system.
+            &nbsp;Our experienced team will find the best plan to troubleshoot,
             reconfigure, or retrofit your sprinkler system to keep it running
             smoothly.
           </p>
           <p className="servParaTitle">Green Roof Installations</p>
-          <p>
+          <p className="servParagraph">
             If you're interested in going green, we can help design, construct,
             and maintain your green roof project.
           </p>
           <p className="servParaTitle">Commercial Maintenance Contracts</p>
-          <p>
+          <p className="servParagraph">
             To keep your system running its best, we offer commercial
             maintenance contracts. Contact us to learn more.
           </p>
           <p className="servParaTitle">
             Commercial Projects Completed by Cloudburst
           </p>
-          <p>Join our growing list of projects that we're proud of.</p>
+          <p className="servParagraph">Join our growing list of projects that we're proud of.</p>
           <div className="commIndentedList">
             <p>Subaru Park - MLS Philadelphia Union Athletic Field (PA)</p>
             <p>Emily B. Clark Historic Garden - University of Delaware (DE)</p>
@@ -169,7 +170,8 @@ export default function Commercial() {
             <p>The Lofts at Valley Forge (PA)</p>
           </div>
         </div>
-        <div className="commTextBody" id="center" style={{marginTop: "4rem"}}>    {/*change inline style later. bad 4 diff resolutions*/}
+        <div className="commTextBody" id="center" style={{ marginTop: "4rem" }}>
+          {/*change inline style later. bad 4 diff resolutions*/}
           <p className="commCTATitle" id="bottom">
             Ready to collaborate?
           </p>
@@ -183,7 +185,7 @@ export default function Commercial() {
           <div className="certs">
             {loadImage("certifications").map((img, idx) => (
               <div key={idx}>
-                <img src={img} alt={img} className="certPic"/>
+                <img src={img} alt={img} className="certPic" />
               </div>
             ))}
           </div>

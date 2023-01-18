@@ -17,14 +17,22 @@
   position: absolute;
   color: white;
   gap: 0.5rem;
-  margin-bottom: 10rem;
+  margin-bottom: 8vw;
   margin-left: 8rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .joinCaptionTitle {
-  font-size: 4.2rem;
+  font-size: 2.5vw;
   font-weight: bold;
-  letter-spacing: 0.3rem;
+  letter-spacing: 2px;
+}
+
+.joinCaptionSub {
+  font-size: 1.2vw;
+  letter-spacing: 1px;
 }
 
 .joinViewContainer {
@@ -44,7 +52,7 @@
   color: #474747;
   font-weight: 700;
   word-spacing: 0.1rem;
-  font-size: 1.7rem;
+  font-size: 1vw;
   margin-top: 3rem;
   margin-bottom: 0.5rem;
 }
@@ -52,8 +60,8 @@
 .joinParagraph {
   color: #474747;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1vw;
   word-spacing: 0.15rem;
-  line-height: 3rem;
+  line-height: 1.6vw;
   letter-spacing: 1px;
 }

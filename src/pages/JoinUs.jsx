@@ -11,6 +11,7 @@ export default function JoinUs() {
         <img src={loadImage("join_us")} alt="" className="joinImg" />
         <div className="joinCaption">
           <span className="joinCaptionTitle">Join Our Team</span>
+          <span className="joinCaptionSub">and work for a premier irrigation company.</span>
         </div>
       </div>
       <div className="joinViewContainer">

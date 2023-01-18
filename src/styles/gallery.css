@@ -1,14 +1,23 @@
-.galleryCaptionTitle {
+.galleryCaptionContainer {
   position: absolute;
   color: white;
-  font-size: 5rem;
-  font-weight: bold;
-  letter-spacing: 0.2rem;
-  inset: auto auto 10rem 10rem
+  top: 0;
+  inset: 35vw 0 0 10rem;
+}
+
+.galleryCaptionTitle {
+  font-size: 2.5vw;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.gallerySubCaption {
+  font-size: 1.2vw;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
 }
 
 .galleryContainer {
-  /* height: 50rem; */
   padding: 5rem;
   display: flex;
   flex-direction: row;
@@ -27,7 +36,7 @@
 }
 
 .galleryBoxH:hover {
-  filter: blur(1px) brightness(80%);
+  filter: brightness(50%);
 }
 
 .galleryCaption {

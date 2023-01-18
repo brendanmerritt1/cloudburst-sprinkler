@@ -7,6 +7,8 @@ const images = {
   home_1920: require("../assets/neighborhood-sprinkler-system-1920.jpg"),
   contact_1920: require("../assets/sprinkler-system-garden-1920.jpg"),
   about_us: require("../assets/residential-sprinkler-1920.jpg"),
+  about_us_v2: require("../assets/AboutUs-1920x900.jpg"),
+  about_us_v3: require("../assets/AboutUs-1920x900.jpg"),
   commercial: require("../assets/commercial-property-irrigation-1920.jpg"),
   gallery: require("../assets/home-lawn-sprinklers-1920.jpg"),
   residential: require("../assets/residential-backyard-sprinklers-1920.jpg"),

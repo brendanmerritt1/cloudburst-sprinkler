@@ -17,7 +17,10 @@ export default function PhotoGallery() {
       <Navbar color="white" />
       <div>
         <img src={loadImage("gallery")} alt="" style={{ width: "100%" }} />
-        <span className="galleryCaptionTitle">Gallery</span>
+        <div className="galleryCaptionContainer">
+          <p className="galleryCaptionTitle">Gallery</p>
+          <p className="gallerySubCaption">A showcase of our work.</p>
+        </div>
       </div>
       <div className="galleryContainer">
         {pics.map((pic) => (
