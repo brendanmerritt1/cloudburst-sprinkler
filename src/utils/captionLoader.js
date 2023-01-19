@@ -1,6 +1,6 @@
 const captions = {
-    pic0: "Landscaping and irrigation for the Centreville Reserve neighborhood in Wilmington, DE.",
-    pic1: "Cloudburst Sprinklers' irrigation services for a residential home.",
+    pic0: "Centreville Reserve - Wilmington, DE.",
+    pic1: "Residential home - city, state.",
     pic2: "Front yard landscaping services on a residential home.",
     pic3: "Sprinkler system installation alongside a residential driveway.",
     pic4: "Landscaping services by Cloudburst Sprinklers on private commercial property.",

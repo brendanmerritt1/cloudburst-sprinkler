@@ -46,7 +46,7 @@ export default function PrivacyPolicy() {
           Terms of Use
         </span>
         <span className="privacyBody">
-          Welcome to <a href="http://www.cloudburstsprinkler.com/" style={{color: "inherit"}}>http://www.cloudburstsprinkler.com/</a>. &nbsp;Please take a few minutes to review the following Terms of Use of our
+          Welcome to <a href="https://www.cloudburstsprinkler.com/" style={{color: "inherit"}}>https://www.cloudburstsprinkler.com/</a>. &nbsp;Please take a few minutes to review the following Terms of Use of our
           site. &nbsp;Your use of our site constitutes your agreement to follow these
           Terms of Use and to be bound by them.
         </span>
@@ -156,7 +156,7 @@ const terms = [
     body: [
       {
         paragraph:
-          'This website (https://www.cloudburstsprinklersystems.com) and all content available on this website are provided on an "as is" basis without warranties of any kind, either express or implied, including without limitation warranties of title or implied warranties of merchantability or fitness for a particular purpose. You acknowledge, by your use of this website, that your use of this website is at your sole risk, that you assume full responsibility for all costs associated with all necessary servicing or repairs of any equipment you use in connection with your use of this website, and that Bassett Furniture Industries shall not be liable for any damages of any kind related to your use of this website.',
+          'This website (https://www.cloudburstsprinklersystems.com) and all content available on this website are provided on an "as is" basis without warranties of any kind, either express or implied, including without limitation warranties of title or implied warranties of merchantability or fitness for a particular purpose. You acknowledge, by your use of this website, that your use of this website is at your sole risk, that you assume full responsibility for all costs associated with all necessary servicing or repairs of any equipment you use in connection with your use of this website, and that Cloudburst Lawn Sprinkler Systems shall not be liable for any damages of any kind related to your use of this website.',
       },
     ],
   },
@@ -165,7 +165,7 @@ const terms = [
     body: [
       {
         paragraph:
-          "All of the content you see on this website, including, for example, all of the page headers, images, illustrations, graphics, audio clips, video clips, and text, are subject to trademark, service mark, trade dress, copyright and/or other intellectual property rights or licenses held by Bassett Furniture, one of our affiliates or by third parties who have licensed their materials to Cloudburst Lawn Sprinkler Systems. The entire content of this site is copyrighted as a collective work under U.S. copyright laws. The site is intended solely for personal, noncommercial use by the users of our site.",
+          "All of the content you see on this website, including, for example, all of the page headers, images, illustrations, graphics, audio clips, video clips, and text, are subject to trademark, service mark, trade dress, copyright and/or other intellectual property rights or licenses held by Cloudburst Lawn Sprinkler Systems, one of our affiliates or by third parties who have licensed their materials to Cloudburst Lawn Sprinkler Systems. The entire content of this site is copyrighted as a collective work under U.S. copyright laws. The site is intended solely for personal, noncommercial use by the users of our site.",
       },
       {
         paragraph:

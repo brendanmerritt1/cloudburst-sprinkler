@@ -24,9 +24,10 @@
 }
 
 .privacyTitle {
-  font-size: 1.4vw;
+  font-size: 1.2vw;
   font-weight: 300;
   margin-top: 1rem;
+  font-weight: 700;
 }
 
 #terms.privacyTitle {
