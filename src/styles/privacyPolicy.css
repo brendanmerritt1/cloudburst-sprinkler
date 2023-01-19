@@ -9,7 +9,6 @@
 
 .privacyViewContainer {
   color: #474747;
-  height: 50rem;
   padding: 5rem 7rem;
   display: flex;
   flex-direction: column;
@@ -25,9 +24,13 @@
 }
 
 .privacyTitle {
-  font-size: 1.2vw;
+  font-size: 1.4vw;
   font-weight: 300;
   margin-top: 1rem;
+}
+
+#terms.privacyTitle {
+  margin-top: 3rem;
 }
 
 .privacyBody {
@@ -37,4 +40,45 @@
   line-height: 1.6vw;
   letter-spacing: 1px;
   margin: 1rem 0;
+}
+
+#content.privacyBody {
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0,1,0,1);
+}
+
+#content.privacyBody.show {
+  margin: 1rem 0;
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.4s cubic-bezier(1,0,1,0);
+}
+
+#title.privacyBody {
+  font-style: italic;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0,1,0,1);
+}
+
+#title.privacyBody.show {
+  margin: 1rem 0;
+  height: auto;
+  max-height: 9999px;
+  transition: all 0.4s cubic-bezier(1,0,1,0);
+}
+
+.privacyItem {
+  margin-top: 2rem;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 20px;
+  /* height: 1.5vw; */
+}
+
+.privacyItemHeading {
+  font-size: 1.1vw;
+  cursor: pointer;
 }
