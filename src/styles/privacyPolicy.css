@@ -12,6 +12,7 @@
   padding: 5rem 7rem;
   display: flex;
   flex-direction: column;
+  word-spacing: 0.1rem;
 }
 
 .privacyHeading {
@@ -37,7 +38,7 @@
 .privacyBody {
   font-size: 1vw;
   font-weight: 300;
-  word-spacing: 0.15rem;
+  
   line-height: 1.6vw;
   letter-spacing: 1px;
   margin: 1rem 0;

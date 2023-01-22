@@ -41,12 +41,12 @@
   padding: 5rem 7rem;
   flex-direction: column;
   gap: 3.5rem;
+  word-spacing: 0.1rem;
 }
 
 .aboutParagraphCaption {
   color: #474747;
   font-weight: 700;
-  word-spacing: 0.1rem;
   font-size: 1.1vw;
   margin-bottom: -2rem;
 }
@@ -55,7 +55,6 @@
   color: #474747;
   font-weight: 300;
   font-size: 1vw;
-  word-spacing: 0.15rem;
   line-height: 1.6vw;
   letter-spacing: 0.5px;
 }

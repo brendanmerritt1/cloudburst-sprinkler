@@ -5,6 +5,8 @@ import { loadImage } from "../utils/imageLoader";
 import "animate.css"
 
 export default function Home() {
+  const today = new Date();
+  const year = today.getFullYear();
   return (
     <div className="homeContainer">
       <Navbar color="black"/>
@@ -30,7 +32,7 @@ export default function Home() {
             <NavigateButton color="gray" desc="RESIDENTIAL" nav="/residential"/>
           </div>
         </div>
-        <span className="copyright">&copy; 2023 CLOUDBURST LAWN SPRINKLER SYSTEMS | ALL RIGHTS RESERVED</span>
+        <span className="copyright">&copy; {year} CLOUDBURST LAWN SPRINKLER SYSTEMS | ALL RIGHTS RESERVED</span>
       </div>
     </div>
   );

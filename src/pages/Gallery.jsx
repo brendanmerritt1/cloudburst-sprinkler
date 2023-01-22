@@ -16,10 +16,10 @@ export default function PhotoGallery() {
     <div>
       <Navbar color="white" />
       <div>
-        <img src={loadImage("gallery")} alt="" style={{ width: "100%" }} />
+        <img src={loadImage("gallery")} alt="lawn irrigation" style={{ width: "100%" }} />
         <div className="galleryCaptionContainer">
-          <p className="galleryCaptionTitle">Gallery</p>
-          <p className="gallerySubCaption">A showcase of our work.</p>
+          <span className="galleryCaptionTitle">Gallery</span>
+          <span className="gallerySubCaption">A showcase of our work.</span>
         </div>
       </div>
       <div className="galleryContainer">

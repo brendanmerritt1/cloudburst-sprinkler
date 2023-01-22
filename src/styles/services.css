@@ -14,7 +14,7 @@
   font-weight: 300;
   font-size: 1vw;
   word-spacing: 0.1rem;
-  line-height: 3rem;
+  line-height: 2.5vw;
   letter-spacing: 0.5px;
   display: flex;
   flex-direction: column;
@@ -81,8 +81,8 @@
 
 #bottom.servCaption {
   font-weight: 400;
-  line-height: 2.5vw;
-  /* margin-top: 3vw; */
+  line-height: 2vw;
+  margin-top: 1.5vw;
   letter-spacing: 1.5px;
 }
 
@@ -191,9 +191,9 @@
   flex-direction: column;
   height: 100%;
   align-items: center;
-  justify-content: flex-end; 
-  gap: 5%;
-  margin-top: -3rem;
+  justify-content: flex-end;
+  gap: 6%;
+  margin-top: -3vw;
 }
 
 .contractBox {
@@ -224,4 +224,8 @@
 .contractCaption {
   font-size: 0.9vw;
   line-height: 2vw;
+}
+
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+    
 }

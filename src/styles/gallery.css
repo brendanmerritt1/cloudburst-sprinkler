@@ -1,8 +1,10 @@
 .galleryCaptionContainer {
   position: absolute;
   color: white;
-  top: 0;
-  inset: 35vw 0 0 10rem;
+  top: 35vw;
+  left: 10rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .galleryCaptionTitle {

@@ -40,6 +40,7 @@
   padding: 5rem 7rem;
   flex-direction: column;
   gap: 3.5rem;
+  word-spacing: 0.1rem;
 }
 
 .joinContactUs {
@@ -51,7 +52,6 @@
 .joinParagraphCaption {
   color: #474747;
   font-weight: 700;
-  word-spacing: 0.1rem;
   font-size: 1vw;
   margin-top: 3rem;
   margin-bottom: 0.5rem;
@@ -61,7 +61,6 @@
   color: #474747;
   font-weight: 300;
   font-size: 1vw;
-  word-spacing: 0.15rem;
   line-height: 1.6vw;
   letter-spacing: 1px;
 }
