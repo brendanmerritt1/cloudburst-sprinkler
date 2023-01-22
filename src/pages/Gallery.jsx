@@ -34,7 +34,13 @@ export default function PhotoGallery() {
                 setIsShown(false);
                 setIdxHover();
               }}
+              className="galleryPicContainer"
             >
+              {isShown && idxHover === pic.idx && (
+                <span className="galleryCaption">
+                  {loadCaption("pic" + pic.idx)}
+                </span>
+              )}
               <div
                 aria-label="Cloudburst Sprinklers Gallery"
                 role="img"
@@ -42,11 +48,7 @@ export default function PhotoGallery() {
                 key={pic.alt}
                 style={{ backgroundImage: "url(" + pic.src + ")" }}
               ></div>
-              {isShown && idxHover === pic.idx && (
-                <span className="galleryCaption">
-                  {loadCaption("pic" + pic.idx)}
-                </span>
-              )}
+              
             </div>
           </Zoom>
         ))}

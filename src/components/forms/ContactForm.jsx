@@ -35,8 +35,7 @@ export default function ContactForm() {
   const captchaRef = useRef(null);
 
   const submitEmail = async () => {
-    await axios
-      .post(process.env.REACT_APP_SUBMIT_URL, { formState })
+    await axios.post(process.env.REACT_APP_SUBMIT_URL, { formState });
   };
 
   const handleSubmit = async (e) => {
@@ -180,7 +179,7 @@ export default function ContactForm() {
             value={formState.company}
             sx={{ mt: "1rem" }}
           />
-
+          <br />
           <FormControl>
             <FormLabel required sx={{ mt: "1rem" }}>
               Are you a current Cloudburst Sprinkler customer?
@@ -221,6 +220,7 @@ export default function ContactForm() {
             </RadioGroup>
           </FormControl>
 
+          <br />
           <span className="contactCommentForm">How can we help you?</span>
           <TextField
             required
@@ -234,29 +234,30 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.message}
           />
+          <div className="contactCaptButtonCont">
+            <div className="contactButtonAlign">
+              <ReCAPTCHA
+                sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
+                onChange={handleCaptcha}
+                ref={captchaRef}
+              />
 
-          <ReCAPTCHA
-            sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
-            style={{ marginLeft: "6rem" }}
-            onChange={handleCaptcha}
-            ref={captchaRef}
-          />
-
-          <Button
-            type="submit"
-            color="primary"
-            variant="contained"
-            sx={{
-              ml: "8rem",
-              width: "13vw",
-              height: "7vh",
-              borderRadius: "10% 10% 10% 10% / 50% 50% 50% 50%",
-              fontSize: "1.5rem",
-              backgroundColor: "#222222",
-            }}
-          >
-            SUBMIT
-          </Button>
+              <Button
+                type="submit"
+                color="primary"
+                variant="contained"
+                sx={{
+                  width: "11vw",
+                  height: "2.75vw",
+                  borderRadius: "13% 13% 13% 13% / 50% 50% 50% 50%",
+                  fontSize: "0.8vw",
+                  backgroundColor: "#222222",
+                }}
+              >
+                SUBMIT
+              </Button>
+            </div>
+          </div>
 
           <Dialog
             open={openSuccess}
@@ -290,6 +291,5 @@ export default function ContactForm() {
         </form>
       </div>
     </ThemeProvider>
-    
   );
 }

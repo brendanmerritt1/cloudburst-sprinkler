@@ -29,6 +29,10 @@
   row-gap: 2vw;
 }
 
+/* .galleryPicContainer:hover:not(.galleryCaption) {
+  filter: brightness(50%);
+} */
+
 .galleryBoxH {
   width: 25vw;
   height: 30vh;
@@ -38,7 +42,7 @@
 }
 
 .galleryBoxH:hover {
-  filter: brightness(50%);
+  filter: brightness(40%);
 }
 
 .galleryCaption {
@@ -46,4 +50,9 @@
   bottom: 5%;
   left: 5%;
   color: #ffffff;
+  z-index: 1;
+}
+
+.galleryCaption:hover ~.galleryBoxH {
+  filter: brightness(40%);
 }
