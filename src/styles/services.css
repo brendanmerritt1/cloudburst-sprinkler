@@ -12,7 +12,7 @@
   margin: 5rem 7rem;
   color: #474747;
   font-weight: 300;
-  font-size: 1.1vw;
+  font-size: 1vw;
   word-spacing: 0.1rem;
   line-height: 2.5vw;
   letter-spacing: 0.5px;
@@ -25,7 +25,7 @@
   color: #a5a5a5;
   cursor: pointer;
   position: absolute;
-  font-size: 3vw;
+  font-size: 2.5vw;
   z-index: 1;
 }
 
@@ -47,13 +47,13 @@
 #comm.captionContainer {
   width: 23%;
   top: 0;
-  margin-left: 10rem;
+  margin-left: 9vw;
   margin-top: 37vw;
 }
 
 #res.captionContainer {
   width: 46%;
-  margin-left: 10rem;
+  margin-left: 9vw;
   margin-top: -13vw;
 }
 
@@ -81,8 +81,10 @@
 
 #bottom.servCaption {
   font-weight: 400;
+  font-size: 1.1vw;
   line-height: 2vw;
   margin-top: 1.5vw;
+  padding: 0 4vw;
   letter-spacing: 1.5px;
 }
 
@@ -115,12 +117,12 @@
 }
 
 #comm.servTextParagraph {
-  margin: 0 3rem;
+  width: 105%;
 }
 
-/* #res.servTextParagraph {
-  margin: 0 10rem;
-} */
+#res.servTextParagraph {
+  margin: 0 7rem;
+}
 
 .commCTATitle {
   font-weight: 900;
@@ -158,6 +160,7 @@
 
 .servParagraph {
   line-height: 1.6vw;
+  padding-right: 3rem;
 }
 
 .commIndentedList {
@@ -182,7 +185,8 @@
 }
 
 .resGrass img {
-  min-width: 100%;
+  min-width: 90%;
+  height: 45vw;
 }
 
 .contractBoxContainer {
@@ -192,13 +196,13 @@
   height: 100%;
   align-items: center;
   justify-content: flex-end;
-  gap: 6%;
-  margin-top: -3vw;
+  gap: 5%;
+  margin-top: -2vw;
 }
 
 .contractBox {
   width: 45vw;
-  height: 9.5vw;
+  height: 8.5vw;
   background-color: white;
   border-radius: 15px;
   display: flex;
@@ -214,6 +218,7 @@
   text-align: left;
   justify-content: center;
   color: #222222;
+  gap: 0.4vw;
 }
 
 .contractTitle {
@@ -223,28 +228,34 @@
 
 .contractCaption {
   font-size: 0.9vw;
-  line-height: 2vw;
+  line-height: 1.6vw;
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1919px) {
-  #comm.captionContainer {
-    margin-left: 9vw;
-  }
-
-  #res.captionContainer {
-    margin-left: 9vw;
-  }
-
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
   #comm.servTextParagraph {
     margin: 0 1rem;
   }
 
-  .servTextParagraph {
-    margin: 0 -1rem;
+  #res.servTextParagraph {
+    margin: 0 7rem;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  #comm.servTextParagraph {
+    width: 115%;
+  }
+
+  #res.servTextParagraph {
+    margin: 0 1rem;
   }
 
   .servParaTitle {
     margin-bottom: -1rem;
+  }
+
+  #bottom.servCaption {
+    padding: 0 1.5vw;
   }
 
   #bottom.captionContainer {
@@ -252,7 +263,7 @@
   }
 
   .contractBoxContainer {
-    gap: 3vw;
+    gap: 2vw;
     margin-top: -2vw;
   }
 

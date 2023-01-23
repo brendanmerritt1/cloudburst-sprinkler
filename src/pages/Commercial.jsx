@@ -34,6 +34,8 @@ export default function Commercial() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 6000,
   };
 
   return (
@@ -75,7 +77,7 @@ export default function Commercial() {
               nav="/contact"
             />
           </div>
-          <div style={{ width: "70%" }}>
+          <div style={{ width: "60%" }}>
             <Slider {...settings}>
               {loadImage("commercialCarousel").map((img, idx) => (
                 <div key={idx}>

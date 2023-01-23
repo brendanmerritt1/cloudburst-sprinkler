@@ -34,6 +34,8 @@ export default function Residential() {
     slidesToScroll: 1,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
+    autoplay: true,
+    autoplaySpeed: 6000,
   };
 
   return (
@@ -50,18 +52,18 @@ export default function Residential() {
       </div>
       <div className="servicesContainer">
         <div className="commTextBody" id="center">
-          <p className="servTextParagraph">
+          <p className="servTextParagraph" id="res">
             Walking barefoot across a lush lawn. &nbsp;Kids playing tag in the back
             yard. &nbsp;What's your vision?
           </p>
-          <p className="servTextParagraph">
+          <p className="servTextParagraph" id="res">
             For over 30 years, Cloudburst has been helping homeowners enhance
             their landscape with a reliable irrigation system. &nbsp;Whether you're
             upgrading an aging sprinkler system or you're ready to outfit your
             dream backyard oasis with a new sprinkler system, you can rely on
             our experienced teams for your project.
           </p>
-          <p className="servTextParagraph">
+          <p className="servTextParagraph" id="res">
             Cloudburst is a full-service residential irrigation company that's
             fully licensed and insured. &nbsp;We service Delaware, Maryland, New
             Jersey, and Pennsylvania.
@@ -73,7 +75,7 @@ export default function Residential() {
               nav="/contact"
             />
           </div>
-          <div style={{ width: "70%" }}>
+          <div style={{ width: "60%" }}>
             <Slider {...settings}>
               {loadImage("residentialCarousel").map((img, idx) => (
                 <div key={idx}>
