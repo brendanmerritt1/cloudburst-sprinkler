@@ -12,7 +12,7 @@
   margin: 5rem 7rem;
   color: #474747;
   font-weight: 300;
-  font-size: 1vw;
+  font-size: 1.1vw;
   word-spacing: 0.1rem;
   line-height: 2.5vw;
   letter-spacing: 0.5px;
@@ -25,7 +25,7 @@
   color: #a5a5a5;
   cursor: pointer;
   position: absolute;
-  font-size: 3rem;
+  font-size: 3vw;
   z-index: 1;
 }
 
@@ -102,7 +102,7 @@
 .commTextBody {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2vw;
 }
 
 #center.commTextBody {
@@ -149,7 +149,7 @@
   color: #7da07d;
 }
 
-.servParaTitle {  
+.servParaTitle {
   font-weight: 700;
   font-size: 1.1vw;
   margin-bottom: -2rem;
@@ -226,6 +226,37 @@
   line-height: 2vw;
 }
 
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-    
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  #comm.captionContainer {
+    margin-left: 9vw;
+  }
+
+  #res.captionContainer {
+    margin-left: 9vw;
+  }
+
+  #comm.servTextParagraph {
+    margin: 0 1rem;
+  }
+
+  .servTextParagraph {
+    margin: 0 -1rem;
+  }
+
+  .servParaTitle {
+    margin-bottom: -1rem;
+  }
+
+  #bottom.captionContainer {
+    width: 61%;
+  }
+
+  .contractBoxContainer {
+    gap: 3vw;
+    margin-top: -2vw;
+  }
+
+  .contractBox {
+    height: 9vw;
+  }
 }

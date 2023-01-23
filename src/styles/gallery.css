@@ -29,13 +29,9 @@
   row-gap: 2vw;
 }
 
-/* .galleryPicContainer:hover:not(.galleryCaption) {
-  filter: brightness(50%);
-} */
-
 .galleryBoxH {
   width: 25vw;
-  height: 30vh;
+  height: 16vw;
   border-radius: 15px;
   background-size: cover;
   background-position: center;
@@ -47,6 +43,7 @@
 
 .galleryCaption {
   position: absolute;
+  font-size: 0.85vw;
   bottom: 5%;
   left: 5%;
   color: #ffffff;
@@ -55,4 +52,10 @@
 
 .galleryCaption:hover ~.galleryBoxH {
   filter: brightness(40%);
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .galleryCaptionContainer {
+    left: 9vw;
+  }
 }

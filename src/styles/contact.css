@@ -7,9 +7,9 @@
 }
 
 .contactImg {
-  height: 175vh;
+  height: 110vh;
   width: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 
 .navigateButton {
@@ -124,6 +124,35 @@ button:active {
   gap: 1vw;
 }
 
-@media screen and (min-width: 2560px) and (max-width: 3760px) {
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .contactImg {
+    height: 220vh;
+  }
 
+  .contactFormContainer {
+    top: 9rem;
+    width: 42rem;
+    height: 75rem;
+  }
+
+  .contactFormTitle {
+    font-size: 1.7rem;
+  }
+
+  .contactFormSubTitle {
+    font-size: 0.9rem;
+  }
+
+  .requiredField {
+    font-size: 0.9rem;
+  }
+
+  .contactFormFields {
+    width: 80%;
+    height: auto;
+  }
+
+  .contactCommentForm {
+    font-size: 1.2rem;
+  }
 }

@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     background-color: #222222;
-    height: 29vh;
+    height: 16vw;
     width: 100%;
     letter-spacing: 0.1rem;
 }
@@ -59,7 +59,7 @@
 .linkContainer {
     display: flex;
     width: 30vw;
-    height: 100%;
+    height: 85%;
     align-items: center;
     margin: 0rem 5rem;
 }
@@ -69,7 +69,7 @@
     flex-flow: column wrap;
     list-style: none;
     color: white;
-    gap: 1.7rem;
+    gap: 1.5vw;
     column-gap: 5rem;
     cursor: pointer;
     height: 80%;
@@ -85,7 +85,7 @@
 
 .trademark {
     color: #878787;
-    font-size: 0.7rem;
+    font-size: 0.6vw;
     margin-left: 1rem;
 }
 
