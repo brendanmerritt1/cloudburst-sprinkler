@@ -31,16 +31,29 @@ export default function Navbar(props) {
         />
       </div>
       {!isDesktop && (
-        <div style={{ display: "flex", alignItems: "center", gap: "1vw", color: props.color }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: "1vw",
+            color: props.color,
+          }}
+        >
           <span
             style={{ fontSize: "1.2vw", fontWeight: "300", cursor: "pointer" }}
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              props.setIsOpenBlur(!isOpen);
+            }}
           >
             MENU
           </span>
           <SlMenu
             className="navMenuButton"
-            onClick={() => setIsOpen(!isOpen)}
+            onClick={() => {
+              setIsOpen(!isOpen);
+              props.setIsOpenBlur(!isOpen);
+            }}
           />
         </div>
       )}
@@ -48,7 +61,10 @@ export default function Navbar(props) {
         {!isDesktop ? (
           <div className="mobileNavClose">
             <TfiClose
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() => {
+                setIsOpen(!isOpen);
+                props.setIsOpenBlur(!isOpen);
+              }}
               style={{ cursor: "pointer" }}
             />
           </div>

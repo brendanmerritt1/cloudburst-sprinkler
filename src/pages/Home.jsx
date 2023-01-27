@@ -2,14 +2,18 @@ import "../styles/home.css";
 import NavigateButton from "../components/services/NavigateButton";
 import Navbar from "../components/navbar/Navbar";
 import { loadImage } from "../utils/imageLoader";
+import { useState } from "react";
 import "animate.css"
 
 export default function Home() {
+  const [isOpenBlur, setIsOpenBlur] = useState(false);
+
   const today = new Date();
   const year = today.getFullYear();
+
   return (
-    <div className="homeContainer">
-      <Navbar color="black"/>
+    <div className={isOpenBlur ? "homeContainer blur" : "homeContainer"}>
+      <Navbar color="black" setIsOpenBlur={setIsOpenBlur}/>
       <div className="homePicContainer">
         <img
           src={loadImage("home_1920")}

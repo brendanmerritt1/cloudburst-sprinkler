@@ -39,6 +39,10 @@
   top: 50%;
 }
 
+.blur {
+  filter: blur(2px);
+}
+
 .captionContainer {
   position: absolute;
   color: white;
@@ -140,8 +144,6 @@
 
 .servGalleryRedir {
   letter-spacing: 0px;
-  /* text-decoration: underline; */
-  /* text-decoration-thickness: 1px; */
   cursor: pointer;
   position: relative;
   font-weight: 700;

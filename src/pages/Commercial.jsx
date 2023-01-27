@@ -6,8 +6,10 @@ import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 export default function Commercial() {
+  const [isOpenBlur, setIsOpenBlur] = useState(false);
   let navigate = useNavigate();
 
   const NextArrow = ({ onClick }) => {
@@ -40,8 +42,8 @@ export default function Commercial() {
 
   return (
     <div className="servicesNavContainer">
-      <Navbar color="white" />
-      <div>
+      <Navbar color="white" setIsOpenBlur={setIsOpenBlur}/>
+      <div className={isOpenBlur ? "blur" : null}>
         <img src={loadImage("commercial")} alt="" style={{ width: "100%" }} />
         <div className="captionContainer" id="comm">
           <p className="servCaptionTitle">Commercial</p>
