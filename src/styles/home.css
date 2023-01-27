@@ -69,3 +69,22 @@
         top: 12vw;
     }
 }
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .homeCaptionTitle {
+        letter-spacing: 2px;
+    }
+
+    .homeSubCaption {
+        word-spacing: 1px;
+        letter-spacing: 1px;
+    }
+
+    #margin.homeSubCaption {
+        margin-bottom: 1rem;
+    }
+
+    .copyright {
+        word-spacing: 1px;
+    }
+}
