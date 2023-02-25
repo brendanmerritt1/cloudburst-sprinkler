@@ -16,6 +16,11 @@
   height: 100%;
   margin-left: 20%;
   margin-top: 10%;
+  cursor: pointer;
+}
+
+.logo.blur {
+  filter: blur(2px);
 }
 
 .navContainer {
@@ -71,7 +76,7 @@
 }
 
 @media screen and (min-width: 1920px) and (max-width: 2559px) {
-  /* placeholder media query, 1920p is original design */
+  /* placeholder media query for development, 1920p is original design */
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {

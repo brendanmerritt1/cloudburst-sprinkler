@@ -6,6 +6,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .servicesContainer {
@@ -39,8 +40,9 @@
   top: 50%;
 }
 
-.blur {
+.servicesBlur {
   filter: blur(2px);
+  z-index: -1;
 }
 
 .captionContainer {
@@ -116,6 +118,10 @@
   text-align: center;
 }
 
+#center.commTextBody.CTA {
+  margin-top: 4rem;
+}
+
 .servTextParagraph {
   line-height: 1.6vw;
 }
@@ -140,6 +146,15 @@
 
 .commButtonContact {
   margin-bottom: 2rem;
+}
+
+.resButtonContact {
+  margin: 2rem 0;
+}
+
+#noSpace.resButtonContact {
+  margin-bottom: 2rem;
+  margin-top: 0;
 }
 
 .servGalleryRedir {
@@ -271,5 +286,57 @@
 
   .contractBox {
     height: 9vw;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .servicesContainer {
+    margin: 5rem 2rem;
+    font-size: 1.1vw;
+  }
+
+  #paragraph.commTextBody {
+    margin: 0 4rem;
+  }
+
+  .commCTATitle {
+    font-size: 1.3vw;
+  }
+
+  .servParaTitle {
+    margin-bottom: -1rem;
+    margin-top: 3rem;
+  }
+  
+  .certPic {
+    height: 15vw;
+  }
+
+  #res.servTextParagraph {
+    margin: 0 2rem;
+  }
+
+  #bottom.servCaption {
+    line-height: 1.8vw;
+    letter-spacing: 1px;
+    word-spacing: 0.5px;
+  }
+
+  .contractTitle {
+    font-size: 1.2vw;
+  }
+  
+  .contractCaption {
+    font-size: 1vw;
+  }
+
+  .navigateButton {
+    font-size: 1.1vw;
+    width: 12vw;
+    height: 3vw;
+  }
+
+  #bottom.commButtonContact {
+    margin-bottom: 0;
   }
 }

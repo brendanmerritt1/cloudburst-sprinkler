@@ -2,55 +2,70 @@ import "../styles/privacyPolicy.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import Accordion from "../components/services/Accordion";
+import { useState } from "react";
 
 export default function PrivacyPolicy() {
+  const [isOpenBlur, setIsOpenBlur] = useState(false);
+
   return (
     <div className="privacyContainer">
-      <Navbar color="black" />
-      <div className="privacyNav"></div>
-      <div className="privacyViewContainer">
-        <span className="privacyHeading">Privacy Policy and Terms of Use</span>
-        <span className="privacyTitle">Privacy Policy</span>
-        <span className="privacyBody">
-          Our Privacy Policy outlines what information we collect from you, how
-          we use your information and the choices that you have regarding our
-          use of your information. &nbsp;Please take a few minutes to review our
-          Privacy Statement for this site.
-        </span>
-        <span className="privacyBody">
-          This Statement of Privacy applies only to the website of Cloudburst
-          Lawn Sprinkler Systems, located on the internet at
-          www.cloudburstsprinkler.com and governs data collection and usage.
-          &nbsp;By using the Cloudburst website, you consent to the data
-          practices described in this statement.
-        </span>
-        <span className="privacyBody">
-          This Privacy Policy may be updated from time to time. &nbsp;Please
-          check back periodically for further updates and changes. &nbsp;The
-          most updated version will be the one that is available on this
-          website.
-        </span>
-        <span className="privacyBody">
-          This is the website of Cloudburst Lawn Sprinkler Systems.
-        </span>
-        <span className="privacyBody">
-          Our postal address is: <br /> Cloudburst Lawn Sprinkler Systems <br />
-          6603 Governor Printz Blvd., <br /> Suite A Wilmington, DE 19809
-        </span>
-        <span className="privacyBody">
-          Email address: sales@cloudburstsprinkler.com <br /> Telephone: (302)
-          798-5999
-        </span>
-        <Accordion data={policy} />
-        <span className="privacyTitle" id="terms">
-          Terms of Use
-        </span>
-        <span className="privacyBody">
-          Welcome to <a href="https://www.cloudburstsprinkler.com/" style={{color: "inherit"}}>https://www.cloudburstsprinkler.com/</a>. &nbsp;Please take a few minutes to review the following Terms of Use of our
-          site. &nbsp;Your use of our site constitutes your agreement to follow these
-          Terms of Use and to be bound by them.
-        </span>
-        <Accordion data={terms} />
+      <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
+      <div className={isOpenBlur ? "privacyBlur" : null}>
+        <div className="privacyNav"></div>
+        <div className="privacyViewContainer">
+          <span className="privacyHeading">
+            Privacy Policy and Terms of Use
+          </span>
+          <span className="privacyTitle">Privacy Policy</span>
+          <span className="privacyBody">
+            Our Privacy Policy outlines what information we collect from you,
+            how we use your information and the choices that you have regarding
+            our use of your information. &nbsp;Please take a few minutes to
+            review our Privacy Statement for this site.
+          </span>
+          <span className="privacyBody">
+            This Statement of Privacy applies only to the website of Cloudburst
+            Lawn Sprinkler Systems, located on the internet at
+            www.cloudburstsprinkler.com and governs data collection and usage.
+            &nbsp;By using the Cloudburst website, you consent to the data
+            practices described in this statement.
+          </span>
+          <span className="privacyBody">
+            This Privacy Policy may be updated from time to time. &nbsp;Please
+            check back periodically for further updates and changes. &nbsp;The
+            most updated version will be the one that is available on this
+            website.
+          </span>
+          <span className="privacyBody">
+            This is the website of Cloudburst Lawn Sprinkler Systems.
+          </span>
+          <span className="privacyBody">
+            Our postal address is: <br /> Cloudburst Lawn Sprinkler Systems{" "}
+            <br />
+            6603 Governor Printz Blvd., <br /> Suite A Wilmington, DE 19809
+          </span>
+          <span className="privacyBody">
+            Email address: sales@cloudburstsprinkler.com <br /> Telephone: (302)
+            798-5999
+          </span>
+          <Accordion data={policy} />
+          <span className="privacyTitle" id="terms">
+            Terms of Use
+          </span>
+          <span className="privacyBody">
+            Welcome to{" "}
+            <a
+              href="https://www.cloudburstsprinkler.com/"
+              style={{ color: "inherit" }}
+            >
+              https://www.cloudburstsprinkler.com/
+            </a>
+            . &nbsp;Please take a few minutes to review the following Terms of
+            Use of our site. &nbsp;Your use of our site constitutes your
+            agreement to follow these Terms of Use and to be bound by them.
+          </span>
+          <Accordion data={terms} />
+        </div>
       </div>
       <Sitemap />
     </div>

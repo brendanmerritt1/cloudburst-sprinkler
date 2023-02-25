@@ -8,7 +8,7 @@ export default function ScrollArrow() {
 
   return (
     <div>
-      <KeyboardArrowUp className="scrollTop" onClick={scrollTop} />
+      <KeyboardArrowUp className="scrollTop" style={{fontSize: "2vw"}} onClick={scrollTop} />
     </div>
   );
 }

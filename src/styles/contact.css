@@ -124,6 +124,11 @@ button:active {
   gap: 1vw;
 }
 
+.contactBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .contactImg {
     height: 90rem;
@@ -154,5 +159,68 @@ button:active {
 
   .contactCommentForm {
     font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .contactImg {
+    height: 85rem;
+  }
+
+  .contactFormContainer {
+    width: 42rem;
+    height: 72rem;
+  }
+
+  .contactFormTitle {
+    font-size: 1.6rem;
+  }
+
+  .contactFormSubTitle {
+    font-size: 0.9rem;
+  }
+
+  .requiredField {
+    font-size: 0.9rem;
+  }
+
+  .contactFormFields {
+    width: 60%;
+    height: auto;
+  }
+
+  .contactCommentForm {
+    font-size: 1rem;
+    margin-left: -8rem;
+  }
+
+  .contactFormInput .MuiInput-input {
+    font-size: 0.7rem;
+  }
+
+  .contactFormInput .MuiInputLabel-standard {
+    font-size: 0.9rem;
+  }
+
+  .contactFormInput .MuiInputLabel-outlined {
+    font-size: 0.9rem;
+  }
+
+  .contactFormInput .MuiFormControlLabel-label {
+    font-size: 0.8rem;
+  }
+
+  .contactFormInput .MuiFormLabel-asterisk {
+    font-size: 0.8rem;
+  }
+
+  .contactButtonAlign {
+    gap: 2vw;
+  }
+
+  .navigateButton.contactButton{
+    font-size: 1.3vw;
+    width: 16vw;
+    height: 4vw;
   }
 }

@@ -1,6 +1,5 @@
 import "../../styles/contact.css";
 import TextField from "@mui/material/TextField";
-import { Button } from "@mui/material";
 import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
@@ -14,9 +13,11 @@ import {
 } from "@mui/material";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
-export default function ContactForm() {
+export default function ContactForm(props) {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1280);
+
   const [formState, setFormState] = useState({
     firstName: "",
     lastName: "",
@@ -94,6 +95,15 @@ export default function ContactForm() {
     setOpenError(false);
   };
 
+  const updateMedia = () => {
+    setIsDesktop(window.innerWidth >= 1280);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
   const theme = createTheme({
     palette: {
       primary: {
@@ -116,7 +126,13 @@ export default function ContactForm() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="contactFormContainer">
+      <div
+        className={
+          props.isOpenBlur
+            ? "contactFormContainer contactBlur"
+            : "contactFormContainer"
+        }
+      >
         <span className="contactFormTitle">
           Ready to bring your vision to life?
         </span>
@@ -139,6 +155,7 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.firstName}
             sx={{ mt: "1rem" }}
+            className="contactFormInput"
           />
           <TextField
             required
@@ -149,6 +166,7 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.lastName}
             sx={{ mt: "1rem" }}
+            className="contactFormInput"
           />
           <TextField
             required
@@ -159,6 +177,7 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.phone}
             sx={{ mt: "1rem" }}
+            className="contactFormInput"
           />
           <TextField
             required
@@ -169,6 +188,7 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.email}
             sx={{ mt: "1rem" }}
+            className="contactFormInput"
           />
           <TextField
             id="standard-basic"
@@ -178,10 +198,15 @@ export default function ContactForm() {
             onChange={handleStateChange}
             value={formState.company}
             sx={{ mt: "1rem" }}
+            className="contactFormInput"
           />
           <br />
           <FormControl>
-            <FormLabel required sx={{ mt: "1rem" }}>
+            <FormLabel
+              required
+              sx={{ mt: "1rem", fontSize: !isDesktop ? "0.9rem" : "medium" }}
+              className="contactFormInput"
+            >
               Are you a current Cloudburst Sprinkler customer?
             </FormLabel>
             <RadioGroup
@@ -190,46 +215,60 @@ export default function ContactForm() {
               onChange={handleStateChange}
             >
               <FormControlLabel
-                control={<Radio required />}
+                control={
+                  <Radio required size={!isDesktop ? "small" : "medium"} />
+                }
                 label="Yes"
                 value="Yes"
+                className="contactFormInput"
               />
               <FormControlLabel
-                control={<Radio required />}
+                control={
+                  <Radio required size={!isDesktop ? "small" : "medium"} />
+                }
                 label="No"
                 value="No"
+                className="contactFormInput"
               />
             </RadioGroup>
 
-            <FormLabel sx={{ mt: "2rem" }}>Project Type</FormLabel>
+            <FormLabel
+              sx={{ mt: "2rem", fontSize: !isDesktop ? "0.9rem" : "medium" }}
+            >
+              Project Type
+            </FormLabel>
             <RadioGroup
               value={formState.project}
               name="project"
               onChange={handleStateChange}
             >
               <FormControlLabel
-                control={<Radio />}
+                control={<Radio size={!isDesktop ? "small" : "medium"} />}
                 label="Residential Service"
                 value="Residential Service"
+                className="contactFormInput"
               />
               <FormControlLabel
-                control={<Radio />}
+                control={<Radio size={!isDesktop ? "small" : "medium"} />}
                 label="New Residential Construction"
                 value="New Residential Construction"
+                className="contactFormInput"
               />
             </RadioGroup>
           </FormControl>
 
           <br />
+
           <span className="contactCommentForm">How can we help you?</span>
           <TextField
             required
+            className="contactFormInput"
             id="standard-multiline-static"
             fullWidth={true}
             multiline
             rows={7}
             label="Comments / Project Description (500 character limit)"
-            inputProps={{ maxLength: 500 }}
+            inputProps={{ maxLength: 500, sx: { fontSize: !isDesktop ? "0.7rem" : "medium" }}}
             name="message"
             onChange={handleStateChange}
             value={formState.message}
@@ -242,20 +281,13 @@ export default function ContactForm() {
                 ref={captchaRef}
               />
 
-              <Button
+              <button
                 type="submit"
-                color="primary"
-                variant="contained"
-                sx={{
-                  width: "11vw",
-                  height: "2.75vw",
-                  borderRadius: "13% 13% 13% 13% / 50% 50% 50% 50%",
-                  fontSize: "0.8vw",
-                  backgroundColor: "#222222",
-                }}
+                className="navigateButton contactButton"
+                id="lightgray"
               >
                 SUBMIT
-              </Button>
+              </button>
             </div>
           </div>
 

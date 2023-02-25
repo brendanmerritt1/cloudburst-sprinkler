@@ -13,8 +13,9 @@
     justify-content: center;
 }
 
-.homeContainer.blur {
+.homePicContainer.blur {
     filter: blur(2px);
+    z-index: -1;
 }
 
 .homePic {

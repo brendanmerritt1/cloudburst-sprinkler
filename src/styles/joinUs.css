@@ -1,6 +1,7 @@
 .joinContainer {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .joinImg {
@@ -16,7 +17,6 @@
 .joinCaption {
   position: absolute;
   color: white;
-  gap: 0.5rem;
   margin-bottom: 8vw;
   margin-left: 8rem;
   display: flex;
@@ -33,6 +33,7 @@
 .joinCaptionSub {
   font-size: 1.2vw;
   letter-spacing: 1px;
+  margin-top: 0.5rem;
 }
 
 .joinViewContainer {
@@ -66,6 +67,11 @@
   letter-spacing: 1px;
 }
 
+.joinBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
   .joinViewContainer {
     padding: 6rem 25rem;
@@ -74,10 +80,24 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .joinViewContainer {
-    padding: 3rem 10rem;
+    padding: 5rem 10rem;
   }
 
   .joinCaption {
     margin-left: 9vw;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .joinViewContainer {
+    padding: 5rem 7rem;
+  }
+
+  .joinCaption {
+    margin-left: 4rem;
+  }
+
+  .joinParagraphCaption {
+    font-size: 1.4vw;
   }
 }

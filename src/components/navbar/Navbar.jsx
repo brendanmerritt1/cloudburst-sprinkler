@@ -27,7 +27,10 @@ export default function Navbar(props) {
         <img
           src={loadImage(img)}
           alt="Cloudburst Lawn Sprinkler Systems"
-          className="logo"
+          className={isOpen ? "logo blur" : "logo"}
+          onClick={() => {
+            navigate("/");
+          }}
         />
       </div>
       {!isDesktop && (
@@ -74,6 +77,8 @@ export default function Navbar(props) {
         <li
           onClick={() => {
             navigate("/");
+            setIsOpen(false);
+            props.setIsOpenBlur(false);
           }}
           className="navItem"
           id={props.color}

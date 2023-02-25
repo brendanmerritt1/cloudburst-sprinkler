@@ -1,3 +1,9 @@
+.galleryFlex {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
 .galleryCaptionContainer {
   position: absolute;
   color: white;
@@ -54,8 +60,19 @@
   filter: brightness(40%);
 }
 
+.galleryBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .galleryCaptionContainer {
     left: 9vw;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .galleryCaptionContainer {
+    left: 6rem;
   }
 }

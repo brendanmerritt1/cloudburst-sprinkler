@@ -1,6 +1,7 @@
 .aboutContainer {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .aboutPicContainer {
@@ -21,7 +22,6 @@
   align-items: flex-start;
   top: 33vw;
   left: 6vw;
-  gap: 0.5rem;
 }
 
 .aboutCaptionTitle {
@@ -64,6 +64,11 @@
   justify-content: center;
 }
 
+.aboutBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .aboutCaptions {
     left: 9vw;
@@ -72,5 +77,21 @@
 
   .aboutParagraphCaption {
     margin-bottom: -2.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .aboutViewContainer {
+    gap: 2rem;
+    word-spacing: 0.1rem;
+  }
+
+  .aboutParagraphCaption {
+    margin-bottom: -1rem;
+  }
+
+  .aboutParagraph {
+    line-height: 1.8vw;
+    letter-spacing: 0.5px;
   }
 }

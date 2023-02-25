@@ -12,9 +12,9 @@ export default function Home() {
   const year = today.getFullYear();
 
   return (
-    <div className={isOpenBlur ? "homeContainer blur" : "homeContainer"}>
+    <div className="homeContainer">
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur}/>
-      <div className="homePicContainer">
+      <div className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}>
         <img
           src={loadImage("home_1920")}
           alt=""

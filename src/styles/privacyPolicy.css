@@ -1,6 +1,7 @@
 .privacyContainer {
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
 .privacyNav {
@@ -9,7 +10,8 @@
 
 .privacyViewContainer {
   color: #474747;
-  padding: 5rem 7rem;
+  padding: 4rem 7rem;
+  margin: 0 8rem;
   display: flex;
   flex-direction: column;
   word-spacing: 0.1rem;
@@ -76,10 +78,35 @@
   margin-top: 2rem;
   border-bottom: 1px solid #d2d2d2;
   padding-bottom: 20px;
-  /* height: 1.5vw; */
 }
 
 .privacyItemHeading {
   font-size: 1.1vw;
   cursor: pointer;
+}
+
+.privacyBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .privacyViewContainer {
+    padding: 8rem 7rem;
+    margin: 0 15rem;
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+  .privacyViewContainer {
+    padding: 2rem 7rem;
+    margin: 0 5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .privacyViewContainer {
+    padding: 1rem 6rem;
+    margin: 0 2rem;
+  }
 }
