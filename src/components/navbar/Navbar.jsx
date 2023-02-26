@@ -43,7 +43,7 @@ export default function Navbar(props) {
           }}
         >
           <span
-            style={{ fontSize: "1.2vw", fontWeight: "300", cursor: "pointer" }}
+            className="navMenu"
             onClick={() => {
               setIsOpen(!isOpen);
               props.setIsOpenBlur(!isOpen);

@@ -32,8 +32,8 @@ export default function Home() {
             Serving Delaware, Maryland, New Jersey, and Pennsylvania.
           </span>
           <div className="homeButtons animate__animated animate__fadeIn animate__slow animate__delay-3s">
-            <NavigateButton color="gray" desc="COMMERCIAL" nav="/commercial"/>
-            <NavigateButton color="gray" desc="RESIDENTIAL" nav="/residential"/>
+            <NavigateButton color={window.screen.width < 1024 ? "mobile" : "gray"} desc="COMMERCIAL" nav="/commercial"/>
+            <NavigateButton color={window.screen.width < 1024 ? "mobile" : "gray"} desc="RESIDENTIAL" nav="/residential"/>
           </div>
         </div>
         <span className="copyright">&copy; {year} CLOUDBURST LAWN SPRINKLER SYSTEMS | ALL RIGHTS RESERVED</span>

@@ -50,7 +50,7 @@
 
 #margin.homeSubCaption {
     margin-bottom: 3rem;
-    margin-top: -0.5rem; /*change later?*/
+    margin-top: -0.5rem;
 }
 
 .homeButtons {
@@ -102,5 +102,37 @@
 
     .copyright {
         word-spacing: 1px;
+    }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+    .homeCaptions {
+        top: 28vh;
+        gap: 0.8rem;
+    }
+
+    .homeCaptionTitle {
+        font-size: 3vw;
+        letter-spacing: 1.5px;
+    }
+
+    .homeSubCaption {
+        font-size: 1.5vw;
+        word-spacing: 1px;
+        letter-spacing: 0.5px;
+    }
+
+    #margin.homeSubCaption {
+        margin-bottom: .5rem;
+    }
+
+    .homeButtons {
+        gap: 4rem;
+    }
+
+    .copyright {
+        word-spacing: 1px;
+        font-size: 1vw;
+        bottom: 0.5rem;
     }
 }

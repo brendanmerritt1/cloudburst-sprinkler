@@ -360,3 +360,81 @@
     margin-bottom: 0;
   }
 }
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .servCaptionTitle {
+    letter-spacing: 1px;
+  }
+  
+  .servCaption {
+    letter-spacing: 0.5px;
+    margin-top: 0.3rem;
+  }
+
+  .servicesContainer {
+    margin: 3rem 5rem;
+    font-size: 1.2vw;
+  }
+
+  .servGalleryRedir {
+    letter-spacing: 0px;
+    word-spacing: 1px;
+    margin-top: 1rem;
+  }
+
+  #paragraph.commTextBody {
+    margin: 0 0;
+  }
+
+  .commCTATitle {
+    font-size: 1.3vw;
+    margin-top: 2rem;
+    word-spacing: 1px;
+  }
+
+  .servParaTitle {
+    margin-bottom: -0.5rem;
+    margin-top: 2rem;
+    font-size: 1.3vw;
+  }
+  
+  .servParagraph {
+    padding-right: 2rem;
+  }
+  
+  .certPic {
+    height: 15vw;
+  }
+
+  #res.servTextParagraph {
+    margin: 0 2rem;
+  }
+
+  #bottom.captionContainer {
+    width: 70%;
+  }  
+
+  #bottom.servCaption {
+    line-height: 1.8vw;
+    letter-spacing: 1px;
+    word-spacing: 0.5px;
+  }
+
+  .contractTitle {
+    font-size: 1.2vw;
+  }
+  
+  .contractCaption {
+    font-size: 1vw;
+  }
+
+  .navigateButton {
+    font-size: 1.1vw;
+    width: 12vw;
+    height: 3vw;
+  }
+
+  #bottom.commButtonContact {
+    margin-bottom: 0;
+  }
+}
