@@ -204,7 +204,7 @@ export default function ContactForm(props) {
           <FormControl>
             <FormLabel
               required
-              sx={{ mt: "1rem", fontSize: !isDesktop ? "0.9rem" : "medium" }}
+              sx={{ mt: "1rem", fontSize: !isDesktop ? "0.8rem" : "medium" }}
               className="contactFormInput"
             >
               Are you a current Cloudburst Sprinkler customer?
@@ -233,7 +233,7 @@ export default function ContactForm(props) {
             </RadioGroup>
 
             <FormLabel
-              sx={{ mt: "2rem", fontSize: !isDesktop ? "0.9rem" : "medium" }}
+              sx={{ mt: "2rem", fontSize: !isDesktop ? "0.8rem" : "medium" }}
             >
               Project Type
             </FormLabel>
@@ -268,18 +268,22 @@ export default function ContactForm(props) {
             multiline
             rows={7}
             label="Comments / Project Description (500 character limit)"
-            inputProps={{ maxLength: 500, sx: { fontSize: !isDesktop ? "0.7rem" : "medium" }}}
+            inputProps={{
+              maxLength: 500
+            }}
             name="message"
             onChange={handleStateChange}
             value={formState.message}
           />
           <div className="contactCaptButtonCont">
             <div className="contactButtonAlign">
-              <ReCAPTCHA
-                sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
-                onChange={handleCaptcha}
-                ref={captchaRef}
-              />
+              <div className="captchaWrapper">
+                <ReCAPTCHA
+                  sitekey={process.env.REACT_APP_RECAPTCHA_SITEKEY}
+                  onChange={handleCaptcha}
+                  ref={captchaRef}
+                />
+              </div>
 
               <button
                 type="submit"

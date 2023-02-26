@@ -72,6 +72,7 @@
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
   .logo {
     margin-top: 20%;
+    width: 12vw;
   }
 }
 
@@ -86,6 +87,11 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .logo {
+    margin-top: 10%;
+    width: 15vw;
+  }
+
   .navContainer {
     flex-direction: column;
     justify-content: flex-start;

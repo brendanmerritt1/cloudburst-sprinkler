@@ -118,6 +118,10 @@
   text-align: center;
 }
 
+#paragraph.commTextBody {
+  margin: 0 3rem;
+}
+
 #center.commTextBody.CTA {
   margin-top: 4rem;
 }
@@ -263,6 +267,10 @@
     width: 115%;
   }
 
+  #paragraph.commTextBody {
+    margin: 0 1.5rem;
+  }
+
   #res.servTextParagraph {
     margin: 0 1rem;
   }
@@ -286,6 +294,18 @@
 
   .contractBox {
     height: 9vw;
+  }
+
+  #bottom.commCTATitle {
+    margin-top: -3rem;
+  }
+
+  .commButtonContact {
+    margin-bottom: 1rem;
+  }
+
+  .certs {
+    margin-bottom: -3rem;
   }
 }
 
