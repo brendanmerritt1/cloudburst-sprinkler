@@ -31,7 +31,7 @@
     align-items: center;
     position: absolute;
     color: #222222;
-    top: 11vw;
+    top: 12vw;
     gap: 1rem;
 }
 
@@ -86,7 +86,21 @@
     }
 }
 
+@media screen and (min-width: 1280px) and (max-width: 1919px) {
+    .homeCaptions {
+        top: 15vw;
+    }
+
+    #margin.homeSubCaption {
+        margin-bottom: 1.5rem;
+    }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .homeCaptions {
+        top: 14vw;
+    }
+
     .homeCaptionTitle {
         letter-spacing: 2px;
     }

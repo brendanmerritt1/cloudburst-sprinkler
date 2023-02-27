@@ -6,9 +6,10 @@ import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Commercial() {
+  const [windowWidth, setWindowWidth] = useState(window.screen.width);
   const [isOpenBlur, setIsOpenBlur] = useState(false);
   let navigate = useNavigate();
 
@@ -28,6 +29,29 @@ export default function Commercial() {
     );
   };
 
+  const selectImg = (width) => {
+    console.log(width)
+    switch (true) {
+      case width >= 1920 && width < 2560:
+        return loadImage("commercial_1920");
+
+      case width >= 1280 && width < 1920:
+        return loadImage("about_us");               //change later, this is for testing
+
+      default:
+        return loadImage("commercial_1920");
+    }
+  };
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.screen.width);
+    }
+
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
@@ -45,7 +69,11 @@ export default function Commercial() {
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div>
-          <img src={loadImage("commercial")} alt="" style={{ width: "100%" }} />
+          <img
+            src={selectImg(windowWidth)}
+            alt=""
+            style={{ width: "100%" }}
+          />
           <div className="captionContainer" id="comm">
             <p className="servCaptionTitle">Commercial</p>
             <p className="servCaption">We're ready to meet your needs.</p>
@@ -180,10 +208,7 @@ export default function Commercial() {
               <p>The Lofts at Valley Forge (PA)</p>
             </div>
           </div>
-          <div
-            className="commTextBody CTA"
-            id="center"
-          >
+          <div className="commTextBody CTA" id="center">
             <p className="commCTATitle" id="bottom">
               Ready to collaborate?
             </p>

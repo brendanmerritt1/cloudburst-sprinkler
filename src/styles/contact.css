@@ -299,6 +299,13 @@ button:active {
     margin-top: 0.5rem;
   }
 
+  #mobile.navigateButton {
+    background-color: #222222;
+    font-size: 1.1vw;
+    width: 9rem;
+    height: 2.25rem;
+  }
+
   .navigateButton.contactButton{
     font-size: 0.9rem;
     width: 10rem;
@@ -313,8 +320,8 @@ button:active {
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   #mobile.navigateButton {
     background-color: #222222;
-    font-size: 1.1vw;
-    width: 15vw;
-    height: 3.75vw;
+    font-size: 1.3vw;
+    width: 18vw;
+    height: 4.5vw;
   }
 }

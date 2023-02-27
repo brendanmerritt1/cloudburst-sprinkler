@@ -9,7 +9,7 @@ const images = {
   about_us: require("../assets/residential-sprinkler-1920.jpg"),
   about_us_v2: require("../assets/AboutUs-1920x900.jpg"),
   about_us_v3: require("../assets/AboutUs-1920x900.jpg"),
-  commercial: require("../assets/commercial-property-irrigation-1920.jpg"),
+  commercial_1920: require("../assets/commercial-property-irrigation-1920x900.jpg"),
   gallery: require("../assets/home-lawn-sprinklers-1920.jpg"),
   residential: require("../assets/residential-backyard-sprinklers-1920.jpg"),
   join_us: require("../assets/cloudburst-commercial-irrigation-1920.jpg"),
@@ -82,7 +82,7 @@ const images = {
       idx: 9
     },
     {
-      src: require("../assets/commercial-property-irrigation-1920.jpg"),
+      src: require("../assets/commercial-property-irrigation-1920x900.jpg"),
       alt: "commercial-property-irrigation",
       idx: 10
     },
