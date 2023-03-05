@@ -362,6 +362,16 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
+  #comm.captionContainer {
+    margin-left: 9vw;
+    margin-top: 46vw;
+  }
+
+  .commLocContainer {
+    margin-left: 2rem;
+    margin-top: 62vw;
+  }
+
   .servCaptionTitle {
     letter-spacing: 1px;
   }
@@ -407,11 +417,11 @@
   }
 
   #res.servTextParagraph {
-    margin: 0 2rem;
+    margin: 0 1rem;
   }
 
   #bottom.captionContainer {
-    width: 70%;
+    width: 75%;
   }  
 
   #bottom.servCaption {

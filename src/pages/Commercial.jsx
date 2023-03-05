@@ -1,10 +1,12 @@
 import "../styles/services.css";
-import Slider from "react-slick";
-import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
+import { selectImg } from "../utils/selectImg";
+import { windowResize } from "../utils/windowResize";
+import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
+import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
@@ -29,27 +31,8 @@ export default function Commercial() {
     );
   };
 
-  const selectImg = (width) => {
-    console.log(width)
-    switch (true) {
-      case width >= 1920 && width < 2560:
-        return loadImage("commercial_1920");
-
-      case width >= 1280 && width < 1920:
-        return loadImage("about_us");               //change later, this is for testing
-
-      default:
-        return loadImage("commercial_1920");
-    }
-  };
-
   useEffect(() => {
-    const handleWindowResize = () => {
-      setWindowWidth(window.screen.width);
-    }
-
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
+    return windowResize(setWindowWidth);
   }, []);
 
   const settings = {
@@ -58,8 +41,8 @@ export default function Commercial() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: windowWidth >= 1280 ? <NextArrow /> : null,
+    prevArrow: windowWidth >= 1280 ? <PrevArrow /> : null,
     autoplay: true,
     autoplaySpeed: 6000,
   };
@@ -70,7 +53,7 @@ export default function Commercial() {
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div>
           <img
-            src={selectImg(windowWidth)}
+            src={selectImg(windowWidth, "commercial")}
             alt=""
             style={{ width: "100%" }}
           />

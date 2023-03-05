@@ -95,3 +95,23 @@
     letter-spacing: 0.5px;
   }
 }
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .aboutCaptions {
+    left: 9vw;
+  }
+
+  .aboutViewContainer {
+    gap: 2.75rem;
+    word-spacing: 0.1rem;
+  }
+
+  .aboutParagraphCaption {
+    margin-bottom: -1rem;
+  }
+
+  .aboutParagraph {
+    line-height: 1.8vw;
+    letter-spacing: 0.5px;
+  }
+}

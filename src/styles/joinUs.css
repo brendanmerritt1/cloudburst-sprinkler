@@ -101,3 +101,18 @@
     font-size: 1.4vw;
   }
 }
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .joinViewContainer {
+    padding: 5rem 4rem;
+    height: 50vh;
+  }
+
+  .joinCaption {
+    margin-left: 4rem;
+  }
+
+  .joinParagraphCaption {
+    font-size: 1.4vw;
+  }
+}

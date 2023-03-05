@@ -76,3 +76,13 @@
     left: 6rem;
   }
 }
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .galleryCaptionContainer {
+    left: 9vw;
+  }
+
+  .galleryContainer {
+    padding: 4rem;
+  }
+}

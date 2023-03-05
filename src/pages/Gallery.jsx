@@ -40,7 +40,6 @@ export default function PhotoGallery() {
                   setIsShown(false);
                   setIdxHover();
                 }}
-                className="galleryPicContainer"
               >
                 {isShown && idxHover === pic.idx && (
                   <span className="galleryCaption">

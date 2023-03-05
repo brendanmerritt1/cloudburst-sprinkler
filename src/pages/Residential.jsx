@@ -4,11 +4,13 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
+import { windowResize } from "../utils/windowResize";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Residential() {
+  const [windowWidth, setWindowWidth] = useState(window.screen.width);
   const [isOpenBlur, setIsOpenBlur] = useState(false);
   let navigate = useNavigate();
 
@@ -28,14 +30,18 @@ export default function Residential() {
     );
   };
 
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    nextArrow: windowWidth >= 1280 ? <NextArrow /> : null,
+    prevArrow: windowWidth >= 1280 ? <PrevArrow /> : null,
     autoplay: true,
     autoplaySpeed: 6000,
   };
