@@ -4,21 +4,18 @@
   overflow-x: hidden;
 }
 
-.joinImg {
-  width: 100%;
-}
-
 .joinPicContainer {
-  display: flex;
+  /* display: flex;
   justify-content: flex-start;
-  align-items: flex-end;
+  align-items: flex-end; */
+  height: 92vh;
 }
 
 .joinCaption {
   position: absolute;
   color: white;
-  margin-bottom: 8vw;
-  margin-left: 8rem;
+  bottom: 19vh;
+  left: 9vw;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -73,18 +70,27 @@
 }
 
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .joinPicContainer {
+    height: 94vh;
+  }
+
+  .joinCaption {
+    top: 36vw;
+    left: 11vw;
+  }
+
   .joinViewContainer {
     padding: 6rem 25rem;
   }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-  .joinViewContainer {
-    padding: 5rem 10rem;
+  .joinCaption {
+    bottom: 22vh;
   }
 
-  .joinCaption {
-    margin-left: 9vw;
+  .joinViewContainer {
+    padding: 5rem 10rem;
   }
 }
 
@@ -94,25 +100,47 @@
   }
 
   .joinCaption {
-    margin-left: 4rem;
+    bottom: 22vh;
+  }
+
+  .joinCaption.blur {
+    filter: blur(2px);
+    bottom: 83.5vh;
   }
 
   .joinParagraphCaption {
     font-size: 1.4vw;
   }
+
+  .heroImg {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
+  .joinPicContainer {
+    height: 50vh;
+  }
+
   .joinViewContainer {
     padding: 5rem 4rem;
     height: 50vh;
   }
 
   .joinCaption {
-    margin-left: 4rem;
+    bottom: 60vh;
+  }
+
+  .joinCaption.blur {
+    filter: blur(2px);
+    bottom: 75.7vh;
   }
 
   .joinParagraphCaption {
     font-size: 1.4vw;
+  }
+
+  #join_us.heroImg {
+    width: auto;
   }
 }

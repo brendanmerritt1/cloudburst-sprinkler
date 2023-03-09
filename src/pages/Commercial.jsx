@@ -3,7 +3,6 @@ import Sitemap from "../components/sitemapFooter/Sitemap";
 import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
-import { selectImg } from "../utils/selectImg";
 import { windowResize } from "../utils/windowResize";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Slider from "react-slick";
@@ -51,17 +50,17 @@ export default function Commercial() {
     <div className="servicesNavContainer">
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
-        <div>
+        <div className="heroImgContainer">
           <img
-            src={selectImg(windowWidth, "commercial")}
+            src={loadImage("commercial")}
             alt=""
-            style={{ width: "100%" }}
+            className="heroImg"
           />
-          <div className="captionContainer" id="comm">
+          <div className={isOpenBlur ? "captionContainer blur" : "captionContainer"} id="comm">
             <p className="servCaptionTitle">Commercial</p>
             <p className="servCaption">We're ready to meet your needs.</p>
           </div>
-          <div className="commLocContainer">
+          <div className={isOpenBlur ? "commLocContainer blur" : "commLocContainer"}>
             <p style={{ fontWeight: "bold" }}>Riverfront</p>
             <p>Wilmington, DE</p>
           </div>

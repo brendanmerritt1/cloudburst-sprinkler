@@ -16,7 +16,7 @@ export default function Home() {
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur}/>
       <div className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}>
         <img
-          src={loadImage("home_1920")}
+          src={loadImage("home")}
           alt=""
           className="homePic"
         />

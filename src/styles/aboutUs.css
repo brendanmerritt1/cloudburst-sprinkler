@@ -8,10 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.aboutImg {
-  width: 100%;
+  height: 92vh;
 }
 
 .aboutCaptions {
@@ -20,8 +17,8 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  top: 33vw;
-  left: 6vw;
+  bottom: 26vh;
+  left: 9vw;
 }
 
 .aboutCaptionTitle {
@@ -69,9 +66,15 @@
   z-index: -1;
 }
 
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .aboutPicContainer {
+    height: 94vh;
+  }
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .aboutCaptions {
-    left: 9vw;
+    bottom: 26vh;
     gap: 0.2rem;
   }
 
@@ -81,6 +84,11 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .aboutCaptions.blur {
+    filter: blur(2px);
+    bottom: 85vh;
+  }
+
   .aboutViewContainer {
     gap: 2rem;
     word-spacing: 0.1rem;
@@ -97,8 +105,17 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
+  .aboutPicContainer {
+    height: 50vh;
+  }
+
   .aboutCaptions {
-    left: 9vw;
+    bottom: 60vh;
+  }
+
+  .aboutCaptions.blur {
+    filter: blur(2px);
+    bottom: 63.7vh;
   }
 
   .aboutViewContainer {

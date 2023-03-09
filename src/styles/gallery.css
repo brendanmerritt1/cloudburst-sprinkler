@@ -7,8 +7,8 @@
 .galleryCaptionContainer {
   position: absolute;
   color: white;
-  top: 35vw;
-  left: 10rem;
+  bottom: 26vh;
+  left: 9vw;
   display: flex;
   flex-direction: column;
 }
@@ -65,21 +65,51 @@
   z-index: -1;
 }
 
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .galleryCaptionContainer {
+    bottom: 25vh;
+  }
+}
+
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .galleryCaptionContainer {
-    left: 9vw;
+    top: auto;
+    bottom: 20vh;
+    left: 10vw;
+  }
+
+  .gallerySubCaption {
+    font-weight: 700;
   }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .galleryCaptionContainer {
-    left: 6rem;
+    bottom: 22vh;
+  }
+
+  .galleryCaptionContainer.blur {
+    filter: blur(2px);
+    top: 71vh;
+  }
+
+  .gallerySubCaption {
+    font-weight: 700;
   }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   .galleryCaptionContainer {
-    left: 9vw;
+    bottom: 60vh;
+  }
+
+  .galleryCaptionContainer.blur {
+    filter: blur(2px);
+    bottom: 88.5vh;
+  }
+
+  #gallery.heroImg {
+    width: auto;
   }
 
   .galleryContainer {

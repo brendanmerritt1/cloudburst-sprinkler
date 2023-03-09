@@ -14,8 +14,8 @@ export default function AboutUs() {
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "aboutBlur" : null}>
         <div className="aboutPicContainer">
-          <img src={loadImage("about_us")} alt="" className="aboutImg" />
-          <div className="aboutCaptions">
+          <img src={loadImage("about_us")} alt="" className="heroImg" />
+          <div className={isOpenBlur ? "aboutCaptions blur" : "aboutCaptions"}>
             <p className="aboutCaptionTitle">Supporting Beautiful Landscapes</p>
             <p className="aboutSubCaption">
               in Delaware, Maryland, New Jersey, and Pennsylvania since 1988.

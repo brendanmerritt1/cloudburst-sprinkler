@@ -12,7 +12,7 @@ export default function Contact() {
     <div className="contactContainer">
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <img
-        src={loadImage("contact_1920")}
+        src={loadImage("contact")}
         alt=""
         className={isOpenBlur ? "contactImg contactBlur" : "contactImg"}
       />

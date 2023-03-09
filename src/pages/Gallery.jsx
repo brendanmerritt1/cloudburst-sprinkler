@@ -17,13 +17,14 @@ export default function PhotoGallery() {
     <div className="galleryFlex">
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "galleryBlur" : null}>
-        <div>
+        <div className="heroImgContainer">
           <img
             src={loadImage("gallery")}
             alt="lawn irrigation"
-            style={{ width: "100%" }}
+            className="heroImg"
+            id="gallery"
           />
-          <div className="galleryCaptionContainer">
+          <div className={isOpenBlur ? "galleryCaptionContainer blur" : "galleryCaptionContainer"}>
             <span className="galleryCaptionTitle">Gallery</span>
             <span className="gallerySubCaption">A showcase of our work.</span>
           </div>

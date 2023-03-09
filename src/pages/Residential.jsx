@@ -50,13 +50,13 @@ export default function Residential() {
     <div className="servicesNavContainer">
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
-        <div>
+        <div className="heroImgContainer">
           <img
             src={loadImage("residential")}
             alt=""
-            style={{ width: "100%" }}
+            className="heroImg"
           />
-          <div className="captionContainer" id="res">
+          <div className={isOpenBlur ? "captionContainer blur" : "captionContainer"} id="res">
             <p className="servCaptionTitle">Residential</p>
             <p className="servCaption">
               A beautiful lawn starts with Cloudburst.

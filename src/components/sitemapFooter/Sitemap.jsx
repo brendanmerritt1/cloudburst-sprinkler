@@ -16,7 +16,7 @@ export default function Sitemap() {
         <div className="topContainer">
           <div className="contactInfo">
             <img
-              src={loadImage("white_281")}
+              src={loadImage("white")}
               alt="Cloudburst Lawn Sprinklers Systems"
               className="logo2"
             />

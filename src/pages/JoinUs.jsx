@@ -12,8 +12,8 @@ export default function JoinUs() {
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "joinBlur" : null}>
         <div className="joinPicContainer">
-          <img src={loadImage("join_us")} alt="" className="joinImg" />
-          <div className="joinCaption">
+          <img src={loadImage("join_us")} alt="" className="heroImg" id="join_us" />
+          <div className={isOpenBlur ? "joinCaption blur" : "joinCaption"}>
             <span className="joinCaptionTitle">Join Our Team</span>
             <span className="joinCaptionSub">
               and work for a premier irrigation company.

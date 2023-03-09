@@ -10,7 +10,7 @@ export default function Navbar(props) {
   const [isOpen, setIsOpen] = useState(false);
 
   let navigate = useNavigate();
-  const img = props.color === "black" ? "black_281" : "white_281";
+  const img = props.color === "black" ? "black" : "white";
 
   const updateMedia = () => {
     setIsDesktop(window.innerWidth >= 1280);
