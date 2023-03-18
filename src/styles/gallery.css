@@ -100,16 +100,26 @@
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   .galleryCaptionContainer {
-    bottom: 60vh;
+    top: 33vh;
   }
 
   .galleryCaptionContainer.blur {
     filter: blur(2px);
-    bottom: 88.5vh;
+    top: 33vh;
   }
 
   #gallery.heroImg {
     width: auto;
+  }
+
+  .galleryCaptionTitle {
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .gallerySubCaption {
+    font-size: 2vw;
+    letter-spacing: 0.41px;
   }
 
   .galleryContainer {

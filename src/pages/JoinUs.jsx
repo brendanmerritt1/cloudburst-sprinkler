@@ -10,7 +10,7 @@ export default function JoinUs() {
   return (
     <div className="joinContainer">
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
-      <div className={isOpenBlur ? "joinBlur" : null}>
+      <div className={isOpenBlur && "joinBlur"}>
         <div className="joinPicContainer">
           <img src={loadImage("join_us")} alt="" className="heroImg" id="join_us" />
           <div className={isOpenBlur ? "joinCaption blur" : "joinCaption"}>
@@ -43,8 +43,8 @@ export default function JoinUs() {
             <p className="joinParagraph">sales@cloudburstsprinkler.com</p>
           </div>
         </div>
+        <Sitemap />
       </div>
-      <Sitemap />
     </div>
   );
 }

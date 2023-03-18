@@ -5,10 +5,11 @@
 }
 
 .joinPicContainer {
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: flex-end; */
   height: 92vh;
+}
+
+#join_us.heroImg {
+  width: auto;
 }
 
 .joinCaption {
@@ -111,10 +112,6 @@
   .joinParagraphCaption {
     font-size: 1.4vw;
   }
-
-  .heroImg {
-    width: auto;
-  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
@@ -123,24 +120,36 @@
   }
 
   .joinViewContainer {
-    padding: 5rem 4rem;
+    padding: 5rem 3.2rem;
     height: 50vh;
   }
 
   .joinCaption {
-    bottom: 60vh;
+    top: 35vh;
   }
 
   .joinCaption.blur {
     filter: blur(2px);
-    bottom: 75.7vh;
+    top: 35vh;
+  }
+
+  .joinCaptionTitle {
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .joinCaptionSub {
+    font-size: 2vw;
+    letter-spacing: 0.41px;
+  }
+
+  .joinParagraph {
+    font-size: 2vw;
+    line-height: 3vw;
+    letter-spacing: -0.24px;
   }
 
   .joinParagraphCaption {
-    font-size: 1.4vw;
-  }
-
-  #join_us.heroImg {
-    width: auto;
+    font-size: 2.2vw;
   }
 }

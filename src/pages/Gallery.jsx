@@ -24,7 +24,13 @@ export default function PhotoGallery() {
             className="heroImg"
             id="gallery"
           />
-          <div className={isOpenBlur ? "galleryCaptionContainer blur" : "galleryCaptionContainer"}>
+          <div
+            className={
+              isOpenBlur
+                ? "galleryCaptionContainer blur"
+                : "galleryCaptionContainer"
+            }
+          >
             <span className="galleryCaptionTitle">Gallery</span>
             <span className="gallerySubCaption">A showcase of our work.</span>
           </div>
@@ -58,9 +64,8 @@ export default function PhotoGallery() {
             </Zoom>
           ))}
         </div>
+        <Sitemap />
       </div>
-
-      <Sitemap />
     </div>
   );
 }

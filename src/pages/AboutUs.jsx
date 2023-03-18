@@ -60,8 +60,8 @@ export default function AboutUs() {
             />
           </div>
         </div>
+        <Sitemap />
       </div>
-      <Sitemap />
     </div>
   );
 }

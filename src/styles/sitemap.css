@@ -123,7 +123,11 @@
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
     .sitemapContainer {
-        height: 15vw;
+        height: 20vw;
+    }
+
+    .topContainer {
+        font-size: 1.3vw;
     }
 
     .contactInfo {
@@ -135,22 +139,22 @@
         word-spacing: 0.1rem;
     }
 
-    .topContainer {
-        font-size: 0.7vw;
-    }
-
     .linkContainer {
         width: 40vw;
         margin: 0rem 2rem;
     }
 
     .links {
-        gap: 1.5vw;
+        gap: 1.9vw;
         column-gap: 4rem;
     }
 
+    .logo2 {
+        width: 60%;
+    }
+
     .trademark {
-        font-size: 0.5vw;
+        font-size: 1vw;
         letter-spacing: 1.5px;
     }
 }

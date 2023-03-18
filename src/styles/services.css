@@ -63,7 +63,7 @@
 }
 
 #comm.captionContainer {
-  width: 23%;
+  width: 32%;
 }
 
 #res.captionContainer {
@@ -71,6 +71,8 @@
 }
 
 #bottom.captionContainer {
+  bottom: auto;
+  left: auto;
   width: 60%;
   margin-top: 3vw;
 }
@@ -399,35 +401,48 @@
   }
 
   .captionContainer {
-    bottom: 60vh;
+    top: 33vh;
   }
 
   .commLocContainer {
-    bottom: 52vh;
+    top: 46vh;
+    letter-spacing: 0.41px;
+    font-size: 1.2vw;
   }
 
   .captionContainer.blur {
     filter: blur(2px);
-    top: 36.3vh;
+    top: 33vh;
   }
 
   .commLocContainer.blur {
     filter: blur(2px);
-    top: 46.7vh;
+    top: 46vh;
   }
 
   .servCaptionTitle {
-    letter-spacing: 1px;
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
   }
   
   .servCaption {
-    letter-spacing: 0.5px;
-    margin-top: 0.3rem;
+    font-size: 2vw;
+    letter-spacing: 0.41px;
   }
 
   .servicesContainer {
-    margin: 3rem 5rem;
-    font-size: 1.2vw;
+    margin: 0;
+    font-size: 2vw;
+    letter-spacing: -0.24px;
+  }
+
+  #center.commTextBody {
+    margin: 5rem 2rem;
+    margin-bottom: 0rem;
+  }
+
+  #center.commTextBody.CTA {
+    margin-bottom: 5rem;
   }
 
   .servGalleryRedir {
@@ -437,11 +452,11 @@
   }
 
   #paragraph.commTextBody {
-    margin: 0 0;
+    margin: 0 3.3rem;
   }
 
   .commCTATitle {
-    font-size: 1.3vw;
+    font-size: 2.2vw;
     margin-top: 2rem;
     word-spacing: 1px;
   }
@@ -449,46 +464,40 @@
   .servParaTitle {
     margin-bottom: -0.5rem;
     margin-top: 2rem;
-    font-size: 1.3vw;
+    font-size: 2.2vw;
   }
   
   .servParagraph {
-    padding-right: 2rem;
+    padding-right: 0;
+    line-height: 3vw;
   }
-  
-  .certPic {
-    height: 15vw;
+
+  #comm.servTextParagraph {
+    width: 90%;
+    line-height: 3vw;
   }
 
   #res.servTextParagraph {
-    margin: 0 1rem;
+    margin: 0;
+    line-height: 3vw;
   }
 
-  #bottom.captionContainer {
-    width: 75%;
-  }  
-
-  #bottom.servCaption {
-    line-height: 1.8vw;
-    letter-spacing: 1px;
-    word-spacing: 0.5px;
-  }
-
-  .contractTitle {
-    font-size: 1.2vw;
-  }
-  
-  .contractCaption {
-    font-size: 1vw;
+  #noSpace.resButtonContact {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
   }
 
   .navigateButton {
-    font-size: 1.1vw;
-    width: 12vw;
-    height: 3vw;
+    font-size: 2vw;
+    width: 22vw;
+    height: 5.5vw;
   }
 
   #bottom.commButtonContact {
     margin-bottom: 0;
+  }
+
+  .certPic {
+    height: 25vw;
   }
 }

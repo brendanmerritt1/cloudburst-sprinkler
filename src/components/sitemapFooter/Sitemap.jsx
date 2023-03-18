@@ -2,13 +2,20 @@ import "../../styles/sitemap.css";
 import { useNavigate } from "react-router-dom";
 import ScrollArrow from "./ScrollArrow";
 import { loadImage } from "../../utils/imageLoader";
+import { windowResize } from "../../utils/windowResize";
+import { useState, useEffect } from "react";
 
 export default function Sitemap() {
+  const [windowWidth, setWindowWidth] = useState(window.screen.width);
   let navigate = useNavigate();
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="sitemapContainer">
@@ -79,7 +86,9 @@ export default function Sitemap() {
                 onClick={() => {
                   navigate("/contact");
                   scrollTop();
-                  setTimeout(() => {window.location.reload(false)}, 800); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
+                  setTimeout(() => {
+                    window.location.reload(false);
+                  }, 800); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
                 }}
               >
                 CONTACT US
@@ -107,9 +116,11 @@ export default function Sitemap() {
         </div>
       </div>
 
-      <div className="arrowContainer">
-        <ScrollArrow />
-      </div>
+      {windowWidth >= 1280 && (
+        <div className="arrowContainer">
+          <ScrollArrow />
+        </div>
+      )}
     </div>
   );
 }

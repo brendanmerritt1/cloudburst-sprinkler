@@ -110,25 +110,38 @@
   }
 
   .aboutCaptions {
-    bottom: 60vh;
+    top: 33vh;
   }
 
   .aboutCaptions.blur {
     filter: blur(2px);
-    bottom: 63.7vh;
+    top: 33vh;
+  }
+
+  .aboutCaptionTitle {
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .aboutSubCaption {
+    font-size: 2vw;
+    letter-spacing: 0.41px;
   }
 
   .aboutViewContainer {
     gap: 2.75rem;
     word-spacing: 0.1rem;
+    padding: 5rem 5rem;
   }
 
   .aboutParagraphCaption {
+    font-size: 2.2vw;
     margin-bottom: -1rem;
   }
 
   .aboutParagraph {
-    line-height: 1.8vw;
-    letter-spacing: 0.5px;
+    font-size: 2vw;
+    line-height: 3vw;
+    letter-spacing: -0.24px;
   }
 }
