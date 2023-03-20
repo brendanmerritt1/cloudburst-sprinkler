@@ -111,6 +111,29 @@
     margin: 0 2rem;
     margin-bottom: 2rem;
   }
+
+  .privacyHeading {
+    width: 100%;
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .privacyTitle {
+    font-size: 2.2vw;
+    letter-spacing: -0.24px;
+  }
+
+  .privacyBody {
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+    letter-spacing: -0.24px;
+    margin: 1rem 0;
+  }
+
+  .privacyItemHeading {
+    font-size: 1.6vw;
+    letter-spacing: -0.24px;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {

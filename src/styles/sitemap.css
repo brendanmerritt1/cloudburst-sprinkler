@@ -1,160 +1,203 @@
 .sitemapContainer {
-    display: flex;
-    flex-direction: row;
-    background-color: #222222;
-    height: 13vw;
-    width: 100%;
-    letter-spacing: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  background-color: #222222;
+  height: 13vw;
+  width: 100%;
+  letter-spacing: 0.1rem;
 }
 
 .flexColumn {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .topContainer {
-    display: flex;
-    flex-direction: row;
-    height: 80%;
-    width: 100%;
-    font-size: 0.75vw;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  height: 80%;
+  width: 100%;
+  font-size: 0.75vw;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .contactInfo {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 30vw;
-    height: 100%;
-    color: white;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  height: 100%;
+  color: white;
+  gap: 1rem;
 }
 
 .logo2 {
-    width: 40%;
+  width: 40%;
 }
 
 .phoneIconContainer {
-    display: flex;
-    flex-direction: row;
-    color: white;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .phoneNumbers {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    word-spacing: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  word-spacing: 0.2rem;
+}
+
+a[href^="tel:"] {
+  color: white;
+  text-decoration: underline;
 }
 
 .linkContainer {
-    display: flex;
-    width: 30vw;
-    height: 100%;
-    align-items: center;
-    margin: 0rem 5rem;
+  display: flex;
+  width: 30vw;
+  height: 100%;
+  align-items: center;
+  margin: 0rem 5rem;
 }
 
 .links {
-    display: flex;
-    flex-flow: column wrap;
-    list-style: none;
-    color: white;
-    gap: 1.3vw;
-    column-gap: 5rem;
-    cursor: pointer;
-    height: 80%;
-    width: 100%;
+  display: flex;
+  flex-flow: column wrap;
+  list-style: none;
+  color: white;
+  gap: 1.3vw;
+  column-gap: 5rem;
+  cursor: pointer;
+  height: 80%;
+  width: 100%;
 }
 
 .bottomContainer {
-    display: flex;
-    height: 15%;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 15%;
+  align-items: center;
+  justify-content: center;
 }
 
 .trademark {
-    color: #878787;
-    font-size: 0.6vw;
-    margin-left: 3rem;
+  color: #878787;
+  font-size: 0.6vw;
+  margin-left: 3rem;
 }
 
 .arrowContainer {
-    width: 5vw;
+  width: 5vw;
 }
 
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
-    .sitemapContainer {
-        height: 12vw;
-    }
+  .sitemapContainer {
+    height: 12vw;
+  }
 
-    .topContainer {
-        font-size: 0.7vw;
-    }
+  .topContainer {
+    font-size: 0.7vw;
+  }
 
-    .trademark {
-        font-size: 0.55vw;
-    }
+  .trademark {
+    font-size: 0.55vw;
+  }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-    .sitemapContainer {
-        height: 12vw;
-    }
+  .sitemapContainer {
+    height: 12vw;
+  }
 
-    .topContainer {
-        font-size: 0.7vw;
-    }
+  .topContainer {
+    font-size: 0.7vw;
+  }
 
-    .trademark {
-        font-size: 0.5vw;
-    }
+  .trademark {
+    font-size: 0.5vw;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .sitemapContainer {
+    height: 15vw;
+  }
+
+  .topContainer {
+    font-size: 1vw;
+  }
+
+  .contactInfo {
+    gap: 0.5rem;
+  }
+
+  .phoneNumbers {
+    gap: 0.25rem;
+    word-spacing: 0.1rem;
+  }
+
+  .linkContainer {
+    width: 40vw;
+    margin: 0rem 2rem;
+  }
+
+  .links {
+    gap: 1.4vw;
+    column-gap: 4rem;
+  }
+
+  .logo2 {
+    width: 45%;
+  }
+
+  .trademark {
+    font-size: 0.75vw;
+    letter-spacing: 1.5px;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
-    .sitemapContainer {
-        height: 20vw;
-    }
+  .sitemapContainer {
+    height: 20vw;
+  }
 
-    .topContainer {
-        font-size: 1.3vw;
-    }
+  .topContainer {
+    font-size: 1.3vw;
+  }
 
-    .contactInfo {
-        gap: 0.5rem;
-    }
+  .contactInfo {
+    gap: 0.5rem;
+  }
 
-    .phoneNumbers {
-        gap: 0.25rem;
-        word-spacing: 0.1rem;
-    }
+  .phoneNumbers {
+    gap: 0.25rem;
+    word-spacing: 0.1rem;
+  }
 
-    .linkContainer {
-        width: 40vw;
-        margin: 0rem 2rem;
-    }
+  .linkContainer {
+    width: 40vw;
+    margin: 0rem 2rem;
+  }
 
-    .links {
-        gap: 1.9vw;
-        column-gap: 4rem;
-    }
+  .links {
+    gap: 1.9vw;
+    column-gap: 4rem;
+  }
 
-    .logo2 {
-        width: 60%;
-    }
+  .logo2 {
+    width: 60%;
+  }
 
-    .trademark {
-        font-size: 1vw;
-        letter-spacing: 1.5px;
-    }
+  .trademark {
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+  }
 }

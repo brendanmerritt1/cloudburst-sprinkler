@@ -85,16 +85,23 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .galleryCaptionContainer {
-    bottom: 22vh;
+    top: 65vh;
+    left: 20vw;
   }
 
   .galleryCaptionContainer.blur {
     filter: blur(2px);
-    top: 71vh;
+    top: 65vh;
   }
 
+  .galleryCaptionTitle {
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+  
   .gallerySubCaption {
-    font-weight: 700;
+    font-size: 1.5vw;
+    letter-spacing: 0.41px;
   }
 }
 

@@ -65,6 +65,11 @@
   letter-spacing: 1px;
 }
 
+a[href^="mailto:"] {
+  color: #222222;
+  text-decoration: underline;
+}
+
 .joinBlur {
   filter: blur(2px);
   z-index: -1;
@@ -97,20 +102,36 @@
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .joinViewContainer {
-    padding: 5rem 7rem;
+    padding: 5rem 3.5rem;
   }
 
   .joinCaption {
-    bottom: 22vh;
+    top: 65vh;
   }
 
   .joinCaption.blur {
     filter: blur(2px);
-    bottom: 83.5vh;
+    bottom: 65vh;
+  }
+
+  .joinCaptionTitle {
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .joinCaptionSub {
+    font-size: 1.5vw;
+    letter-spacing: 0.41px;
+  }
+
+  .joinParagraph {
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+    letter-spacing: -0.24px;
   }
 
   .joinParagraphCaption {
-    font-size: 1.4vw;
+    font-size: 1.6vw;
   }
 }
 

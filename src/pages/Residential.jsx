@@ -90,7 +90,7 @@ export default function Residential() {
                 nav="/contact"
               />
             </div>
-            <div style={{ width: "60%" }}>
+            <div className="servSlider">
               <Slider {...settings}>
                 {loadImage("residentialCarousel").map((img, idx) => (
                   <div key={idx}>
@@ -153,7 +153,7 @@ export default function Residential() {
                 nav="/contact"
               />
             </div>
-            {windowWidth > 1023 ? <DesktopResContracts /> : <MobileResContracts />}
+            {windowWidth >= 1280 ? <DesktopResContracts /> : <MobileResContracts />}
           </div>
         </div>
       </div>

@@ -29,8 +29,12 @@ export default function Sitemap() {
             />
             <div className="phoneIconContainer">
               <div className="phoneNumbers">
-                <span>Delaware 302.798.5999</span>
-                <span>Pennsylvania 610.640.4067</span>
+                <span itemProp="telephone">
+                  Delaware <a href="tel:302-798-5999">302-798-5999</a>
+                </span>
+                <span>
+                  Pennsylvania <a href="tel:610-640-4067">610-640-4067</a>
+                </span>
               </div>
             </div>
           </div>

@@ -88,7 +88,7 @@ export default function Commercial() {
                 nav="/contact"
               />
             </div>
-            <div style={{ width: "60%" }}>
+            <div className="servSlider" >
               <Slider {...settings}>
                 {loadImage("commercialCarousel").map((img, idx) => (
                   <div key={idx}>
@@ -211,7 +211,6 @@ export default function Commercial() {
           </div>
         </div>
       </div>
-
       <Sitemap />
     </div>
   );

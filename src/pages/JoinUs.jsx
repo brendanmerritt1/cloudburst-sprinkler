@@ -12,7 +12,12 @@ export default function JoinUs() {
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur && "joinBlur"}>
         <div className="joinPicContainer">
-          <img src={loadImage("join_us")} alt="" className="heroImg" id="join_us" />
+          <img
+            src={loadImage("join_us")}
+            alt=""
+            className="heroImg"
+            id="join_us"
+          />
           <div className={isOpenBlur ? "joinCaption blur" : "joinCaption"}>
             <span className="joinCaptionTitle">Join Our Team</span>
             <span className="joinCaptionSub">
@@ -37,10 +42,24 @@ export default function JoinUs() {
             <p className="joinParagraphCaption">
               Ready to join us? Call us today.
             </p>
-            <p className="joinParagraph">Delaware (302) 798-5999</p>
-            <p className="joinParagraph">Pennsylvania (610) 640-4067</p>
-            <p className="joinParagraphCaption">Or send us an email.</p>
-            <p className="joinParagraph">sales@cloudburstsprinkler.com</p>
+            <span className="joinParagraph">
+              Delaware:&nbsp;
+              <a href="tel:302-798-5999" style={{ color: "#222222" }}>
+                (302) 798-5999
+              </a>
+            </span>
+            <span className="joinParagraph">
+              Pennsylvania:&nbsp;
+              <a href="tel:610-640-4067" style={{ color: "#222222" }}>
+                (610) 640-4067
+              </a>
+            </span>
+            <span className="joinParagraphCaption">Or send us an email.</span>
+            <span className="joinParagraph">
+              <a href="mailto:sales@cloudburstsprinkler.com">
+                sales@cloudburstsprinkler.com
+              </a>
+            </span>
           </div>
         </div>
         <Sitemap />

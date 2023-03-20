@@ -169,6 +169,11 @@
   margin-top: 0;
 }
 
+.servSlider {
+  width: 60%;
+}
+
+
 .servGalleryRedir {
   letter-spacing: 0px;
   cursor: pointer;
@@ -334,40 +339,94 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .captionContainer {
+    top: 65vh;
+  }
+
   .captionContainer.blur {
     filter: blur(2px);
-    top: 67vh;
+    top: 65vh;
+  }
+
+  .commLocContainer {
+    top: 85vh;
+    letter-spacing: 0.41px;
+    font-size: 1vw;
   }
 
   .commLocContainer.blur {
     filter: blur(2px);
-    top: 87.3vh;
+    top: 85vh;
+  }
+
+  .servCaptionTitle {
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .servCaption {
+    font-size: 1.5vw;
+    letter-spacing: 0.41px;
   }
 
   .servicesContainer {
-    margin: 5rem 2rem;
-    font-size: 1.1vw;
+    margin: 0;
+    font-size: 1.5vw;
+    letter-spacing: -0.24px;
+  }
+
+  #center.commTextBody {
+    margin: 5rem 9rem;
+    margin-bottom: 0rem;
   }
 
   #paragraph.commTextBody {
-    margin: 0 4rem;
+    margin: 0 5rem;
   }
 
   .commCTATitle {
-    font-size: 1.3vw;
+    font-size: 1.7vw;
+    margin-top: 2rem;
+    word-spacing: 1px;
+  }
+
+  .servSlider {
+    width: 80%;
+  }
+
+  .servGalleryRedir {
+    letter-spacing: 0px;
+    word-spacing: 1px;
+    margin-top: 1rem;
   }
 
   .servParaTitle {
-    margin-bottom: -1rem;
-    margin-top: 3rem;
+    margin-bottom: -0.5rem;
+    margin-top: 2rem;
+    font-size: 1.6vw;
+  }
+  
+  .servParagraph {
+    padding-right: 0;
+    line-height: 2.2vw;
+  }
+
+  .commIndentedList {
+    line-height: 3vw;
   }
   
   .certPic {
-    height: 15vw;
+    height: 20vw;
+  }
+
+  #comm.servTextParagraph {
+    width: 100%;
+    line-height: 2.2vw;
   }
 
   #res.servTextParagraph {
-    margin: 0 2rem;
+    margin: 0;
+    line-height: 2.2vw;
   }
 
   #bottom.servCaption {
@@ -470,6 +529,10 @@
   .servParagraph {
     padding-right: 0;
     line-height: 3vw;
+  }
+
+  .commIndentedList {
+    line-height: 4vw;
   }
 
   #comm.servTextParagraph {

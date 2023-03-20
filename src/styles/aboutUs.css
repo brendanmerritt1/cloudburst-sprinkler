@@ -84,23 +84,44 @@
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .aboutCaptions {
+    top: 65vh;
+  }
+
   .aboutCaptions.blur {
     filter: blur(2px);
-    bottom: 85vh;
+    bottom: 65vh;
+  }
+
+  .aboutCaptionTitle {
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .aboutSubCaption {
+    font-size: 1.5vw;
+    letter-spacing: 0.41px;
   }
 
   .aboutViewContainer {
-    gap: 2rem;
+    gap: 2.75rem;
     word-spacing: 0.1rem;
+    padding: 5rem 6rem;
   }
 
   .aboutParagraphCaption {
     margin-bottom: -1rem;
   }
 
+  .aboutParagraphCaption {
+    font-size: 1.6vw;
+    margin-bottom: -1rem;
+  }
+
   .aboutParagraph {
-    line-height: 1.8vw;
-    letter-spacing: 0.5px;
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+    letter-spacing: -0.24px;
   }
 }
 
