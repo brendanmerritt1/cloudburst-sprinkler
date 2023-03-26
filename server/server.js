@@ -35,14 +35,15 @@ app.post(process.env.REACT_APP_API_URL, async (req, res) => {
 });
 
 let transporter = nodemailer.createTransport({
-  service: "gmail",
+  host: process.env.REACT_APP_HOST,
+  port: 587,
+  secure: false,
   auth: {
-    type: "OAuth2",
     user: process.env.REACT_APP_EMAIL,
     pass: process.env.REACT_APP_PASS,
-    clientId: process.env.REACT_APP_OAUTH_CLIENTID,
-    clientSecret: process.env.REACT_APP_OAUTH_CLIENT_SECRET,
-    refreshToken: process.env.REACT_APP_OAUTH_REFRESH_TOKEN,
+  },
+  tls: {
+    rejectUnauthorized: false,
   },
 });
 
@@ -57,7 +58,7 @@ transporter.verify((err, success) => {
 
 app.post(process.env.REACT_APP_SUBMIT_URL, (req, res) => {
   let mailOptions = {
-    from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${req.body.formState.email}>`,
+    from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${process.env.REACT_APP_EMAIL}>`,
     to: process.env.REACT_APP_EMAIL,
     replyTo: `${req.body.formState.email}`,
     subject: `Message from: ${req.body.formState.firstName} ${req.body.formState.lastName}`,

@@ -413,3 +413,13 @@ button:active {
     transform: scale(0.8);
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  #mobile.navigateButton {
+    background-color: #222222;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    font-size: 2.5vw;
+    width: 40vw;
+    height: 8vw;
+  }
+}

@@ -14,12 +14,12 @@ export default function Accordion(props) {
   return (
     <div>
       {props.data.map((item, idx) => (
-        <div className="privacyItem">
+        <div className="privacyItem" key={idx}>
           <div className="privacyItemHeading" onClick={() => toggle(idx)}>
             <span>{selected === idx ? "- " : "+ "} &nbsp;&nbsp;</span>
             {item.heading}
           </div>
-          {item.body.map((type) => {
+          {item.body.map((type, i) => {
             if (type.paragraph) {
               return (
                 <div
@@ -27,6 +27,7 @@ export default function Accordion(props) {
                     selected === idx ? "privacyBody show" : "privacyBody"
                   }
                   id="content"
+                  key={i}
                 >
                   {type.paragraph}
                 </div>
@@ -38,6 +39,7 @@ export default function Accordion(props) {
                     selected === idx ? "privacyBody show" : "privacyBody"
                   }
                   id="title"
+                  key={i}
                 >
                   {type.title}
                 </div>
@@ -50,9 +52,10 @@ export default function Accordion(props) {
                       selected === idx ? "privacyBody show" : "privacyBody"
                     }
                     id="content"
+                    key={i}
                   >
-                    {type.list.map((bullet) => (
-                      <li>{bullet}</li>
+                    {type.list.map((bullet, i) => (
+                      <li key={i}>{bullet}</li>
                     ))}
                     <ul
                       className={
@@ -60,8 +63,8 @@ export default function Accordion(props) {
                       }
                       id="content"
                     >
-                      {type.sublist.map((bullet) => (
-                        <li>{bullet}</li>
+                      {type.sublist.map((bullet, i) => (
+                        <li key={i}>{bullet}</li>
                       ))}
                     </ul>
                   </ul>
@@ -73,9 +76,10 @@ export default function Accordion(props) {
                     selected === idx ? "privacyBody show" : "privacyBody"
                   }
                   id="content"
+                  key={i}
                 >
-                  {type.list.map((bullet) => (
-                    <li>{bullet}</li>
+                  {type.list.map((bullet, i) => (
+                    <li key={i}>{bullet}</li>
                   ))}
                 </ul>
               );

@@ -61,7 +61,7 @@ export default function Navbar(props) {
         </div>
       )}
       <ul className={isOpen ? "navContainer show" : "navContainer hide"}>
-        {!isDesktop ? (
+        {!isDesktop && (
           <div className="mobileNavClose">
             <TfiClose
               onClick={() => {
@@ -71,8 +71,6 @@ export default function Navbar(props) {
               style={{ cursor: "pointer" }}
             />
           </div>
-        ) : (
-          ""
         )}
         <li
           onClick={() => {

@@ -201,3 +201,42 @@ a[href^="tel:"] {
     letter-spacing: 1.5px;
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  .sitemapContainer {
+    height: 30vw;
+  }
+
+  .topContainer {
+    font-size: 2.3vw;
+  }
+
+  .contactInfo {
+    gap: 0.5rem;
+    width: 40%;
+  }
+
+  .phoneNumbers {
+    gap: 0.25rem;
+    word-spacing: 0.1rem;
+  }
+
+  .linkContainer {
+    width: 40vw;
+    margin: 0rem 2rem;
+  }
+
+  .links {
+    gap: 2.4vw;
+    column-gap: 4rem;
+  }
+
+  .logo2 {
+    width: 60%;
+  }
+
+  .trademark {
+    font-size: 1vw;
+    letter-spacing: 1.5px;
+  }
+}

@@ -100,6 +100,15 @@ export default function Sitemap() {
               <li
                 className="link"
                 onClick={() => {
+                  navigate("/join-us");
+                  scrollTop();
+                }}
+              >
+                JOIN US
+              </li>
+              <li
+                className="link"
+                onClick={() => {
                   navigate("/privacy-policy");
                   scrollTop();
                 }}

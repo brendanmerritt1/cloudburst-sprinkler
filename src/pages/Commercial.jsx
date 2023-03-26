@@ -4,6 +4,7 @@ import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
+import Accordion from "../components/services/Accordion";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
@@ -51,16 +52,21 @@ export default function Commercial() {
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div className="heroImgContainer">
-          <img
-            src={loadImage("commercial")}
-            alt=""
-            className="heroImg"
-          />
-          <div className={isOpenBlur ? "captionContainer blur" : "captionContainer"} id="comm">
+          <img src={loadImage("commercial")} alt="" className="heroImg" />
+          <div
+            className={
+              isOpenBlur ? "captionContainer blur" : "captionContainer"
+            }
+            id="comm"
+          >
             <p className="servCaptionTitle">Commercial</p>
             <p className="servCaption">We're ready to meet your needs.</p>
           </div>
-          <div className={isOpenBlur ? "commLocContainer blur" : "commLocContainer"}>
+          <div
+            className={
+              isOpenBlur ? "commLocContainer blur" : "commLocContainer"
+            }
+          >
             <p style={{ fontWeight: "bold" }}>Riverfront</p>
             <p>Wilmington, DE</p>
           </div>
@@ -88,7 +94,7 @@ export default function Commercial() {
                 nav="/contact"
               />
             </div>
-            <div className="servSlider" >
+            <div className="servSlider">
               <Slider {...settings}>
                 {loadImage("commercialCarousel").map((img, idx) => (
                   <div key={idx}>
@@ -107,89 +113,40 @@ export default function Commercial() {
               View All Projects In Gallery
             </p>
           </div>
-          <div className="commTextBody" id="paragraph">
-            <p className="servParaTitle">New Construction and Development</p>
-            <p className="servParagraph">
-              New construction irrigation projects demand significant
-              coordination, resources, and experience. &nbsp;You can count on
-              our talented teams at Cloudburst to navigate common challenges and
-              develop solutions to ensure your project goals are met to your
-              satisfaction and in a timely manner.
-            </p>
-            <p className="servParagraph">
-              We have the capabilities to handle union work and accept bids for
-              prevailing wage rate work.
-            </p>
-            <p className="servParagraph">
-              We service a wide range of businesses including, but not limited
-              to:
-            </p>
-            <div className="commIndentedList">
-              <p>Multi-Family Apartments, Duplexes, and Condominiums</p>
-              <p>HOA and Housing Developments</p>
-              <p>Retail Centers</p>
-              <p>Medical Centers</p>
-              <p>Office Buildings</p>
-              <p>Athletic Fields</p>
-              <p>Schools and University Campuses</p>
-              <p>Municipal Buildings</p>
-              <p>Parks and Recreation</p>
+          {windowWidth >= 700 ? (
+            <div className="commTextBody" id="paragraph">
+              <p className="servParaTitle">{data[0].heading}</p>
+              <p className="servParagraph">{data[0].body[0].paragraph}</p>
+              <p className="servParagraph">{data[0].body[1].paragraph}</p>
+              <p className="servParagraph">{data[0].body[2].paragraph}</p>
+              <div className="commIndentedList">
+                {data[0].body[3].list.map((para, i) => {
+                  return <p key={i}>{para}</p>;
+                })}
+              </div>
+              <p className="servParaTitle">{data[1].heading}</p>
+              <p className="servParagraph">{data[1].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[2].heading}</p>
+              <p className="servParagraph">{data[2].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[3].heading}</p>
+              <p className="servParagraph">{data[3].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[4].heading}</p>
+              <p className="servParagraph">{data[4].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[5].heading}</p>
+              <p className="servParagraph">{data[5].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[6].heading}</p>
+              <p className="servParagraph">{data[6].body[0].paragraph}</p>
+              <div className="commIndentedList">
+                {data[6].body[1].list.map((para, i) => {
+                  return <p key={i}>{para}</p>;
+                })}
+              </div>
             </div>
-            <p className="servParaTitle"> Two-Wire Installations</p>
-            <p className="servParagraph">
-              As a leader in the industry, we're certified experts in installing
-              and troubleshooting two-wire landscape irrigation systems.
-              &nbsp;Our technicians have mastered today's sophisticated control
-              systems and will develop solutions to ensure that project goals
-              are met.
-            </p>
-            <p className="servParaTitle">Backflow Testing & Repairs</p>
-            <p className="servParagraph">
-              Our Certified Backflow Prevention Assembly Testers will test and
-              certify new or existing back flow preventers and troubleshoot any
-              necessary repairs.
-            </p>
-            <p className="servParaTitle">
-              Repairs, Retrofitting, and Renovations
-            </p>
-            <p className="servParagraph">
-              Mainline repairs, retrofits, a hardscape upgrade - we understand
-              that over the years there may be landscape renovations and
-              improvements that can impact your existing irrigation system.
-              &nbsp;Our experienced team will find the best plan to
-              troubleshoot, reconfigure, or retrofit your sprinkler system to
-              keep it running smoothly.
-            </p>
-            <p className="servParaTitle">Green Roof Installations</p>
-            <p className="servParagraph">
-              If you're interested in going green, we can help design,
-              construct, and maintain your green roof project.
-            </p>
-            <p className="servParaTitle">Commercial Maintenance Contracts</p>
-            <p className="servParagraph">
-              To keep your system running its best, we offer commercial
-              maintenance contracts. Contact us to learn more.
-            </p>
-            <p className="servParaTitle">
-              Commercial Projects Completed by Cloudburst
-            </p>
-            <p className="servParagraph">
-              Join our growing list of projects that we're proud of.
-            </p>
-            <div className="commIndentedList">
-              <p>Subaru Park - MLS Philadelphia Union Athletic Field (PA)</p>
-              <p>
-                Emily B. Clark Historic Garden - University of Delaware (DE)
-              </p>
-              <p>
-                Solomon Solis-Cohen Elementary School - Green Roof Irrigation
-                (PA)
-              </p>
-              <p>Mormon Tabernacle Church (PA)</p>
-              <p>Riverfront Wilmington (DE)</p>
-              <p>The Lofts at Valley Forge (PA)</p>
+          ) : (
+            <div className="commTextBody" id="paragraph">
+              <Accordion data={data} />
             </div>
-          </div>
+          )}
           <div className="commTextBody CTA" id="center">
             <p className="commCTATitle" id="bottom">
               Ready to collaborate?
@@ -215,3 +172,99 @@ export default function Commercial() {
     </div>
   );
 }
+
+const data = [
+  {
+    heading: "New Construction and Development",
+    body: [
+      {
+        paragraph:
+          "New construction irrigation projects demand significant coordination, resources, and experience. You can count on our talented teams at Cloudburst to navigate common challenges and develop solutions to ensure your project goals are met to your satisfaction and in a timely manner.",
+      },
+      {
+        paragraph:
+          "We have the capabilities to handle union work and accept bids for prevailing wage rate work.",
+      },
+      {
+        paragraph:
+          "We service a wide range of businesses including, but not limited to:",
+      },
+      {
+        list: [
+          "Multi-Family Apartments, Duplexes, and Condominiums",
+          "HOA and Housing Developments",
+          "Retail Centers",
+          "Medical Centers",
+          "Office Buildings",
+          "Athletic Fields",
+          "Schools and University Campuses",
+          "Municipal Buildings",
+          "Parks and Recreation",
+        ],
+      },
+    ],
+  },
+  {
+    heading: "Two-Wire Installations",
+    body: [
+      {
+        paragraph:
+          "As a leader in the industry, we're certified experts in installing and troubleshooting two-wire landscape irrigation systems. Our technicians have mastered today's sophisticated control systems and will develop solutions to ensure that project goals are met.",
+      },
+    ],
+  },
+  {
+    heading: "Backflow Testing & Repairs",
+    body: [
+      {
+        paragraph:
+          "Our Certified Backflow Prevention Assembly Testers will test and certify new or existing back flow preventers and troubleshoot any necessary repairs.",
+      },
+    ],
+  },
+  {
+    heading: "Repairs, Retrofitting, and Renovations",
+    body: [
+      {
+        paragraph:
+          "Mainline repairs, retrofits, a hardscape upgrade - we understand that over the years there may be landscape renovations and improvements that can impact your existing irrigation system.  Our experienced team will find the best plan to troubleshoot, reconfigure, or retrofit your sprinkler system to keep it running smoothly.",
+      },
+    ],
+  },
+  {
+    heading: "Green Roof Installations",
+    body: [
+      {
+        paragraph:
+          "If you're interested in going green, we can help design, construct, and maintain your green roof project.",
+      },
+    ],
+  },
+  {
+    heading: "Commercial Maintenance Contracts",
+    body: [
+      {
+        paragraph:
+          "To keep your system running its best, we offer commercial maintenance contracts. Contact us to learn more.",
+      },
+    ],
+  },
+  {
+    heading: "Commercial Projects Completed by Cloudburst",
+    body: [
+      {
+        paragraph: "Join our growing list of projects that we're proud of.",
+      },
+      {
+        list: [
+          "Subaru Park - MLS Philadelphia Union Athletic Field (PA)",
+          "Emily B. Clark Historic Garden - University of Delaware (DE)",
+          "Solomon Solis-Cohen Elementary School - Green Roof Irrigation (PA)",
+          "Mormon Tabernacle Church (PA)",
+          "Riverfront Wilmington (DE)",
+          "The Lofts at Valley Forge (PA)",
+        ],
+      },
+    ],
+  },
+];

@@ -166,3 +166,39 @@
     letter-spacing: -0.24px;
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  .privacyViewContainer {
+    padding: 1rem 4rem;
+    margin: 0 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .privacyHeading {
+    width: 100%;
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
+  }
+
+  .privacyTitle {
+    font-size: 2.2vw;
+    letter-spacing: -0.24px;
+  }
+
+  .privacyBody {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+    margin: 1rem 0;
+  }
+
+  #content.privacyBody.show {
+    margin: 2rem 0 1rem 0;
+  }
+
+  .privacyItemHeading {
+    font-size: 3.8vw;
+    letter-spacing: -0.24px;
+    font-weight: 400;
+  }
+}
