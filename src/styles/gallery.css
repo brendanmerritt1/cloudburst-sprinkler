@@ -133,3 +133,43 @@
     padding: 4rem;
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  .galleryCaptionContainer {
+    top: 35vh;
+  }
+
+  .galleryCaptionContainer.blur {
+    filter: blur(2px);
+    top: 35vh;
+  }
+
+  #gallery.heroImg {
+    object-position: 90%;
+  }
+
+  .galleryCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .gallerySubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .galleryContainer {
+    padding: 2rem;
+    column-gap: 3vw;
+    row-gap: 2vw;
+  }
+
+  .galleryBoxH {
+    width: 40vw;
+    height: 30vw;
+  }
+
+  .galleryBoxH:hover {
+    filter: none;
+  }
+}

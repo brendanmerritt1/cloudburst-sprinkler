@@ -422,4 +422,84 @@ button:active {
     width: 40vw;
     height: 8vw;
   }
+
+  .contactImg {
+    height: 97rem;
+  }
+
+  .contactFormContainer {
+    width: 25rem;
+    height: auto;
+    border-radius: 30px 30px 30px 30px;
+  }
+
+  .contactFormTitle {
+    font-size: 1.5rem;
+    top: 2rem;
+  }
+
+  .contactFormSubTitle {
+    font-size: 1rem;
+    top: 2.5rem;
+    padding: 0 3rem;
+  }
+
+  .requiredField {
+    font-size: 0.85rem;
+    position: relative;
+    top: 4rem;
+    right: auto;
+  }
+
+  .contactFormFields {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+
+  .contactCommentForm {
+    font-size: 1.2rem;
+    margin-left: 0;
+  }
+
+  .contactFormInput .MuiInput-input {
+    font-size: 1rem;
+  }
+
+  .contactFormInput .MuiInputLabel-standard {
+    font-size: 1rem;
+  }
+
+  .contactFormInput .MuiInputLabel-outlined {
+    font-size: 0.85rem;
+  }
+
+  .contactFormInput .MuiFormControlLabel-label {
+    font-size: 1rem;
+  }
+
+  .contactFormInput .MuiFormLabel-asterisk {
+    font-size: 0.85rem;
+  }
+
+  .contactButtonAlign {
+    gap: 1rem;
+  }
+
+  .contactCaptButtonCont {
+    margin-top: 0.5rem;
+  }
+
+  .navigateButton.contactButton{
+    font-size: 0.9rem;
+    width: 10rem;
+    height: 2.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .captchaWrapper {
+    transform: none;
+  }
 }

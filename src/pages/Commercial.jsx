@@ -1,5 +1,6 @@
 import "../styles/services.css";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
@@ -52,7 +53,12 @@ export default function Commercial() {
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div className="heroImgContainer">
-          <img src={loadImage("commercial")} alt="" className="heroImg" />
+          <img
+            src={loadImage("commercial")}
+            alt=""
+            className="heroImg"
+            id="comm"
+          />
           <div
             className={
               isOpenBlur ? "captionContainer blur" : "captionContainer"
@@ -168,7 +174,7 @@ export default function Commercial() {
           </div>
         </div>
       </div>
-      <Sitemap />
+      {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }

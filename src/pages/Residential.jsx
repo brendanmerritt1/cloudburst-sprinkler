@@ -2,8 +2,10 @@ import "../styles/services.css";
 import Slider from "react-slick";
 import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Navbar from "../components/navbar/Navbar";
 import NavigateButton from "../components/services/NavigateButton";
+import Accordion from "../components/services/Accordion";
 import DesktopResContracts from "../components/residentialContracts/DesktopResContracts";
 import MobileResContracts from "../components/residentialContracts/MobileResContracts";
 import { windowResize } from "../utils/windowResize";
@@ -57,8 +59,14 @@ export default function Residential() {
             src={loadImage("residential")}
             alt=""
             className="heroImg"
+            id="res"
           />
-          <div className={isOpenBlur ? "captionContainer blur" : "captionContainer"} id="res">
+          <div
+            className={
+              isOpenBlur ? "captionContainer blur" : "captionContainer"
+            }
+            id="res"
+          >
             <p className="servCaptionTitle">Residential</p>
             <p className="servCaption">
               A beautiful lawn starts with Cloudburst.
@@ -83,7 +91,7 @@ export default function Residential() {
               fully licensed and insured. &nbsp;We service Delaware, Maryland,
               New Jersey, and Pennsylvania.
             </p>
-            <div className="resButtonContact">
+            <div className="resButtonContact" id="noSpace">
               <NavigateButton
                 color="lightgray"
                 desc="CONTACT US"
@@ -109,40 +117,23 @@ export default function Residential() {
               View All Projects In Gallery
             </p>
           </div>
-          <div className="commTextBody" id="paragraph">
-            <p className="servParaTitle">Customer Service</p>
-            <p className="servParagraph">
-              We prioritize communication and being responsive. &nbsp;With every
-              job, we'll keep you up to date and informed about appointments,
-              when to expect a technician, and our progress along the way.
-            </p>
-            <p className="servParagraph">
-              You can count on our on-call service to be prompt and reliable to
-              troubleshoot your sprinkler system.
-            </p>
-            <p className="servParaTitle"> Smart WiFi Controller Upgrades</p>
-            <p className="servParagraph">
-              An efficient sprinkler system can save you money. &nbsp;Upgrade
-              today with a smart controller and save on average up to 30% on
-              water usage. &nbsp;Smart controllers use the latest technology and
-              real-time weather data to adjust the frequency of watering to
-              ensure a consistent schedule and prevent overwatering.
-              &nbsp;Contact us to learn more.
-            </p>
-            <p className="servParaTitle">Free Estimates, No Obligation</p>
-            <p className="servParagraph">
-              We'll meet with you at your home to discuss your needs.
-              &nbsp;Every proposal includes a comprehensive digital plan
-              outlining a custom design with detailed measurements, zones, and
-              recommended equipment unique to your landscape requirements.
-              &nbsp;All new installations are backed by a 5-year warranty on
-              parts and labor.
-            </p>
-          </div>
-          <div
-            className="commTextBody CTA"
-            id="center"
-          >
+          {windowWidth >= 700 ? (
+            <div className="commTextBody" id="paragraph">
+              <p className="servParaTitle">{data[0].heading}</p>
+              <p className="servParagraph">{data[0].body[0].paragraph}</p>
+              <p className="servParagraph">{data[0].body[1].paragraph}</p>
+              <p className="servParaTitle">{data[1].heading}</p>
+              <p className="servParagraph">{data[1].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[2].heading}</p>
+              <p className="servParagraph">{data[2].body[0].paragraph}</p>
+            </div>
+          ) : (
+            <div className="commTextBody" id="paragraph">
+              <Accordion data={data} />
+            </div>
+          )}
+
+          <div className="commTextBody CTA" id="center">
             <p className="commCTATitle" id="bottom">
               We'll help you get beautiful results.
             </p>
@@ -153,11 +144,49 @@ export default function Residential() {
                 nav="/contact"
               />
             </div>
-            {windowWidth >= 1280 ? <DesktopResContracts /> : <MobileResContracts />}
+            {windowWidth >= 1280 ? (
+              <DesktopResContracts />
+            ) : (
+              <MobileResContracts />
+            )}
           </div>
         </div>
       </div>
-      <Sitemap />
+      {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }
+
+const data = [
+  {
+    heading: "Customer Service",
+    body: [
+      {
+        paragraph:
+          "We prioritize communication and being responsive. With every job, we'll keep you up to date and informed about appointments, when to expect a technician, and our progress along the way.",
+      },
+      {
+        paragraph:
+          "You can count on our on-call service to be prompt and reliable to troubleshoot your sprinkler system.",
+      },
+    ],
+  },
+  {
+    heading: "Smart WiFi Controller Upgrades",
+    body: [
+      {
+        paragraph:
+          "An efficient sprinkler system can save you money. Upgrade today with a smart controller and save on average up to 30% on water usage. Smart controllers use the latest technology and real-time weather data to adjust the frequency of watering to ensure a consistent schedule and prevent overwatering. Contact us to learn more.",
+      },
+    ],
+  },
+  {
+    heading: "Free Estimates, No Obligation",
+    body: [
+      {
+        paragraph:
+          "We'll meet with you at your home to discuss your needs. Every proposal includes a comprehensive digital plan outlining a custom design with detailed measurements, zones, and recommended equipment unique to your landscape requirements. All new installations are backed by a 5-year warranty on parts and labor.",
+      },
+    ],
+  },
+];

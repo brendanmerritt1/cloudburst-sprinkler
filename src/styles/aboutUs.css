@@ -166,3 +166,45 @@
     letter-spacing: -0.24px;
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  .aboutPicContainer {
+    height: 50vh;
+  }
+
+  .aboutCaptions {
+    top: 35vh;
+  }
+
+  .aboutCaptions.blur {
+    filter: blur(2px);
+    top: 35vh;
+  }
+
+  .aboutCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .aboutSubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .aboutViewContainer {
+    gap: 2rem;
+    word-spacing: 0.1rem;
+    padding: 3rem 3rem;
+  }
+
+  .aboutParagraphCaption {
+    font-size: 4vw;
+    margin-bottom: -1rem;
+  }
+
+  .aboutParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+}

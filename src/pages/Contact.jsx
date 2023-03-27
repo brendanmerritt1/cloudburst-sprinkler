@@ -1,6 +1,7 @@
 import "../styles/contact.css";
 import ContactForm from "../components/forms/ContactForm";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Navbar from "../components/navbar/Navbar";
 import { loadImage } from "../utils/imageLoader";
 import { useState } from "react";
@@ -17,7 +18,7 @@ export default function Contact() {
         className={isOpenBlur ? "contactImg contactBlur" : "contactImg"}
       />
       <ContactForm isOpenBlur={isOpenBlur} />
-      <Sitemap />
+      {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }

@@ -200,11 +200,18 @@ export default function ContactForm(props) {
             sx={{ mt: "1rem" }}
             className="contactFormInput"
           />
-          <br />
-          <FormControl>
+          {/* <br /> */}
+          <FormControl sx={{ p: window.screen.width < 700 && "0 6rem" }}>
             <FormLabel
               required
-              sx={{ mt: "1rem", fontSize: !isDesktop ? "0.8rem" : "medium" }}
+              sx={{
+                mt: "1rem",
+                fontSize: !isDesktop
+                  ? window.screen.width >= 700
+                    ? "0.8rem"
+                    : "1rem"
+                  : "medium",
+              }}
               className="contactFormInput"
             >
               Are you a current Cloudburst Sprinkler customer?
@@ -233,7 +240,14 @@ export default function ContactForm(props) {
             </RadioGroup>
 
             <FormLabel
-              sx={{ mt: "2rem", fontSize: !isDesktop ? "0.8rem" : "medium" }}
+              sx={{
+                mt: "2rem",
+                fontSize: !isDesktop
+                  ? window.screen.width >= 700
+                    ? "0.8rem"
+                    : "1rem"
+                  : "medium",
+              }}
             >
               Project Type
             </FormLabel>
@@ -257,7 +271,7 @@ export default function ContactForm(props) {
             </RadioGroup>
           </FormControl>
 
-          <br />
+          {/* <br /> */}
 
           <span className="contactCommentForm">How can we help you?</span>
           <TextField
@@ -269,8 +283,9 @@ export default function ContactForm(props) {
             rows={7}
             label="Comments / Project Description (500 character limit)"
             inputProps={{
-              maxLength: 500
+              maxLength: 500,
             }}
+            sx={{width: window.screen.width < 700 && "90%"}}
             name="message"
             onChange={handleStateChange}
             value={formState.message}

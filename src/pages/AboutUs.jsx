@@ -2,6 +2,7 @@ import "../styles/aboutUs.css";
 import "../styles/contact.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { useState } from "react";
@@ -16,9 +17,12 @@ export default function AboutUs() {
         <div className="aboutPicContainer">
           <img src={loadImage("about_us")} alt="" className="heroImg" />
           <div className={isOpenBlur ? "aboutCaptions blur" : "aboutCaptions"}>
-            <p className="aboutCaptionTitle">Supporting Beautiful Landscapes</p>
+            <p className="aboutCaptionTitle">
+              {window.screen.width >= 700 && "Supporting"} Beautiful Landscapes
+            </p>
             <p className="aboutSubCaption">
-              in Delaware, Maryland, New Jersey, and Pennsylvania since 1988.
+              in Delaware, Maryland, New Jersey,
+              {window.screen.width < 700 && <br />} and Pennsylvania since 1988.
             </p>
           </div>
         </div>
@@ -60,7 +64,7 @@ export default function AboutUs() {
             />
           </div>
         </div>
-        <Sitemap />
+        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );

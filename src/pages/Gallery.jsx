@@ -1,6 +1,7 @@
 import "../styles/gallery.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import { loadImage, loadGallery } from "../utils/imageLoader";
 import { loadCaption } from "../utils/captionLoader";
 import Zoom from "react-medium-image-zoom";
@@ -48,7 +49,7 @@ export default function PhotoGallery() {
                   setIdxHover();
                 }}
               >
-                {isShown && idxHover === pic.idx && (
+                {isShown && idxHover === pic.idx && window.screen.width >= 700 && (
                   <span className="galleryCaption">
                     {loadCaption("pic" + pic.idx)}
                   </span>
@@ -64,7 +65,7 @@ export default function PhotoGallery() {
             </Zoom>
           ))}
         </div>
-        <Sitemap />
+        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );
