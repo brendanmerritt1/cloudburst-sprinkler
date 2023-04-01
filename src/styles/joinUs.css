@@ -182,3 +182,51 @@ a[href^="mailto:"] {
     font-size: 2.2vw;
   }
 }
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  #join_us.heroImg {
+    object-position: 0%;
+  }
+  
+  .joinPicContainer {
+    height: 50vh;
+  }
+
+  .joinViewContainer {
+    padding: 3rem 2rem;
+  }
+
+  .joinCaption {
+    top: 35vh;
+  }
+
+  .joinCaption.blur {
+    filter: blur(2px);
+    top: 35vh;
+  }
+
+  .joinCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .joinCaptionSub {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .joinParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+
+  .joinContactUs {
+    margin-top: -1rem;
+  }
+
+  .joinParagraphCaption {
+    font-size: 4vw;
+    margin-top: 3rem;
+  }
+}

@@ -1,6 +1,7 @@
 import "../styles/joinUs.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import { loadImage } from "../utils/imageLoader";
 import { useState } from "react";
 
@@ -62,7 +63,7 @@ export default function JoinUs() {
             </span>
           </div>
         </div>
-        <Sitemap />
+        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import "../styles/privacyPolicy.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
+import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Accordion from "../components/services/Accordion";
 import { useState } from "react";
 
@@ -20,19 +21,19 @@ export default function PrivacyPolicy() {
           <span className="privacyBody">
             Our Privacy Policy outlines what information we collect from you,
             how we use your information and the choices that you have regarding
-            our use of your information. &nbsp;Please take a few minutes to
+            our use of your information. Please take a few minutes to
             review our Privacy Statement for this site.
           </span>
           <span className="privacyBody">
             This Statement of Privacy applies only to the website of Cloudburst
             Lawn Sprinkler Systems, located on the internet at
             www.cloudburstsprinkler.com and governs data collection and usage.
-            &nbsp;By using the Cloudburst website, you consent to the data
+            By using the Cloudburst website, you consent to the data
             practices described in this statement.
           </span>
           <span className="privacyBody">
-            This Privacy Policy may be updated from time to time. &nbsp;Please
-            check back periodically for further updates and changes. &nbsp;The
+            This Privacy Policy may be updated from time to time. Please
+            check back periodically for further updates and changes. The
             most updated version will be the one that is available on this
             website.
           </span>
@@ -60,14 +61,14 @@ export default function PrivacyPolicy() {
             >
               https://www.cloudburstsprinkler.com/
             </a>
-            . &nbsp;Please take a few minutes to review the following Terms of
-            Use of our site. &nbsp;Your use of our site constitutes your
+            . Please take a few minutes to review the following Terms of
+            Use of our site. Your use of our site constitutes your
             agreement to follow these Terms of Use and to be bound by them.
           </span>
           <Accordion data={terms} />
         </div>
+        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
-      <Sitemap />
     </div>
   );
 }

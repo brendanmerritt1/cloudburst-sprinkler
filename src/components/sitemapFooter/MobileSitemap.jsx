@@ -43,15 +43,6 @@ export default function MobileSitemap() {
             <li
               className="link"
               onClick={() => {
-                navigate("/about");
-                scrollTop();
-              }}
-            >
-              ABOUT CLOUDBURST
-            </li>
-            <li
-              className="link"
-              onClick={() => {
                 navigate("/commercial");
                 scrollTop();
               }}
@@ -75,6 +66,15 @@ export default function MobileSitemap() {
               }}
             >
               GALLERY
+            </li>
+            <li
+              className="link"
+              onClick={() => {
+                navigate("/about");
+                scrollTop();
+              }}
+            >
+              ABOUT CLOUDBURST
             </li>
             <li
               className="link"

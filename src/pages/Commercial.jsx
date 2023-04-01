@@ -173,8 +173,8 @@ export default function Commercial() {
             </div>
           </div>
         </div>
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
-      {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }

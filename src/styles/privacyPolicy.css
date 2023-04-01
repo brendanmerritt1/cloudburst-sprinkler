@@ -169,19 +169,18 @@
 
 @media screen and (min-width: 415px) and (max-width: 699px) {
   .privacyViewContainer {
-    padding: 1rem 4rem;
-    margin: 0 2rem;
-    margin-bottom: 2rem;
+    padding: 1rem 1.2rem;
+    margin: 0 0 2rem 0;
   }
 
   .privacyHeading {
     width: 100%;
-    font-size: 4.4vw;
+    font-size: 6vw;
     letter-spacing: 0.41px;
   }
 
   .privacyTitle {
-    font-size: 2.2vw;
+    font-size: 4vw;
     letter-spacing: -0.24px;
   }
 
@@ -193,11 +192,11 @@
   }
 
   #content.privacyBody.show {
-    margin: 2rem 0 1rem 0;
+    margin: 1rem 0;
   }
 
   .privacyItemHeading {
-    font-size: 3.8vw;
+    font-size: 3.7vw;
     letter-spacing: -0.24px;
     font-weight: 400;
   }

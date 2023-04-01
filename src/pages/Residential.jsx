@@ -151,8 +151,8 @@ export default function Residential() {
             )}
           </div>
         </div>
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
-      {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }
