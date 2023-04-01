@@ -503,3 +503,23 @@ button:active {
     transform: none;
   }
 }
+
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  #mobile.navigateButton {
+    background-color: #222222;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    font-size: 2.5vw;
+    width: 40vw;
+    height: 8vw;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 349px) {
+  #mobile.navigateButton {
+    background-color: #222222;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    font-size: 2.5vw;
+    width: 40vw;
+    height: 8vw;
+  }
+}
