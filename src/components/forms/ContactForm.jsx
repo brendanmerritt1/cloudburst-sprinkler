@@ -100,9 +100,13 @@ export default function ContactForm(props) {
   };
 
   const dynamicMargin = (width) => {
-    if (width >= 415 && width <= 699) {
+    if (width >= 700 && width <= 1279) {
+      return "0 4rem";
+    }
+    else if (width >= 415 && width <= 699) {
       return "0 6rem";
-    } else if (width >= 350 && width <= 414) {
+    }
+    else if (width >= 350 && width <= 414) {
       return "0 4rem";
     } else if (width < 350) {
       return "0 3rem";
@@ -303,7 +307,7 @@ export default function ContactForm(props) {
             inputProps={{
               maxLength: 500,
             }}
-            sx={{ width: window.screen.width < 700 && "90%" }}
+            sx={{ width: "90%" }}
             name="message"
             onChange={handleStateChange}
             value={formState.message}

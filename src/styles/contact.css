@@ -186,7 +186,7 @@ button:active {
 
   .contactCommentForm {
     font-size: 1.1rem;
-    margin-left: -6rem;
+    margin-left: 0;
   }
 
   .navigateButton.contactButton{
@@ -268,7 +268,7 @@ button:active {
 
   .contactCommentForm {
     font-size: 1rem;
-    margin-left: -3.5rem;
+    margin-left: 0;
   }
 
   .contactFormInput .MuiInput-input {
@@ -371,7 +371,7 @@ button:active {
 
   .contactCommentForm {
     font-size: 1rem;
-    margin-left: -3.5rem;
+    margin-left: 0;
   }
 
   .contactFormInput .MuiInput-input {
