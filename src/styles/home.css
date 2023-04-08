@@ -125,8 +125,13 @@
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
+    .homePic {
+        height: 100dvh;
+    }
+
     .homeCaptions {
         top: 28vh;
+        top: 28dvh;
         gap: 0.8rem;
     }
 
@@ -157,27 +162,14 @@
     }
 }
 
-@media screen and (min-width: 700px) and (max-width: 1023px) and (max-height: 450px) {
-    .homePicContainer {
-        height: 200vh;
-    }
-
-    .homePic {
-        height: 100%;
-    }
-
-    .homeCaptions {
-        top: 45vh;
-    }
-    
-    .copyright {
-        bottom: -95vh;
-    }
-}
-
 @media screen and (min-width: 415px) and (max-width: 699px) {
+    .homePic {
+        height: 100dvh;
+    }
+
     .homeCaptions {
         top: 23vh;
+        top: 23dvh;
         gap: 1.25rem;
     }
 
@@ -201,6 +193,7 @@
 
     #margin.homeSubCaption {
         margin-bottom: 30vh;
+        margin-bottom: 30dvh;
     }
 
     .homeButtons {
@@ -216,9 +209,16 @@
     }
 }
 
+/* TODO: LANDSCAPE ORIENTATIONS */
+
 @media screen and (min-width: 350px) and (max-width: 414px) {
+    .homePic {
+        height: 100dvh;
+    }
+
     .homeCaptions {
         top: 20vh;
+        top: 20dvh;
         gap: 1.25rem;
     }
 
@@ -242,6 +242,7 @@
 
     #margin.homeSubCaption {
         margin-bottom: 30vh;
+        margin-bottom: 30dvh;
     }
 
     .homeButtons {
@@ -258,8 +259,13 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 349px) {
+    .homePic {
+        height: 100dvh;
+    }
+
     .homeCaptions {
         top: 15vh;
+        top: 15dvh;
         gap: 1.25rem;
     }
 
@@ -283,6 +289,7 @@
 
     #margin.homeSubCaption {
         margin-bottom: 27vh;
+        margin-bottom: 27dvh;
     }
 
     .homeButtons {

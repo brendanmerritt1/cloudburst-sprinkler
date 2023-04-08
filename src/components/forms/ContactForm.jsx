@@ -99,6 +99,32 @@ export default function ContactForm(props) {
     setIsDesktop(window.innerWidth >= 1280);
   };
 
+  const dynamicMargin = (width) => {
+    if (width >= 415 && width <= 699) {
+      return "0 6rem";
+    } else if (width >= 350 && width <= 414) {
+      return "0 4rem";
+    } else if (width < 350) {
+      return "0 3rem";
+    } else {
+      return "0 6rem";
+    }
+  };
+
+  const dynamicFontSize = (width) => {
+    if (width >= 1280) {
+      return "medium";
+    } else if (width >= 700 && width <= 1023) {
+      return "0.8rem";
+    } else if (width >= 350 && width <= 699) {
+      return "1rem";
+    } else if (width < 350) {
+      return "0.9rem";
+    } else {
+      return "medium";
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
@@ -201,16 +227,12 @@ export default function ContactForm(props) {
             className="contactFormInput"
           />
           {/* <br /> */}
-          <FormControl sx={{ p: window.screen.width < 700 && "0 6rem" }}>
+          <FormControl sx={{ p: dynamicMargin(window.screen.width) }}>
             <FormLabel
               required
               sx={{
                 mt: "1rem",
-                fontSize: !isDesktop
-                  ? window.screen.width >= 700
-                    ? "0.8rem"
-                    : "1rem"
-                  : "medium",
+                fontSize: dynamicFontSize(window.screen.width),
               }}
               className="contactFormInput"
             >
@@ -242,11 +264,7 @@ export default function ContactForm(props) {
             <FormLabel
               sx={{
                 mt: "2rem",
-                fontSize: !isDesktop
-                  ? window.screen.width >= 700
-                    ? "0.8rem"
-                    : "1rem"
-                  : "medium",
+                fontSize: dynamicFontSize(window.screen.width),
               }}
             >
               Project Type
@@ -285,7 +303,7 @@ export default function ContactForm(props) {
             inputProps={{
               maxLength: 500,
             }}
-            sx={{width: window.screen.width < 700 && "90%"}}
+            sx={{ width: window.screen.width < 700 && "90%" }}
             name="message"
             onChange={handleStateChange}
             value={formState.message}

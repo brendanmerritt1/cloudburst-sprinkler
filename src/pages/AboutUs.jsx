@@ -15,7 +15,7 @@ export default function AboutUs() {
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "aboutBlur" : null}>
         <div className="aboutPicContainer">
-          <img src={loadImage("about_us")} alt="" className="heroImg" />
+          <img src={loadImage("about_us")} alt="" className="heroImg" id="aboutUs"/>
           <div className={isOpenBlur ? "aboutCaptions blur" : "aboutCaptions"}>
             <p className="aboutCaptionTitle">
               {window.screen.width >= 700 && "Supporting"} Beautiful Landscapes

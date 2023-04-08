@@ -76,19 +76,19 @@ export default function Residential() {
         <div className="servicesContainer">
           <div className="commTextBody" id="center">
             <p className="servTextParagraph" id="res">
-              Walking barefoot across a lush lawn. &nbsp;Kids playing tag in the
-              back yard. &nbsp;What's your vision?
+              Walking barefoot across a lush lawn. Kids playing tag in the
+              back yard. What's your vision?
             </p>
             <p className="servTextParagraph" id="res">
               For over 30 years, Cloudburst has been helping homeowners enhance
-              their landscape with a reliable irrigation system. &nbsp;Whether
+              their landscape with a reliable irrigation system. Whether
               you're upgrading an aging sprinkler system or you're ready to
               outfit your dream backyard oasis with a new sprinkler system, you
               can rely on our experienced teams for your project.
             </p>
             <p className="servTextParagraph" id="res">
               Cloudburst is a full-service residential irrigation company that's
-              fully licensed and insured. &nbsp;We service Delaware, Maryland,
+              fully licensed and insured. We service Delaware, Maryland,
               New Jersey, and Pennsylvania.
             </p>
             <div className="resButtonContact" id="noSpace">

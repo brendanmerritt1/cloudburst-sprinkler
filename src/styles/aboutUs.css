@@ -128,15 +128,18 @@
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   .aboutPicContainer {
     height: 50vh;
+    height: 50dvh;
   }
 
   .aboutCaptions {
     top: 33vh;
+    top: 33dvh;
   }
 
   .aboutCaptions.blur {
     filter: blur(2px);
     top: 33vh;
+    top: 33dvh;
   }
 
   .aboutCaptionTitle {
@@ -170,15 +173,18 @@
 @media screen and (min-width: 415px) and (max-width: 699px) {
   .aboutPicContainer {
     height: 50vh;
+    height: 50dvh;
   }
 
   .aboutCaptions {
     top: 35vh;
+    top: 35dvh;
   }
 
   .aboutCaptions.blur {
     filter: blur(2px);
     top: 35vh;
+    top: 35dvh;
   }
 
   .aboutCaptionTitle {
@@ -195,6 +201,104 @@
     gap: 2rem;
     word-spacing: 0.1rem;
     padding: 3rem 3rem;
+  }
+
+  .aboutParagraphCaption {
+    font-size: 4vw;
+    margin-bottom: -1rem;
+  }
+
+  .aboutParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  .aboutPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  #aboutUs.heroImg {
+    object-position: 70%;
+  }
+
+  .aboutCaptions {
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .aboutCaptions.blur {
+    filter: blur(2px);
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .aboutCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .aboutSubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .aboutViewContainer {
+    gap: 2rem;
+    word-spacing: 0.1rem;
+    padding: 3rem 2rem;
+  }
+
+  .aboutParagraphCaption {
+    font-size: 4vw;
+    margin-bottom: -1rem;
+  }
+
+  .aboutParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 349px) {
+  .aboutPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  #aboutUs.heroImg {
+    object-position: 70%;
+  }
+
+  .aboutCaptions {
+    top: 32vh;
+    top: 32dvh;
+  }
+
+  .aboutCaptions.blur {
+    filter: blur(2px);
+    top: 32vh;
+    top: 32dvh;
+  }
+
+  .aboutCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .aboutSubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .aboutViewContainer {
+    gap: 1.5rem;
+    word-spacing: 0.1rem;
+    padding: 2rem 1.75rem;
   }
 
   .aboutParagraphCaption {

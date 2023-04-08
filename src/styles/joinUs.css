@@ -194,6 +194,7 @@ a[href^="mailto:"] {
 
   .joinViewContainer {
     padding: 3rem 2rem;
+    gap: 2.5rem;
   }
 
   .joinCaption {
@@ -227,6 +228,110 @@ a[href^="mailto:"] {
 
   .joinParagraphCaption {
     font-size: 4vw;
+    margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  #join_us.heroImg {
+    object-position: 0%;
+  }
+  
+  .joinPicContainer {
+    height: 60vh;
+    height: 60dvh;
+  }
+
+  .joinViewContainer {
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .joinCaption {
+    top: 45vh;
+    top: 45dvh;
+  }
+
+  .joinCaption.blur {
+    filter: blur(2px);
+    top: 45vh;
+    top: 45dvh;
+  }
+
+  .joinCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .joinCaptionSub {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .joinParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+
+  .joinContactUs {
+    margin-top: -1rem;
+  }
+
+  .joinParagraphCaption {
+    font-size: 4vw;
     margin-top: 3rem;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 349px) {
+  #join_us.heroImg {
+    object-position: 72%;
+  }
+  
+  .joinPicContainer {
+    height: 60vh;
+    height: 60dvh;
+  }
+
+  .joinViewContainer {
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .joinCaption {
+    top: 42vh;
+    top: 42dvh;
+  }
+
+  .joinCaption.blur {
+    filter: blur(2px);
+    top: 42vh;
+    top: 42dvh;
+  }
+
+  .joinCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .joinCaptionSub {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .joinParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+  }
+
+  .joinContactUs {
+    margin-top: -1rem;
+  }
+
+  .joinParagraphCaption {
+    font-size: 4vw;
+    margin-top: 2rem;
   }
 }
