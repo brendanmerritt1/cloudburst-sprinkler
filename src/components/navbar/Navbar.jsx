@@ -16,6 +16,14 @@ export default function Navbar(props) {
     setIsDesktop(window.innerWidth >= 1280);
   };
 
+  const changeZIndex = (open) => {
+    if (open) {
+      return "1";
+    } else {
+      return "2";
+    }
+  };
+
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
@@ -40,6 +48,7 @@ export default function Navbar(props) {
             alignItems: "center",
             gap: "1vw",
             color: props.color,
+            zIndex: changeZIndex(isOpen),
           }}
         >
           <span

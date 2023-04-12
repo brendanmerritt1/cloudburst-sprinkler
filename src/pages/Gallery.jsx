@@ -38,7 +38,7 @@ export default function PhotoGallery() {
         </div>
         <div className="galleryContainer">
           {pics.map((pic) => (
-            <Zoom>
+            <Zoom classDialog="custom-zoom">
               <div
                 onMouseEnter={() => {
                   setIsShown(true);

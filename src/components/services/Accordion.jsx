@@ -17,7 +17,7 @@ export default function Accordion(props) {
         <div className="privacyItem" key={idx}>
           <div className="privacyItemHeading" onClick={() => toggle(idx)}>
             <span>{selected === idx ? "- " : "+ "} &nbsp;&nbsp;</span>
-            {item.heading}
+            <span>{item.heading}</span>
           </div>
           {item.body.map((type, i) => {
             if (type.paragraph) {

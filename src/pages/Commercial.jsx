@@ -220,7 +220,7 @@ const data = [
     ],
   },
   {
-    heading: "Backflow Testing & Repairs",
+    heading: "Backflow Testing and Repairs",
     body: [
       {
         paragraph:
@@ -233,7 +233,7 @@ const data = [
     body: [
       {
         paragraph:
-          "Mainline repairs, retrofits, a hardscape upgrade - we understand that over the years there may be landscape renovations and improvements that can impact your existing irrigation system.  Our experienced team will find the best plan to troubleshoot, reconfigure, or retrofit your sprinkler system to keep it running smoothly.",
+          "Mainline repairs, retrofits, hardscape upgrades - we understand that over the years there may be landscape renovations and improvements that can impact your existing irrigation system.  Our experienced team will find the best plan to troubleshoot, reconfigure, or retrofit your sprinkler system to keep it running smoothly.",
       },
     ],
   },

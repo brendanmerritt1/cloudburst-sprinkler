@@ -318,6 +318,7 @@ a[href^="mailto:"] {
   .joinCaptionSub {
     font-size: 3vw;
     letter-spacing: 0.41px;
+    margin-top: 0.25rem;
   }
 
   .joinParagraph {

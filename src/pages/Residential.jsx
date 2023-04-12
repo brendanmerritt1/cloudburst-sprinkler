@@ -126,6 +126,8 @@ export default function Residential() {
               <p className="servParagraph">{data[1].body[0].paragraph}</p>
               <p className="servParaTitle">{data[2].heading}</p>
               <p className="servParagraph">{data[2].body[0].paragraph}</p>
+              <p className="servParaTitle">{data[3].heading}</p>
+              <p className="servParagraph">{data[3].body[0].paragraph}</p>
             </div>
           ) : (
             <div className="commTextBody" id="paragraph">
@@ -177,6 +179,15 @@ const data = [
       {
         paragraph:
           "An efficient sprinkler system can save you money. Upgrade today with a smart controller and save on average up to 30% on water usage. Smart controllers use the latest technology and real-time weather data to adjust the frequency of watering to ensure a consistent schedule and prevent overwatering. Contact us to learn more.",
+      },
+    ],
+  },
+  {
+    heading: "Maintaining Your System",
+    body: [
+      {
+        paragraph:
+          "Protect your investment with a maintenance plan. We'll maintain your sprinkler system like it's our own. See our residential maintenance plan below to learn more.",
       },
     ],
   },

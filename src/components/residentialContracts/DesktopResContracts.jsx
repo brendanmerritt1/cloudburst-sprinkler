@@ -10,9 +10,7 @@ export default function DesktopResContracts() {
           Residential Maintenance Contracts
         </p>
         <p className="servCaption" id="bottom">
-          Protect your investment with a maintenance plan. &nbsp;We'll maintain
-          your sprinkler system like it's our own. &nbsp;Contact us to learn
-          more.
+          Throughout the year, we've got you covered. Contact us to learn more.
         </p>
       </div>
       <div className="contractBoxContainer">

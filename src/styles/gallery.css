@@ -56,7 +56,7 @@
   z-index: 1;
 }
 
-.galleryCaption:hover ~.galleryBoxH {
+.galleryCaption:hover ~ .galleryBoxH {
   filter: brightness(40%);
 }
 
@@ -98,7 +98,7 @@
     font-size: 3.3vw;
     letter-spacing: 0.41px;
   }
-  
+
   .gallerySubCaption {
     font-size: 1.5vw;
     letter-spacing: 0.41px;
@@ -125,7 +125,7 @@
     font-size: 4.4vw;
     letter-spacing: 0.41px;
   }
-  
+
   .gallerySubCaption {
     font-size: 2vw;
     letter-spacing: 0.41px;
@@ -156,7 +156,7 @@
     font-size: 6vw;
     letter-spacing: 0.41px;
   }
-  
+
   .gallerySubCaption {
     font-size: 3vw;
     letter-spacing: 0.41px;
@@ -200,7 +200,7 @@
     font-size: 6vw;
     letter-spacing: 0.41px;
   }
-  
+
   .gallerySubCaption {
     font-size: 3vw;
     letter-spacing: 0.41px;
@@ -221,6 +221,12 @@
 
   .galleryBoxH:hover {
     filter: none;
+  }
+
+  .custom-zoom [data-rmiz-modal-overlay] {
+    position: absolute;
+    inset: 0;
+    transition: background-color 0.3s;
   }
 }
 
@@ -244,10 +250,11 @@
     font-size: 6vw;
     letter-spacing: 0.41px;
   }
-  
+
   .gallerySubCaption {
     font-size: 3vw;
     letter-spacing: 0.41px;
+    margin-top: 0.25rem;
   }
 
   .galleryContainer {
