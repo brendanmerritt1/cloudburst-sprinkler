@@ -6,7 +6,7 @@ import { windowResize } from "../../utils/windowResize";
 import { useState, useEffect } from "react";
 
 export default function Sitemap() {
-  const [windowWidth, setWindowWidth] = useState(window.screen.width);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   let navigate = useNavigate();
 
   const scrollTop = () => {

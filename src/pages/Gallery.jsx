@@ -4,15 +4,21 @@ import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import { loadImage, loadGallery } from "../utils/imageLoader";
 import { loadCaption } from "../utils/captionLoader";
+import { windowResize } from "../utils/windowResize";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function PhotoGallery() {
   const pics = loadGallery();
   const [isShown, setIsShown] = useState(false);
   const [idxHover, setIdxHover] = useState();
   const [isOpenBlur, setIsOpenBlur] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="galleryFlex">
@@ -49,7 +55,7 @@ export default function PhotoGallery() {
                   setIdxHover();
                 }}
               >
-                {isShown && idxHover === pic.idx && window.screen.width >= 700 && (
+                {isShown && idxHover === pic.idx && windowWidth >= 700 && (
                   <span className="galleryCaption">
                     {loadCaption("pic" + pic.idx)}
                   </span>
@@ -65,7 +71,7 @@ export default function PhotoGallery() {
             </Zoom>
           ))}
         </div>
-        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );

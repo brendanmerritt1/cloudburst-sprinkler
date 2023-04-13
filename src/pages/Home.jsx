@@ -8,7 +8,7 @@ import "animate.css";
 
 export default function Home() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
-  const [windowWidth, setWindowWidth] = useState(window.screen.width);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   const today = new Date();
   const year = today.getFullYear();
@@ -53,12 +53,12 @@ export default function Home() {
           </span>
           <div className="homeButtons animate__animated animate__fadeIn animate__slow animate__delay-3s">
             <NavigateButton
-              color={window.screen.width <= 1024 ? "mobile" : "gray"}
+              color={window.innerWidth <= 1024 ? "mobile" : "gray"}
               desc="COMMERCIAL"
               nav="/commercial"
             />
             <NavigateButton
-              color={window.screen.width <= 1024 ? "mobile" : "gray"}
+              color={window.innerWidth <= 1024 ? "mobile" : "gray"}
               desc="RESIDENTIAL"
               nav="/residential"
             />

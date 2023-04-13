@@ -5,10 +5,16 @@ import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
-import { useState } from "react";
+import { windowResize } from "../utils/windowResize";
+import { useState, useEffect } from "react";
 
 export default function AboutUs() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="aboutContainer">
@@ -18,11 +24,11 @@ export default function AboutUs() {
           <img src={loadImage("about_us")} alt="" className="heroImg" id="aboutUs"/>
           <div className={isOpenBlur ? "aboutCaptions blur" : "aboutCaptions"}>
             <p className="aboutCaptionTitle">
-              {window.screen.width >= 700 && "Supporting"} Beautiful Landscapes
+              {windowWidth >= 700 && "Supporting"} Beautiful Landscapes
             </p>
             <p className="aboutSubCaption">
               in Delaware, Maryland, New Jersey,
-              {window.screen.width < 700 && <br />} and Pennsylvania since 1988.
+              {windowWidth < 700 && <br />} and Pennsylvania since 1988.
             </p>
           </div>
         </div>
@@ -64,7 +70,7 @@ export default function AboutUs() {
             />
           </div>
         </div>
-        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );

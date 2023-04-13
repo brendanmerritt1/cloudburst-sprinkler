@@ -4,10 +4,16 @@ import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Navbar from "../components/navbar/Navbar";
 import { loadImage } from "../utils/imageLoader";
-import { useState } from "react";
+import { windowResize } from "../utils/windowResize";
+import { useState, useEffect } from "react";
 
 export default function Contact() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="contactContainer">
@@ -18,7 +24,7 @@ export default function Contact() {
         className={isOpenBlur ? "contactImg contactBlur" : "contactImg"}
       />
       <ContactForm isOpenBlur={isOpenBlur} />
-      {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
+      {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
     </div>
   );
 }

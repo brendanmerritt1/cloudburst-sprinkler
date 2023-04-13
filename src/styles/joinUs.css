@@ -8,6 +8,10 @@
   height: 92vh;
 }
 
+#join_us.heroImg {
+  object-position: 10%;
+}
+
 .joinCaption {
   position: absolute;
   color: white;
@@ -61,8 +65,20 @@
   letter-spacing: 1px;
 }
 
+a[href^="tel:"] {
+  text-decoration: none;
+}
+
+a[href^="tel:"]:hover {
+  text-decoration: underline;
+}
+
 a[href^="mailto:"] {
   color: #222222;
+  text-decoration: none;
+}
+
+a[href^="mailto:"]:hover {
   text-decoration: underline;
 }
 
@@ -87,10 +103,6 @@ a[href^="mailto:"] {
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
-  #join_us.heroImg {
-    width: auto;
-  }
-
   .joinCaption {
     bottom: 22vh;
   }
@@ -102,7 +114,7 @@ a[href^="mailto:"] {
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   #join_us.heroImg {
-    width: auto;
+    object-position: 0%;
   }
 
   .joinViewContainer {
@@ -137,11 +149,19 @@ a[href^="mailto:"] {
   .joinParagraphCaption {
     font-size: 1.6vw;
   }
+
+  a[href^="tel:"] {
+    text-decoration: underline;
+  }
+  
+  a[href^="mailto:"] {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   #join_us.heroImg {
-    width: auto;
+    object-position: 0%;
   }
   
   .joinPicContainer {
@@ -181,6 +201,14 @@ a[href^="mailto:"] {
   .joinParagraphCaption {
     font-size: 2.2vw;
   }
+
+  a[href^="tel:"] {
+    text-decoration: underline;
+  }
+  
+  a[href^="mailto:"] {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 415px) and (max-width: 699px) {
@@ -189,7 +217,8 @@ a[href^="mailto:"] {
   }
   
   .joinPicContainer {
-    height: 50vh;
+    height: 60vh;
+    height: 60dvh;
   }
 
   .joinViewContainer {
@@ -198,12 +227,14 @@ a[href^="mailto:"] {
   }
 
   .joinCaption {
-    top: 35vh;
+    top: 45vh;
+    top: 45dvh;
   }
 
   .joinCaption.blur {
     filter: blur(2px);
-    top: 35vh;
+    top: 45vh;
+    top: 45dvh;
   }
 
   .joinCaptionTitle {
@@ -230,6 +261,14 @@ a[href^="mailto:"] {
     font-size: 4vw;
     margin-top: 2rem;
   }
+
+  a[href^="tel:"] {
+    text-decoration: underline;
+  }
+  
+  a[href^="mailto:"] {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 350px) and (max-width: 414px) {
@@ -238,8 +277,8 @@ a[href^="mailto:"] {
   }
   
   .joinPicContainer {
-    height: 60vh;
-    height: 60dvh;
+    height: 62vh;
+    height: 62dvh;
   }
 
   .joinViewContainer {
@@ -248,14 +287,14 @@ a[href^="mailto:"] {
   }
 
   .joinCaption {
-    top: 45vh;
-    top: 45dvh;
+    top: 47vh;
+    top: 47dvh;
   }
 
   .joinCaption.blur {
     filter: blur(2px);
-    top: 45vh;
-    top: 45dvh;
+    top: 47vh;
+    top: 47dvh;
   }
 
   .joinCaptionTitle {
@@ -282,6 +321,14 @@ a[href^="mailto:"] {
     font-size: 4vw;
     margin-top: 3rem;
   }
+
+  a[href^="tel:"] {
+    text-decoration: underline;
+  }
+  
+  a[href^="mailto:"] {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 349px) {
@@ -295,7 +342,7 @@ a[href^="mailto:"] {
   }
 
   .joinViewContainer {
-    padding: 2rem 1.5rem;
+    padding: 2rem 1.1rem;
     gap: 1.5rem;
   }
 
@@ -316,14 +363,14 @@ a[href^="mailto:"] {
   }
   
   .joinCaptionSub {
-    font-size: 3vw;
+    font-size: 3.5vw;
     letter-spacing: 0.41px;
     margin-top: 0.25rem;
   }
 
   .joinParagraph {
-    font-size: 3.5vw;
-    line-height: 5vw;
+    font-size: 4vw;
+    line-height: 6vw;
     letter-spacing: -0.24px;
   }
 
@@ -332,7 +379,15 @@ a[href^="mailto:"] {
   }
 
   .joinParagraphCaption {
-    font-size: 4vw;
+    font-size: 4.5vw;
     margin-top: 2rem;
+  }
+
+  a[href^="tel:"] {
+    text-decoration: underline;
+  }
+  
+  a[href^="mailto:"] {
+    text-decoration: underline;
   }
 }

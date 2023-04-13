@@ -865,30 +865,30 @@
   }
 
   #comm.captionContainer {
-    width: 50%;
+    width: 55%;
   }
 
   #res.captionContainer {
-    width: 60%;
+    width: 70%;
   }
 
   .commLocContainer {
-    top: 46vh;
-    top: 46dvh;
+    top: 45vh;
+    top: 45dvh;
     letter-spacing: 0.41px;
     font-size: 2.1vw;
   }
 
   .captionContainer.blur {
     filter: blur(2px);
-    top: 35vh;
-    top: 35dvh;
+    top: 32vh;
+    top: 32dvh;
   }
 
   .commLocContainer.blur {
     filter: blur(2px);
-    top: 46vh;
-    top: 46dvh;
+    top: 45vh;
+    top: 45dvh;
   }
 
   .servCaptionTitle {
@@ -897,7 +897,7 @@
   }
   
   .servCaption {
-    font-size: 3vw;
+    font-size: 3.5vw;
     letter-spacing: 0.41px;
     margin-top: 0.25rem;
   }
@@ -908,12 +908,12 @@
 
   .servicesContainer {
     margin: 0;
-    font-size: 3.5vw;
+    font-size: 4vw;
     letter-spacing: -0.24px;
   }
 
   #center.commTextBody {
-    margin: 2rem -1rem;
+    margin: 2rem;
     margin-bottom: 0rem;
   }
 
@@ -932,7 +932,7 @@
   }
 
   .commCTATitle {
-    font-size: 4vw;
+    font-size: 4.5vw;
     margin-top: 2rem;
     margin-bottom: 1rem;
     word-spacing: 1px;
@@ -958,14 +958,15 @@
   }
 
   #comm.servTextParagraph {
-    width: 90%;
-    line-height: 5vw;
+    width: 100%;
     margin-bottom: 1rem;
+    line-height: 6vw;
   }
 
   #res.servTextParagraph {
-    margin: 0 2.5rem 1rem 2.5rem;
-    line-height: 5vw;
+    margin: 0 -1.25rem;
+    margin-bottom: 1rem;
+    line-height: 6vw;
   }
 
   #noSpace.resButtonContact {
@@ -974,7 +975,7 @@
   }
 
   .navigateButton {
-    font-size: 2.5vw;
+    font-size: 2.75vw;
     width: 32vw;
     height: 8vw;
   }

@@ -31,7 +31,7 @@
     align-items: center;
     position: absolute;
     color: #222222;
-    top: 12vw;
+    top: 11vw;
     gap: 1rem;
 }
 
@@ -71,7 +71,7 @@
 
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
     .homeCaptions {
-        top: 12vw;
+        top: 11vw;
     }
 
     .homeCaptionTitle {
@@ -88,7 +88,7 @@
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
     .homeCaptions {
-        top: 15vw;
+        top: 11vw;
     }
 
     #margin.homeSubCaption {
@@ -266,7 +266,7 @@
     .homeCaptions {
         top: 13vh;
         top: 13dvh;
-        gap: 1.25rem;
+        gap: 1rem;
     }
 
     .mobileHomeAlign {
@@ -282,7 +282,7 @@
     }
 
     .homeSubCaption {
-        font-size: 3vw;
+        font-size: 3.5vw;
         word-spacing: 1px;
         letter-spacing: 0.5px;
     }

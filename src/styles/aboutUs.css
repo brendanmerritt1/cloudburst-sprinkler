@@ -291,7 +291,7 @@
   }
   
   .aboutSubCaption {
-    font-size: 3vw;
+    font-size: 3.5vw;
     letter-spacing: 0.41px;
     margin-top: 0.25rem;
   }
@@ -303,13 +303,14 @@
   }
 
   .aboutParagraphCaption {
-    font-size: 4vw;
+    font-size: 4.5vw;
     margin-bottom: -1rem;
+    word-spacing: 0.05rem;
   }
 
   .aboutParagraph {
-    font-size: 3.5vw;
-    line-height: 5vw;
+    font-size: 4vw;
+    line-height: 6vw;
     letter-spacing: -0.24px;
   }
 }

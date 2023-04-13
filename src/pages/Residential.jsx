@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Residential() {
-  const [windowWidth, setWindowWidth] = useState(window.screen.width);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpenBlur, setIsOpenBlur] = useState(false);
   let navigate = useNavigate();
 

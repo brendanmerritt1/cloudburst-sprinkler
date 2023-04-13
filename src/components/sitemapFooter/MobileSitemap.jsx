@@ -83,7 +83,7 @@ export default function MobileSitemap() {
                 scrollTop();
                 setTimeout(() => {
                   window.location.reload(false);
-                }, 800); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
+                }, 800);
               }}
             >
               CONTACT US

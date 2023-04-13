@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Commercial() {
-  const [windowWidth, setWindowWidth] = useState(window.screen.width);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpenBlur, setIsOpenBlur] = useState(false);
   let navigate = useNavigate();
 
@@ -80,7 +80,7 @@ export default function Commercial() {
         <div className="servicesContainer">
           <div className="commTextBody" id="center">
             <p className="servTextParagraph" id="comm">
-              Cloudburst is invested in your success. &nbsp;We're a premier
+              Cloudburst is invested in your success. We're a premier
               irrigation company that has supported and collaborated with the
               commercial industry for over 30 years.
             </p>

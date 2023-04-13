@@ -1,7 +1,18 @@
-export const windowResize = (setter) => {
-  const handleWindowResize = () => {
-    setter(window.screen.width);
+function debounce(fn, ms) {
+  let timer;
+  return () => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this, arguments);
+    }, ms);
   };
-  window.addEventListener("resize", handleWindowResize);
-  return () => window.removeEventListener("resize", handleWindowResize);
+};
+
+export const windowResize = (setter) => {
+  const dbHandleWindowResize = debounce(function handleWindowResize() {
+    setter(window.innerWidth);
+  }, 100);
+  window.addEventListener("resize", dbHandleWindowResize);
+  return () => window.removeEventListener("resize", dbHandleWindowResize);
 };

@@ -3,10 +3,16 @@ import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import { loadImage } from "../utils/imageLoader";
-import { useState } from "react";
+import { windowResize } from "../utils/windowResize";
+import { useState, useEffect } from "react";
 
 export default function JoinUs() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="joinContainer">
@@ -30,7 +36,7 @@ export default function JoinUs() {
           <p className="joinParagraph">
             Cloudburst is committed to providing the highest quality of
             irrigation services, but it takes the right people to create a
-            successful team. &nbsp;We're always searching for experienced
+            successful team. We're always searching for experienced
             irrigation service and installation technicians with a strong work
             ethic and great attitude.
           </p>
@@ -63,7 +69,7 @@ export default function JoinUs() {
             </span>
           </div>
         </div>
-        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );

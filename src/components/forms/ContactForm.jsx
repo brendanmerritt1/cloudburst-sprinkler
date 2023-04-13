@@ -14,9 +14,34 @@ import {
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
+import * as bp from "../services/breakpoints";
 
 export default function ContactForm(props) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1280);
+  const [is2560, setIs2560] = useState(
+    window.matchMedia(bp.MediaQuery2560).matches
+  );
+  const [is1920, setIs1920] = useState(
+    window.matchMedia(bp.MediaQuery1920).matches
+  );
+  const [is1280, setIs1280] = useState(
+    window.matchMedia(bp.MediaQuery1280).matches
+  );
+  const [is1024, setIs1024] = useState(
+    window.matchMedia(bp.MediaQuery1024).matches
+  );
+  const [is700, setIs700] = useState(
+    window.matchMedia(bp.MediaQuery700).matches
+  );
+  const [is415, setIs415] = useState(
+    window.matchMedia(bp.MediaQuery415).matches
+  );
+  const [is350, setIs350] = useState(
+    window.matchMedia(bp.MediaQuery350).matches
+  );
+  const [is320, setIs320] = useState(
+    window.matchMedia(bp.MediaQuery320).matches
+  );
 
   const [formState, setFormState] = useState({
     firstName: "",
@@ -95,44 +120,52 @@ export default function ContactForm(props) {
     setOpenError(false);
   };
 
-  const updateMedia = () => {
-    setIsDesktop(window.innerWidth >= 1280);
-  };
-
-  const dynamicMargin = (width) => {
-    if (width >= 700 && width <= 1279) {
+  const dynamicMargin = () => {
+    if (is700 || is1024) {
       return "0 4rem";
-    }
-    else if (width >= 415 && width <= 699) {
+    } else if (is415) {
       return "0 6rem";
-    }
-    else if (width >= 350 && width <= 414) {
+    } else if (is350) {
       return "0 4rem";
-    } else if (width < 350) {
+    } else if (is320) {
       return "0 3rem";
-    } else {
+    } else if (is1280 || is1920 || is2560) {
       return "0 6rem";
     }
   };
 
-  const dynamicFontSize = (width) => {
-    if (width >= 1280) {
+  const dynamicFontSize = () => {
+    if (is1920 || is2560) {
       return "medium";
-    } else if (width >= 700 && width <= 1023) {
-      return "0.8rem";
-    } else if (width >= 350 && width <= 699) {
-      return "1rem";
-    } else if (width < 350) {
+    } else if (is1280) {
       return "0.9rem";
-    } else {
-      return "medium";
+    } else if (is1024) {
+      return "0.9rem";
+    } else if (is700) {
+      return "0.8rem";
+    } else if (is350 || is415) {
+      return "1rem";
+    } else if (is320) {
+      return "0.9rem";
     }
   };
 
   useEffect(() => {
+    const updateMedia = () => {
+      setIsDesktop(window.innerWidth >= 1280);
+      setIs2560(window.matchMedia(bp.MediaQuery2560).matches);
+      setIs1920(window.matchMedia(bp.MediaQuery1920).matches);
+      setIs1280(window.matchMedia(bp.MediaQuery1280).matches);
+      setIs1024(window.matchMedia(bp.MediaQuery1024).matches);
+      setIs700(window.matchMedia(bp.MediaQuery700).matches);
+      setIs415(window.matchMedia(bp.MediaQuery415).matches);
+      setIs350(window.matchMedia(bp.MediaQuery350).matches);
+      setIs320(window.matchMedia(bp.MediaQuery320).matches);
+    };
+
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
-  });
+  }, []);
 
   const theme = createTheme({
     palette: {
@@ -230,13 +263,13 @@ export default function ContactForm(props) {
             sx={{ mt: "1rem" }}
             className="contactFormInput"
           />
-          {/* <br /> */}
-          <FormControl sx={{ p: dynamicMargin(window.screen.width) }}>
+
+          <FormControl sx={{ p: dynamicMargin() }}>
             <FormLabel
               required
               sx={{
                 mt: "1rem",
-                fontSize: dynamicFontSize(window.screen.width),
+                fontSize: dynamicFontSize(),
               }}
               className="contactFormInput"
             >
@@ -268,7 +301,7 @@ export default function ContactForm(props) {
             <FormLabel
               sx={{
                 mt: "2rem",
-                fontSize: dynamicFontSize(window.screen.width),
+                fontSize: dynamicFontSize(),
               }}
             >
               Project Type
@@ -292,8 +325,6 @@ export default function ContactForm(props) {
               />
             </RadioGroup>
           </FormControl>
-
-          {/* <br /> */}
 
           <span className="contactCommentForm">How can we help you?</span>
           <TextField

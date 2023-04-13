@@ -3,10 +3,16 @@ import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Accordion from "../components/services/Accordion";
-import { useState } from "react";
+import { windowResize } from "../utils/windowResize";
+import { useState, useEffect } from "react";
 
 export default function PrivacyPolicy() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    return windowResize(setWindowWidth);
+  }, []);
 
   return (
     <div className="privacyContainer">
@@ -26,10 +32,16 @@ export default function PrivacyPolicy() {
           </span>
           <span className="privacyBody">
             This Statement of Privacy applies only to the website of Cloudburst
-            Lawn Sprinkler Systems, located on the internet at
-            www.cloudburstsprinkler.com and governs data collection and usage.
-            By using the Cloudburst website, you consent to the data practices
-            described in this statement.
+            Lawn Sprinkler Systems, located on the internet at&nbsp;
+            <a
+              href="https://www.cloudburstsprinkler.com"
+              style={{ color: "inherit" }}
+            >
+              https://www.cloudburstsprinkler.com
+            </a>
+            &nbsp;and governs data collection and usage. By using the Cloudburst
+            website, you consent to the data practices described in this
+            statement.
           </span>
           <span className="privacyBody">
             This Privacy Policy may be updated from time to time. Please check
@@ -52,7 +64,7 @@ export default function PrivacyPolicy() {
             </a>
             <br />
             Telephone:&nbsp;
-            <a href="tel:302-798-5999" style={{ color: "#222222" }}>
+            <a href="tel:302-798-5999" style={{ color: "inherit" }}>
               (302) 798-5999
             </a>
           </span>
@@ -66,7 +78,7 @@ export default function PrivacyPolicy() {
               href="https://www.cloudburstsprinkler.com/"
               style={{ color: "inherit" }}
             >
-              https://www.cloudburstsprinkler.com/
+              https://www.cloudburstsprinkler.com
             </a>
             . Please take a few minutes to review the following Terms of Use of
             our site. Your use of our site constitutes your agreement to follow
@@ -74,7 +86,7 @@ export default function PrivacyPolicy() {
           </span>
           <Accordion data={terms} />
         </div>
-        {window.screen.width >= 700 ? <Sitemap /> : <MobileSitemap />}
+        {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
       </div>
     </div>
   );
@@ -96,15 +108,9 @@ const policy = [
           "Contact Information: your first and last name, postal address, email address, and phone number",
           "Other identifying information: IP address and cookie identifiers",
           "Geolocation data: country, region, state, city and postal code",
-          "Internet or other electronic activity: your browsing and click history, including information about how you navigate within our services and which elements of our services you use the most",
         ],
       },
       { title: "How Collected Information Is Used" },
-      {
-        list: [
-          "Security and Fraud Prevention - We use your contact information, other identifying information, commercial information, financial information, geolocation data, internet activity and browsing history, and inferences to protect this website, our company, and others and to prevent fraud, theft and misconduct.",
-        ],
-      },
       {
         list: [
           "Maintenance and Improvement of Services and Website - We use your contact information, commercial information, and internet activity and browsing history to:",
@@ -135,21 +141,12 @@ const policy = [
     body: [
       {
         paragraph:
-          "We secure all personal information from unauthorized access, use or disclosure. Cloudburst Lawn Sprinkler Systems secures the personally identifiable information you provide on computer servers in a controlled, secure environment, protected from unauthorized access, use or disclosure.",
+          "We secure all personal information from unauthorized access, use or disclosure. Cloudburst Lawn Sprinkler Systems secures the personally identifiable information you provide in a controlled, secure environment, protected from unauthorized access, use or disclosure.",
       },
       { title: "Protecting Children" },
       {
         paragraph:
-          "We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that any of your children has provided us with personal information without your consent, please contact us and we will take steps to remove that information from our servers.",
-      },
-      { title: "Links to Third Party Web Sites" },
-      {
-        paragraph:
-          "Our web sites may contain links to web sites operated and maintained by third parties, over which we have no control. Privacy policies on such linked web sites may be different from our privacy policy. You access such linked web sites at your own risk. You should always read the privacy policy of a linked web site before disclosing any of your information on such web site.",
-      },
-      {
-        paragraph:
-          "If you feel that this site is not following its stated information policy, you may contact us at sales@cloudburstsprinkler.com.",
+          "We do not knowingly collect personal information from children under 13. If you are a parent or guardian and you are aware that any of your children has provided us with personal information without your consent, please contact us and we will take steps to remove that information.",
       },
     ],
   },

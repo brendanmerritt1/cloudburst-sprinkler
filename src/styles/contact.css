@@ -161,7 +161,7 @@ button:active {
   .contactFormContainer {
     top: 9rem;
     width: 38rem;
-    height: 66rem;
+    height: 68rem;
   }
 
   .contactFormTitle {
@@ -169,7 +169,7 @@ button:active {
   }
 
   .contactFormSubTitle {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .requiredField {
@@ -208,11 +208,11 @@ button:active {
   }
 
   .contactFormInput .MuiInput-input {
-    font-size: 0.75rem;
+    font-size: 0.9rem;
   }
 
   .contactFormInput .MuiInputLabel-standard {
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .contactFormInput .MuiInputLabel-outlined {
@@ -220,7 +220,7 @@ button:active {
   }
 
   .contactFormInput .MuiFormControlLabel-label {
-    font-size: 0.75rem;
+    font-size: 0.85rem;
   }
 
   .contactFormInput .MuiFormLabel-asterisk {
@@ -280,7 +280,7 @@ button:active {
   }
 
   .contactFormInput .MuiInputLabel-outlined {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .contactFormInput .MuiFormControlLabel-label {
@@ -383,7 +383,7 @@ button:active {
   }
 
   .contactFormInput .MuiInputLabel-outlined {
-    font-size: 0.75rem;
+    font-size: 0.7rem;
   }
 
   .contactFormInput .MuiFormControlLabel-label {
@@ -598,7 +598,7 @@ button:active {
   #mobile.navigateButton {
     background-color: #222222;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
-    font-size: 2.5vw;
+    font-size: 3vw;
     width: 40vw;
     height: 8vw;
   }

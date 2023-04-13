@@ -6,4 +6,4 @@ The website is now live on [*Render*](https://cloudburst-sprinkler.onrender.com/
 \
 Please note: the web service hosted on Render will need to spin up, and may take longer than expected to load.\
 \
-It is currently optimized for 428px-2560px, and may not view correctly on other smaller mobile screen sizes. The website is compatible with desktops, laptops, tablets, and large phones (such as the iPhone 12 Pro Max). Currently working on optimization for all mobile devices.
+It is currently optimized for 320px-2560px, and should view correctly on any mobile or desktop screen sizes. The website is compatible with desktops, laptops, and tablets, as well as both small phones (such as the iPhone SE) and large phones (such as the iPhone 12 Pro Max). Currently working on optimization for mobile landscape view and bugfixes.
