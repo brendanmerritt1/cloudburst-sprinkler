@@ -222,12 +222,6 @@
   .galleryBoxH:hover {
     filter: none;
   }
-
-  .custom-zoom [data-rmiz-modal-overlay] {
-    position: absolute;
-    inset: 0;
-    transition: background-color 0.3s;
-  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 349px) {

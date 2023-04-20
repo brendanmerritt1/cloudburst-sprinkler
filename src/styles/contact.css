@@ -155,7 +155,7 @@ button:active {
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .contactImg {
-    height: 90rem;
+    height: 85rem;
   }
 
   .contactFormContainer {

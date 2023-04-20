@@ -59,8 +59,8 @@ export default function PrivacyPolicy() {
           </span>
           <span className="privacyBody">
             Email address:&nbsp;
-            <a href="mailto:sales@cloudburstsprinkler.com">
-              sales@cloudburstsprinkler.com
+            <a href="mailto:service@cloudburstsprinkler.com">
+              service@cloudburstsprinkler.com
             </a>
             <br />
             Telephone:&nbsp;
@@ -128,7 +128,7 @@ const policy = [
     body: [
       {
         paragraph:
-          "If you supply us with your postal address on-line you may receive periodic mailings from us with information on new products and services or upcoming events. If you do not want to receive emails from us in the future, please let us know by sending us email at sales@cloudburstsprinkler.com.",
+          "If you supply us with your postal address on-line you may receive periodic mailings from us with information on new products and services or upcoming events. If you do not want to receive emails from us in the future, please let us know by sending us email at service@cloudburstsprinkler.com.",
       },
       {
         paragraph:
