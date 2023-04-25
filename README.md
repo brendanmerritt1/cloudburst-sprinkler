@@ -1,7 +1,7 @@
 # Cloudburst Lawn Sprinkler Systems
 A website made from scratch using React, Node.js, and CSS for Cloudburst Lawn Sprinkler Systems, who serve the Delaware, Pennsylvania and Maryland areas.
 
-### Website is currently in the deployment stage
+## Website is currently in the deployment stage
 The website is now live on [*Render*](https://cloudburst-sprinkler.onrender.com/) for testing the production build.\
 \
 Please note: the web service hosted on Render will need to spin up, and may take longer than expected to load.\
