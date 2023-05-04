@@ -60,8 +60,12 @@ export default function ContactForm(props) {
   const [verified, setVerified] = useState(false);
   const captchaRef = useRef(null);
 
+  const axiosInstance = axios.create({
+    baseURL: process.env.REACT_APP_BACKEND_URL,
+  })
+
   const submitEmail = async () => {
-    await axios.post(process.env.REACT_APP_SUBMIT_URL, { formState });
+    await axiosInstance.post(process.env.REACT_APP_SUBMIT_URL, { formState });
   };
 
   const handleSubmit = async (e) => {
@@ -70,7 +74,7 @@ export default function ContactForm(props) {
       setOpenError(true);
     } else {
       const token = captchaRef.current.getValue();
-      await axios
+      await axiosInstance
         .post(process.env.REACT_APP_API_URL, { token })
         .then((res) => {
           if (res.status) {
