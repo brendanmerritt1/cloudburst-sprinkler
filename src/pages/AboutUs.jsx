@@ -7,6 +7,7 @@ import NavigateButton from "../components/services/NavigateButton";
 import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function AboutUs() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
@@ -18,10 +19,19 @@ export default function AboutUs() {
 
   return (
     <div className="aboutContainer">
+      <Helmet>
+        <title>About Us - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/about" />
+      </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "aboutBlur" : null}>
         <div className="aboutPicContainer">
-          <img src={loadImage("about_us")} alt="" className="heroImg" id="aboutUs"/>
+          <img
+            src={loadImage("about_us")}
+            alt=""
+            className="heroImg"
+            id="aboutUs"
+          />
           <div className={isOpenBlur ? "aboutCaptions blur" : "aboutCaptions"}>
             <p className="aboutCaptionTitle">
               {windowWidth >= 700 && "Supporting"} Beautiful Landscapes

@@ -8,6 +8,7 @@ import { windowResize } from "../utils/windowResize";
 import Zoom from "react-medium-image-zoom";
 import "react-medium-image-zoom/dist/styles.css";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function PhotoGallery() {
   const pics = loadGallery();
@@ -22,6 +23,10 @@ export default function PhotoGallery() {
 
   return (
     <div className="galleryFlex">
+      <Helmet>
+        <title>Gallery - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/gallery" />
+      </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "galleryBlur" : null}>
         <div className="heroImgContainer">

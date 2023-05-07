@@ -5,6 +5,7 @@ import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import Accordion from "../components/services/Accordion";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function PrivacyPolicy() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
@@ -16,6 +17,10 @@ export default function PrivacyPolicy() {
 
   return (
     <div className="privacyContainer">
+      <Helmet>
+        <title>Privacy Policy - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/privacy-policy" />
+      </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "privacyBlur" : null}>
         <div className="privacyNav"></div>

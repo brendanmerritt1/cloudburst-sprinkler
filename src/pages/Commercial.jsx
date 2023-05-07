@@ -10,6 +10,7 @@ import { IoIosArrowDropleft, IoIosArrowDropright } from "react-icons/io";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Commercial() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -50,6 +51,10 @@ export default function Commercial() {
 
   return (
     <div className="servicesNavContainer">
+      <Helmet>
+        <title>Commercial - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/commercial" />
+      </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div className="heroImgContainer">
@@ -80,9 +85,9 @@ export default function Commercial() {
         <div className="servicesContainer">
           <div className="commTextBody" id="center">
             <p className="servTextParagraph" id="comm">
-              Cloudburst is invested in your success. We're a premier
-              irrigation company that has supported and collaborated with the
-              commercial industry for over 30 years.
+              Cloudburst is invested in your success. We're a premier irrigation
+              company that has supported and collaborated with the commercial
+              industry for over 30 years.
             </p>
             <p className="servTextParagraph" id="comm">
               From designing and installing a commercial-grade irrigation system

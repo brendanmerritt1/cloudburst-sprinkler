@@ -5,6 +5,7 @@ import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
 import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function JoinUs() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
@@ -16,6 +17,10 @@ export default function JoinUs() {
 
   return (
     <div className="joinContainer">
+      <Helmet>
+        <title>Join Us - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/join-us" />
+      </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur && "joinBlur"}>
         <div className="joinPicContainer">
@@ -36,9 +41,9 @@ export default function JoinUs() {
           <p className="joinParagraph">
             Cloudburst is committed to providing the highest quality of
             irrigation services, but it takes the right people to create a
-            successful team. We're always searching for experienced
-            irrigation service and installation technicians with a strong work
-            ethic and great attitude.
+            successful team. We're always searching for experienced irrigation
+            service and installation technicians with a strong work ethic and
+            great attitude.
           </p>
           <p className="joinParagraph">
             At Cloudburst you'll enjoy a competitve compensation and benefits

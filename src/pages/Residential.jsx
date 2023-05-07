@@ -12,6 +12,7 @@ import { windowResize } from "../utils/windowResize";
 import { loadImage } from "../utils/imageLoader";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 export default function Residential() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -52,6 +53,10 @@ export default function Residential() {
 
   return (
     <div className="servicesNavContainer">
+      <Helmet>
+        <title>Residential - Cloudburst Lawn Sprinkler Systems</title>
+        <link rel="canonical" href="http://31.220.21.25/residential" />
+      </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
         <div className="heroImgContainer">
@@ -76,20 +81,20 @@ export default function Residential() {
         <div className="servicesContainer">
           <div className="commTextBody" id="center">
             <p className="servTextParagraph" id="res">
-              Walking barefoot across a lush lawn. Kids playing tag in the
-              back yard. What's your vision?
+              Walking barefoot across a lush lawn. Kids playing tag in the back
+              yard. What's your vision?
             </p>
             <p className="servTextParagraph" id="res">
               For over 30 years, Cloudburst has been helping homeowners enhance
-              their landscape with a reliable irrigation system. Whether
-              you're upgrading an aging sprinkler system or you're ready to
-              outfit your dream backyard oasis with a new sprinkler system, you
-              can rely on our experienced teams for your project.
+              their landscape with a reliable irrigation system. Whether you're
+              upgrading an aging sprinkler system or you're ready to outfit your
+              dream backyard oasis with a new sprinkler system, you can rely on
+              our experienced teams for your project.
             </p>
             <p className="servTextParagraph" id="res">
               Cloudburst is a full-service residential irrigation company that's
-              fully licensed and insured. We service Delaware, Maryland,
-              New Jersey, and Pennsylvania.
+              fully licensed and insured. We service Delaware, Maryland, New
+              Jersey, and Pennsylvania.
             </p>
             <div className="resButtonContact" id="noSpace">
               <NavigateButton
