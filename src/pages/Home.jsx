@@ -5,6 +5,7 @@ import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
 import "animate.css";
+import { Helmet } from "react-helmet";
 
 export default function Home() {
   const [isOpenBlur, setIsOpenBlur] = useState(false);
@@ -19,6 +20,9 @@ export default function Home() {
 
   return (
     <div className="homeContainer">
+      <Helmet>
+        <link rel="canonical" href="http://31.220.21.25/" />
+      </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div
         className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}
