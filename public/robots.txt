@@ -1,3 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Disallow: /
+Sitemap: http://31.220.21.25/sitemap.xml
