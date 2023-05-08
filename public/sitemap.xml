@@ -44,4 +44,9 @@
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
+    <url>
+        <loc>http://31.220.21.25/areas-serviced</loc>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+    </url>
 </urlset>

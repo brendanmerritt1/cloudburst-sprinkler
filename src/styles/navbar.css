@@ -30,7 +30,7 @@
   flex-direction: row;
   justify-content: flex-end;
   gap: 4vw;
-  margin-right: 15rem;
+  margin-right: 5rem;
 }
 
 .navItem {
@@ -86,7 +86,7 @@
   }
 
   .navContainer {
-    margin-right: 8rem;
+    margin-right: 3.5rem;
   }
 
   .logo {

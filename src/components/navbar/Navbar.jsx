@@ -133,7 +133,7 @@ export default function Navbar(props) {
             navigate("/contact");
             window.location.reload(
               false
-            ); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
+            );
           }}
           className="navItem"
           id={props.color}
@@ -148,6 +148,15 @@ export default function Navbar(props) {
           id={props.color}
         >
           JOIN US
+        </li>
+        <li
+          onClick={() => {
+            navigate("/areas-serviced");
+          }}
+          className="navItem"
+          id={props.color}
+        >
+          AREAS SERVICED
         </li>
       </ul>
     </div>

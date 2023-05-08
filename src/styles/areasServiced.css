@@ -1,0 +1,311 @@
+.areasContainer {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.areasPicContainer {
+  height: 92vh;
+}
+
+.areasCaptions {
+  position: absolute;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  bottom: 26vh;
+  left: 9vw;
+}
+
+.areasCaptionTitle {
+  font-size: 2.5vw;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.areasSubCaption {
+  font-size: 1.2vw;
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.areasBlur {
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.areasViewContainer {
+  display: flex;
+  padding: 5rem 0rem;
+  flex-direction: column;
+  gap: 3.5rem;
+  word-spacing: 0.1rem;
+  align-items: center;
+}
+
+.areasParagraph {
+  color: #474747;
+  font-weight: 300;
+  font-size: 1vw;
+  line-height: 1.6vw;
+  letter-spacing: 0.5px;
+}
+
+.areasContactUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.areasParagraphCaption {
+  color: #474747;
+  font-weight: 700;
+  font-size: 1.1vw;
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.areasParagraph {
+  color: #474747;
+  font-weight: 300;
+  font-size: 1vw;
+  line-height: 1.6vw;
+  letter-spacing: 1px;
+}
+
+.areasButton {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .areasPicContainer {
+    height: 94vh;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .areasCaptions {
+    top: 65vh;
+  }
+
+  .areasCaptions.blur {
+    filter: blur(2px);
+    bottom: 65vh;
+  }
+
+  .areasCaptionTitle {
+    font-size: 3.3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasSubCaption {
+    font-size: 1.5vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasViewContainer {
+    gap: 2.75rem;
+    word-spacing: 0.1rem;
+  }
+
+  .areasParagraphCaption {
+    font-size: 1.6vw;
+  }
+
+  .areasParagraph {
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+    letter-spacing: -0.24px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 1023px) {
+  .areasPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  .areasCaptions {
+    top: 33vh;
+    top: 33dvh;
+  }
+
+  .areasCaptions.blur {
+    filter: blur(2px);
+    top: 33vh;
+    top: 33dvh;
+  }
+
+  .areasCaptionTitle {
+    font-size: 4.4vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasSubCaption {
+    font-size: 2vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasViewContainer {
+    gap: 2.75rem;
+    word-spacing: 0.1rem;
+    padding: 5rem 3rem;
+  }
+
+  .areasParagraphCaption {
+    font-size: 2.2vw;
+  }
+
+  .areasParagraph {
+    font-size: 2vw;
+    line-height: 3vw;
+    letter-spacing: -0.24px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 415px) and (max-width: 699px) {
+  .areasPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  .areasCaptions {
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .areasCaptions.blur {
+    filter: blur(2px);
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .areasCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .areasSubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasViewContainer {
+    gap: 2rem;
+    word-spacing: 0.1rem;
+    padding: 3rem 1rem;
+  }
+
+  .areasParagraphCaption {
+    font-size: 4vw;
+  }
+
+  .areasParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 414px) {
+  .areasPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  .areasCaptions {
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .areasCaptions.blur {
+    filter: blur(2px);
+    top: 35vh;
+    top: 35dvh;
+  }
+
+  .areasCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .areasSubCaption {
+    font-size: 3vw;
+    letter-spacing: 0.41px;
+  }
+
+  .areasViewContainer {
+    gap: 2rem;
+    word-spacing: 0.1rem;
+    padding: 3rem 1rem;
+  }
+
+  .areasParagraphCaption {
+    font-size: 4vw;
+  }
+
+  .areasParagraph {
+    font-size: 3.5vw;
+    line-height: 5vw;
+    letter-spacing: -0.24px;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 349px) {
+  .areasPicContainer {
+    height: 50vh;
+    height: 50dvh;
+  }
+
+  .areasCaptions {
+    top: 32vh;
+    top: 32dvh;
+    left: 5vw;
+    left: 5dvw;
+  }
+
+  .areasCaptions.blur {
+    filter: blur(2px);
+    top: 32vh;
+    top: 32dvh;
+    left: 5vw;
+    left: 5dvw;
+  }
+
+  .areasCaptionTitle {
+    font-size: 6vw;
+    letter-spacing: 0.41px;
+  }
+  
+  .areasSubCaption {
+    font-size: 3.5vw;
+    letter-spacing: 0.41px;
+    margin-top: 0.25rem;
+  }
+
+  .areasViewContainer {
+    gap: 1.5rem;
+    word-spacing: 0.1rem;
+    padding: 2rem 1.5rem;
+  }
+
+  .areasParagraphCaption {
+    font-size: 4.5vw;
+    word-spacing: 0.05rem;
+  }
+
+  .areasParagraph {
+    font-size: 4vw;
+    line-height: 6vw;
+    letter-spacing: -0.24px;
+    text-align: center;
+  }
+
+  .areasButton {
+    margin-top: 1rem;
+  }
+}

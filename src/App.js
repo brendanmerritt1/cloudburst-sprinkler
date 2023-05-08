@@ -7,6 +7,7 @@ import AboutUs from "./pages/AboutUs";
 import JoinUs from "./pages/JoinUs";
 import PhotoGallery from "./pages/Gallery"
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import AreasServiced from "./pages/AreasServiced";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/join-us" element={<JoinUs />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/areas-serviced" element={<AreasServiced />} />
           <Route path="*" element={<Navigate replace to="/" />} />
         </Routes>
       </div>

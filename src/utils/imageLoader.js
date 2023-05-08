@@ -109,6 +109,9 @@ const images = {
       idx: 12
     },
   ],
+
+  /* AREAS SERVICED */
+  areas_serviced: require("../assets/pages/dewy-grass-maintenance.jpg"),
 };
 
 export function loadImage(imageName) {

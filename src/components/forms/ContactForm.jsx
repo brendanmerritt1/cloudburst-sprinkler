@@ -14,7 +14,7 @@ import {
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
-import * as bp from "../services/breakpoints";
+import * as bp from "../../utils/breakpoints";
 
 export default function ContactForm(props) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1280);

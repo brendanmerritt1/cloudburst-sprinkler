@@ -92,7 +92,7 @@ export default function Sitemap() {
                   scrollTop();
                   setTimeout(() => {
                     window.location.reload(false);
-                  }, 800); /* CHANGE LATER, THIS IS SO HACKY AND BAD */
+                  }, 800);
                 }}
               >
                 CONTACT US
@@ -114,6 +114,15 @@ export default function Sitemap() {
                 }}
               >
                 PRIVACY POLICY
+              </li>
+              <li
+                className="link"
+                onClick={() => {
+                  navigate("/areas-serviced");
+                  scrollTop();
+                }}
+              >
+                AREAS SERVICED
               </li>
             </ul>
           </div>

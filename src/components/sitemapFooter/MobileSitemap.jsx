@@ -106,6 +106,15 @@ export default function MobileSitemap() {
             >
               PRIVACY POLICY
             </li>
+            <li
+              className="link"
+              onClick={() => {
+                navigate("/areas-serviced");
+                scrollTop();
+              }}
+            >
+              AREAS SERVICED
+            </li>
           </ul>
         </div>
 
