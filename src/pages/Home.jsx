@@ -21,7 +21,7 @@ export default function Home() {
   return (
     <div className="homeContainer">
       <Helmet>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/" />
       </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div

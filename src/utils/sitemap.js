@@ -1,7 +1,7 @@
 const { SitemapStream } = require("sitemap");
 const { createWriteStream } = require("fs");
 
-const sitemap = new SitemapStream({ hostname: "http://cloudburstsprinkler.com/" });
+const sitemap = new SitemapStream({ hostname: "https://cloudburstsprinkler.com/" });
 
 const writeStream = createWriteStream("public/sitemap.xml");
 sitemap.pipe(writeStream);

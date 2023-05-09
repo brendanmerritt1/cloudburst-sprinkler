@@ -55,7 +55,7 @@ export default function Residential() {
     <div className="servicesNavContainer">
       <Helmet>
         <title>Residential - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/residential" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/residential" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>

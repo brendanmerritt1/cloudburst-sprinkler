@@ -25,7 +25,7 @@ export default function PhotoGallery() {
     <div className="galleryFlex">
       <Helmet>
         <title>Gallery - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/gallery" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/gallery" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "galleryBlur" : null}>

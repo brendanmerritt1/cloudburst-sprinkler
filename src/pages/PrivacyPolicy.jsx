@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
     <div className="privacyContainer">
       <Helmet>
         <title>Privacy Policy - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/privacy-policy" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/privacy-policy" />
       </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "privacyBlur" : null}>

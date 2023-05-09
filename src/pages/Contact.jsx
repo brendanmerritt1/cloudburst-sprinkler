@@ -20,7 +20,7 @@ export default function Contact() {
     <div className="contactContainer">
       <Helmet>
         <title>Contact Us - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/contact" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/contact" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <img

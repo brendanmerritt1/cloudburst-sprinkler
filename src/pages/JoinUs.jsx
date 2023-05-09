@@ -19,7 +19,7 @@ export default function JoinUs() {
     <div className="joinContainer">
       <Helmet>
         <title>Join Us - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://cloudburstsprinkler.com/join-us" />
+        <link rel="canonical" href="https://cloudburstsprinkler.com/join-us" />
       </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur && "joinBlur"}>
