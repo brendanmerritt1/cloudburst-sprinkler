@@ -53,7 +53,7 @@ export default function Commercial() {
     <div className="servicesNavContainer">
       <Helmet>
         <title>Commercial - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://31.220.21.25/commercial" />
+        <link rel="canonical" href="http://cloudburstsprinkler.com/commercial" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>

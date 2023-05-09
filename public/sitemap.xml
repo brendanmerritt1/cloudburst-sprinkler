@@ -5,47 +5,47 @@
     xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
     xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
     <url>
-        <loc>http://31.220.21.25/</loc>
+        <loc>http://cloudburstsprinkler.com/</loc>
         <changefreq>yearly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/commercial</loc>
+        <loc>http://cloudburstsprinkler.com/commercial</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/residential</loc>
+        <loc>http://cloudburstsprinkler.com/residential</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/gallery</loc>
+        <loc>http://cloudburstsprinkler.com/gallery</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/about</loc>
+        <loc>http://cloudburstsprinkler.com/about</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/contact</loc>
+        <loc>http://cloudburstsprinkler.com/contact</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/join-us</loc>
+        <loc>http://cloudburstsprinkler.com/join-us</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/privacy-policy</loc>
+        <loc>http://cloudburstsprinkler.com/privacy-policy</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>http://31.220.21.25/areas-serviced</loc>
+        <loc>http://cloudburstsprinkler.com/areas-serviced</loc>
         <changefreq>yearly</changefreq>
         <priority>0.8</priority>
     </url>

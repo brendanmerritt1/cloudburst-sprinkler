@@ -156,7 +156,7 @@ export default function AreasServiced() {
     <div className="areasContainer">
       <Helmet>
         <title>Areas Serviced - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://31.220.21.25/areas-serviced" />
+        <link rel="canonical" href="http://cloudburstsprinkler.com/areas-serviced" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "areasBlur" : null}>

@@ -21,7 +21,7 @@ export default function AboutUs() {
     <div className="aboutContainer">
       <Helmet>
         <title>About Us - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="http://31.220.21.25/about" />
+        <link rel="canonical" href="http://cloudburstsprinkler.com/about" />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "aboutBlur" : null}>
