@@ -2,7 +2,7 @@
 A website made from scratch using React, Node.js, and CSS for Cloudburst Lawn Sprinkler Systems, who serve the Delaware, Pennsylvania and Maryland areas.
 
 ## Website is currently in the deployment stage
-The website is now live on [*a VPS*](http://31.220.21.25/) running Nginx and is fully deployed.\
+The website is now live on [*a VPS*](https://cloudburst-sprinkler.onrender.com) running Nginx and is fully deployed.\
 \
 Please note: the domain name is currently in the process of switching hosting providers. Once the transfer is complete, the link above will include a the full domain name cloudburstsprinkler.com with the secure certificate enabled (https).\
 \
