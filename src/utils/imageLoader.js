@@ -89,22 +89,22 @@ const images = {
       idx: 8
     },
     {
-      src: require("../assets/pages/neighborhood-sprinkler-system.jpg"),
+      src: require("../assets/carousel/neighborhood-sprinkler-system.jpg"),
       alt: "neighborhood-sprinkler-system",
       idx: 9
     },
     {
-      src: require("../assets/pages/commercial-property-irrigation.jpg"),
+      src: require("../assets/carousel/commercial-property-irrigation.jpg"),
       alt: "commercial-property-irrigation",
       idx: 10
     },
     {
-      src: require("../assets/pages/residential-sprinkler-system.jpg"),
+      src: require("../assets/carousel/commercial-sprinkler-system.jpg"),
       alt: "residential-sprinkler",
       idx: 11
     },
     {
-      src: require("../assets/pages/residential-backyard-sprinklers.jpg"),
+      src: require("../assets/carousel/cloudburst-construction.jpg"),
       alt: "residential-backyard-sprinklers",
       idx: 12
     },

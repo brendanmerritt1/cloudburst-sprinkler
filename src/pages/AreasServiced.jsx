@@ -170,7 +170,7 @@ export default function AreasServiced() {
           <div className={isOpenBlur ? "areasCaptions blur" : "areasCaptions"}>
             <p className="areasCaptionTitle">Areas We Service</p>
             <p className="areasSubCaption">
-              in Delaware, Maryland, New Jersey, and Pennsylvania.
+              in Delaware, Maryland, New Jersey, and Pennsylvania
             </p>
           </div>
         </div>

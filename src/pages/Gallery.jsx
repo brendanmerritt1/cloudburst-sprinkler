@@ -44,7 +44,6 @@ export default function PhotoGallery() {
             }
           >
             <span className="galleryCaptionTitle">Gallery</span>
-            <span className="gallerySubCaption">A showcase of our work.</span>
           </div>
         </div>
         <div className="galleryContainer">
