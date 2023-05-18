@@ -42,9 +42,16 @@ transporter.verify((err, success) => {
 });
 
 app.post("/api/contact", (req, res) => {
+  const email = "";
+  if (req.body.formState.project == "Service Request (existing system)") {
+    email = process.env.REACT_APP_EMAIL_SERVICE;
+  } else {
+    email = process.env.REACT_APP_EMAIL_SALES;
+  }
+
   let mailOptions = {
-    from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${process.env.REACT_APP_EMAIL}>`,
-    to: process.env.REACT_APP_EMAIL,
+    from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${email}>`,
+    to: email,
     replyTo: `${req.body.formState.email}`,
     subject: `Message from: ${req.body.formState.firstName} ${req.body.formState.lastName}`,
     text: `
@@ -52,6 +59,7 @@ app.post("/api/contact", (req, res) => {
 
     Project type: ${req.body.formState.project}
     Phone number: ${req.body.formState.phone}
+    Customer email: ${req.body.formState.email}
     Affiliated company: ${req.body.formState.company}
     Current Cloudburst Sprinkler customer: ${req.body.formState.customer}
   `,

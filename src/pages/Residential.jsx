@@ -174,7 +174,7 @@ const data = [
       },
       {
         paragraph:
-          "You can count on our on-call service to be prompt and reliable to troubleshoot your sprinkler system.",
+          "You can count on our experienced service technician to be prompt and reliable to troubleshoot your sprinkler system.",
       },
     ],
   },

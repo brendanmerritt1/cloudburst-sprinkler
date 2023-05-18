@@ -62,7 +62,7 @@ export default function ContactForm(props) {
 
   const axiosInstance = axios.create({
     baseURL: process.env.REACT_APP_BACKEND_URL,
-  })
+  });
 
   const submitEmail = async () => {
     await axiosInstance.post(process.env.REACT_APP_SUBMIT_URL, { formState });
@@ -188,6 +188,16 @@ export default function ContactForm(props) {
           },
         },
       },
+      MuiFormControlLabel: {
+        styleOverrides: {
+          asterisk: {
+            color: "#ffffff",
+            "&$error": {
+              color: "#ffffff",
+            },
+          },
+        },
+      },
     },
   });
 
@@ -285,6 +295,7 @@ export default function ContactForm(props) {
               onChange={handleStateChange}
             >
               <FormControlLabel
+                required
                 control={
                   <Radio required size={!isDesktop ? "small" : "medium"} />
                 }
@@ -293,6 +304,7 @@ export default function ContactForm(props) {
                 className="contactFormInput"
               />
               <FormControlLabel
+                required
                 control={
                   <Radio required size={!isDesktop ? "small" : "medium"} />
                 }
@@ -303,6 +315,7 @@ export default function ContactForm(props) {
             </RadioGroup>
 
             <FormLabel
+              required
               sx={{
                 mt: "2rem",
                 fontSize: dynamicFontSize(),
@@ -316,15 +329,17 @@ export default function ContactForm(props) {
               onChange={handleStateChange}
             >
               <FormControlLabel
+                required
                 control={<Radio size={!isDesktop ? "small" : "medium"} />}
-                label="Residential Service"
-                value="Residential Service"
+                label="Service Request (existing system)"
+                value="Service Request (existing system)"
                 className="contactFormInput"
               />
               <FormControlLabel
+                required
                 control={<Radio size={!isDesktop ? "small" : "medium"} />}
-                label="New Residential Construction"
-                value="New Residential Construction"
+                label="New Installation / Construction"
+                value="New Installation / Construction"
                 className="contactFormInput"
               />
             </RadioGroup>
