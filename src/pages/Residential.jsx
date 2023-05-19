@@ -99,6 +99,7 @@ export default function Residential() {
             <div className="resButtonContact" id="noSpace">
               <NavigateButton
                 color="lightgray"
+                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />
@@ -147,6 +148,7 @@ export default function Residential() {
             <div className="resButtonContact" id="noSpace">
               <NavigateButton
                 color="lightgray"
+                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

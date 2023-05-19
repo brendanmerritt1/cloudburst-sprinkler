@@ -75,6 +75,7 @@ export default function AboutUs() {
           <div className="aboutButtonCenter">
             <NavigateButton
               color="lightgray"
+              text=""
               desc="CONTACT US"
               nav="/contact"
             />

@@ -101,6 +101,7 @@ export default function Commercial() {
             <div className="commButtonContact">
               <NavigateButton
                 color="lightgray"
+                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />
@@ -165,6 +166,7 @@ export default function Commercial() {
             <div className="commButtonContact" id="bottom">
               <NavigateButton
                 color="lightgray"
+                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

@@ -28,6 +28,10 @@
   border-radius: 13% 13% 13% 13% / 50% 50% 50% 50%;
 }
 
+.navigateButton.white {
+  color: #e8e6e3;
+}
+
 .navigateButton.contactButton{
   font-size: 1.3rem;
   width: 13rem;
@@ -301,7 +305,7 @@ button:active {
   }
 
   #mobile.navigateButton {
-    background-color: #e8e6e3;
+    background-color: #222222;
     font-size: 1.4vw;
     width: 11rem;
     height: 2.75rem;
@@ -311,6 +315,17 @@ button:active {
     font-size: 1.3vw;
     width: 9rem;
     height: 2.25rem;
+  }
+  
+  #gray.navigateButton {
+    transition: 0.5s ease;
+    background: linear-gradient(to left, #222222 50%, #e8e6e3 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+  }
+  
+  #gray.navigateButton:hover {
+    color: #222222;
   }
 
   .navigateButton.contactButton{
@@ -327,7 +342,7 @@ button:active {
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   #mobile.navigateButton {
-    background-color: #e8e6e3;
+    background-color: #222222;
     font-size: 1.3vw;
     width: 18vw;
     height: 4.5vw;
@@ -417,7 +432,7 @@ button:active {
 
 @media screen and (min-width: 415px) and (max-width: 699px) {
   #mobile.navigateButton {
-    background-color: #e8e6e3;
+    background-color: #222222;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 2.5vw;
     width: 40vw;
@@ -507,7 +522,7 @@ button:active {
 
 @media screen and (min-width: 350px) and (max-width: 414px) {
   #mobile.navigateButton {
-    background-color: #e8e6e3;
+    background-color: #222222;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 2.5vw;
     width: 40vw;
@@ -597,7 +612,7 @@ button:active {
 
 @media screen and (min-width: 320px) and (max-width: 349px) {
   #mobile.navigateButton {
-    background-color: #e8e6e3;
+    background-color: #222222;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 3vw;
     width: 40vw;

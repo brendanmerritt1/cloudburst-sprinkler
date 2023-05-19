@@ -200,6 +200,7 @@ export default function AreasServiced() {
             <div className="areasButton">
               <NavigateButton
                 color="lightgray"
+                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

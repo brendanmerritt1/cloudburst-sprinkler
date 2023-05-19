@@ -2,6 +2,8 @@ import "../styles/home.css";
 import NavigateButton from "../components/services/NavigateButton";
 import Navbar from "../components/navbar/Navbar";
 import { windowResize } from "../utils/windowResize";
+import VideoLoader from "../utils/VideoLoader";
+import { loadImage } from "../utils/imageLoader";
 import { useState, useEffect } from "react";
 import "animate.css";
 import { Helmet } from "react-helmet";
@@ -22,15 +24,21 @@ export default function Home() {
       <Helmet>
         <link rel="canonical" href="https://cloudburstsprinkler.com/" />
       </Helmet>
-      <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
+      <Navbar color={windowWidth >= 1280 ? "white" : "black"} setIsOpenBlur={setIsOpenBlur} />
       <div
         className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}
       >
-        <video autoPlay loop muted className="homePic">
-          <source src="/Videos/heroVideo.webm" type='video/webm; codecs="vp9"'/>
-          <source src="/Videos/heroVideo.mp4" type='video/mp4; codecs="avc1"' />
-        </video>
-        <div className="homeCaptions">
+        {windowWidth >= 1280 ? (
+          <VideoLoader
+            className="homePic"
+            video_webm="/Videos/heroVideo.webm"
+            video_mp4="/Videos/heroVideo.mp4"
+          />
+        ) : (
+          <img src={loadImage("home")} alt="" className="homePic" />
+        )}
+
+        <div className={windowWidth >= 1280 ? "homeCaptions white" : "homeCaptions"}>
           {windowWidth >= 700 ? (
             <span className="homeCaptionTitle animate__animated animate__fadeInUp animate__slow">
               Protect and Enhance Your Landscape Investment
@@ -59,12 +67,14 @@ export default function Home() {
           </span>
           <div className="homeButtons animate__animated animate__fadeIn animate__slow animate__delay-3s">
             <NavigateButton
-              color={window.innerWidth <= 1024 ? "mobile" : "gray"}
+              color={windowWidth <= 1024 ? "mobile" : "gray"}
+              text={windowWidth >= 1280 ? "" : " white"}
               desc="COMMERCIAL"
               nav="/commercial"
             />
             <NavigateButton
-              color={window.innerWidth <= 1024 ? "mobile" : "gray"}
+              color={windowWidth <= 1024 ? "mobile" : "gray"}
+              text={windowWidth >= 1280 ? "" : " white"}
               desc="RESIDENTIAL"
               nav="/residential"
             />
