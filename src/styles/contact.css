@@ -44,6 +44,7 @@
 #lightgray.navigateButton {
   font-weight: 500;
   background-color: #222222;
+  color: #ffffff;
 }
 
 #gray.navigateButton:hover {
