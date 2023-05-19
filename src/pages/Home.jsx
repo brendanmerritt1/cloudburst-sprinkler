@@ -1,7 +1,6 @@
 import "../styles/home.css";
 import NavigateButton from "../components/services/NavigateButton";
 import Navbar from "../components/navbar/Navbar";
-import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
 import "animate.css";
@@ -23,11 +22,14 @@ export default function Home() {
       <Helmet>
         <link rel="canonical" href="https://cloudburstsprinkler.com/" />
       </Helmet>
-      <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
+      <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div
         className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}
       >
-        <img src={loadImage("home")} alt="" className="homePic" />
+        <video autoPlay loop muted className="homePic">
+          <source src="/Videos/heroVideo.webm" type='video/webm; codecs="vp9"'/>
+          <source src="/Videos/heroVideo.mp4" type='video/mp4; codecs="avc1"' />
+        </video>
         <div className="homeCaptions">
           {windowWidth >= 700 ? (
             <span className="homeCaptionTitle animate__animated animate__fadeInUp animate__slow">

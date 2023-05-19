@@ -14,9 +14,9 @@
 
 .navigateButton {
   font-size: 0.8vw;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 1px;
-  color: white;
+  color: #222222;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -36,7 +36,7 @@
 
 #gray.navigateButton {
   transition: 0.5s ease;
-  background: linear-gradient(to left, #222222 50%, #e4e4e4 50%);
+  background: linear-gradient(to left, #e8e6e3 50%, #222222 50%);
   background-size: 200% 100%;
   background-position: right bottom;
 }
@@ -48,14 +48,13 @@
 
 #gray.navigateButton:hover {
   outline: 0;
-  color: #222222;
+  color: #e8e6e3;
   background-position: left bottom;
 }
 
 #gray.navigateButton:active,
 button:active {
   outline: 0;
-  color: #fff;
 }
 
 .contactFormContainer {
@@ -66,7 +65,8 @@ button:active {
   background-color: white;
   top: 9rem;
   width: 50rem;
-  height: 78rem;
+  height: auto;
+  padding-bottom: 3rem;
   border-radius: 5%;
 }
 
@@ -144,6 +144,7 @@ button:active {
   .contactFormContainer {
     top: 12rem;
     width: 48rem;
+    padding-bottom: 3rem;
   }
 
   .navigateButton.contactButton{
@@ -161,7 +162,6 @@ button:active {
   .contactFormContainer {
     top: 9rem;
     width: 38rem;
-    height: 68rem;
   }
 
   .contactFormTitle {
@@ -235,7 +235,7 @@ button:active {
 
   .contactFormContainer {
     width: 35rem;
-    height: auto;
+    padding-bottom: 1rem;
   }
 
   .contactFormFields {
@@ -300,7 +300,7 @@ button:active {
   }
 
   #mobile.navigateButton {
-    background-color: #222222;
+    background-color: #e8e6e3;
     font-size: 1.4vw;
     width: 11rem;
     height: 2.75rem;
@@ -326,7 +326,7 @@ button:active {
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
   #mobile.navigateButton {
-    background-color: #222222;
+    background-color: #e8e6e3;
     font-size: 1.3vw;
     width: 18vw;
     height: 4.5vw;
@@ -338,7 +338,7 @@ button:active {
 
   .contactFormContainer {
     width: 35rem;
-    height: auto;
+    padding-bottom: 1rem;
   }
 
   .contactFormFields {
@@ -416,7 +416,7 @@ button:active {
 
 @media screen and (min-width: 415px) and (max-width: 699px) {
   #mobile.navigateButton {
-    background-color: #222222;
+    background-color: #e8e6e3;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 2.5vw;
     width: 40vw;
@@ -424,12 +424,12 @@ button:active {
   }
 
   .contactImg {
-    height: 97rem;
+    height: 98rem;
   }
 
   .contactFormContainer {
     width: 25rem;
-    height: auto;
+    padding-bottom: 1rem;
     border-radius: 30px 30px 30px 30px;
   }
 
@@ -506,7 +506,7 @@ button:active {
 
 @media screen and (min-width: 350px) and (max-width: 414px) {
   #mobile.navigateButton {
-    background-color: #222222;
+    background-color: #e8e6e3;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 2.5vw;
     width: 40vw;
@@ -519,7 +519,7 @@ button:active {
 
   .contactFormContainer {
     width: 22rem;
-    height: auto;
+    padding-bottom: 1rem;
     border-radius: 30px 30px 30px 30px;
   }
 
@@ -596,7 +596,7 @@ button:active {
 
 @media screen and (min-width: 320px) and (max-width: 349px) {
   #mobile.navigateButton {
-    background-color: #222222;
+    background-color: #e8e6e3;
     border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
     font-size: 3vw;
     width: 40vw;
@@ -610,7 +610,7 @@ button:active {
   .contactFormContainer {
     width: 19rem;
     top: 5rem;
-    height: auto;
+    padding-bottom: 1rem;
     border-radius: 30px 30px 30px 30px;
   }
 
