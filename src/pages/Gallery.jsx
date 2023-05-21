@@ -26,6 +26,10 @@ export default function PhotoGallery() {
       <Helmet>
         <title>Gallery - Cloudburst Lawn Sprinkler Systems</title>
         <link rel="canonical" href="https://cloudburstsprinkler.com/gallery" />
+        <meta
+          name="description"
+          content="Cloudburst Sprinkler Gallery. Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems."
+        />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "galleryBlur" : null}>

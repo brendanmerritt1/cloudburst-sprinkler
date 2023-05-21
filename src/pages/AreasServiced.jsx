@@ -23,7 +23,7 @@ export default function AreasServiced() {
     searchPlaceholder: "City or State",
     rowsPerPageOptions: [10, 20],
     responsive: "standard",
-    filterType: "checkbox"
+    filterType: "checkbox",
   };
 
   const dynamicWidth = () => {
@@ -156,7 +156,14 @@ export default function AreasServiced() {
     <div className="areasContainer">
       <Helmet>
         <title>Areas Serviced - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="https://cloudburstsprinkler.com/areas-serviced" />
+        <link
+          rel="canonical"
+          href="https://cloudburstsprinkler.com/areas-serviced"
+        />
+        <meta
+          name="description"
+          content="Areas We Service - Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems."
+        />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "areasBlur" : null}>
@@ -177,8 +184,13 @@ export default function AreasServiced() {
         <div className="areasViewContainer">
           <p className="areasParagraph">
             Cloudburst serves all of the areas listed in the table below. The
-            search icon is provided for an easy lookup of the area you would like
-            serviced.
+            search icon is provided for an easy lookup of the area you would
+            like serviced.
+          </p>
+          <p className="areasParagraph">
+            The list below is not all-inclusive of the areas we service. If you
+            are unsure if Cloudburst can service your area, don't hesitate to
+            contact us!
           </p>
           <div className="areasContactUs">
             <p className="areasParagraphCaption">
@@ -200,7 +212,6 @@ export default function AreasServiced() {
             <div className="areasButton">
               <NavigateButton
                 color="lightgray"
-                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

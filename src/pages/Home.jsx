@@ -24,7 +24,7 @@ export default function Home() {
       <Helmet>
         <link rel="canonical" href="https://cloudburstsprinkler.com/" />
       </Helmet>
-      <Navbar color={windowWidth >= 1280 ? "white" : "black"} setIsOpenBlur={setIsOpenBlur} />
+      <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div
         className={isOpenBlur ? "homePicContainer blur" : "homePicContainer"}
       >
@@ -38,7 +38,7 @@ export default function Home() {
           <img src={loadImage("home")} alt="" className="homePic" />
         )}
 
-        <div className={windowWidth >= 1280 ? "homeCaptions white" : "homeCaptions"}>
+        <div className="homeCaptions">
           {windowWidth >= 700 ? (
             <span className="homeCaptionTitle animate__animated animate__fadeInUp animate__slow">
               Protect and Enhance Your Landscape Investment
@@ -68,13 +68,11 @@ export default function Home() {
           <div className="homeButtons animate__animated animate__fadeIn animate__slow animate__delay-3s">
             <NavigateButton
               color={windowWidth <= 1024 ? "mobile" : "gray"}
-              text={windowWidth >= 1280 ? "" : " white"}
               desc="COMMERCIAL"
               nav="/commercial"
             />
             <NavigateButton
               color={windowWidth <= 1024 ? "mobile" : "gray"}
-              text={windowWidth >= 1280 ? "" : " white"}
               desc="RESIDENTIAL"
               nav="/residential"
             />

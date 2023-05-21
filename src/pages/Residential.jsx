@@ -55,7 +55,14 @@ export default function Residential() {
     <div className="servicesNavContainer">
       <Helmet>
         <title>Residential - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="https://cloudburstsprinkler.com/residential" />
+        <link
+          rel="canonical"
+          href="https://cloudburstsprinkler.com/residential"
+        />
+        <meta
+          name="description"
+          content="Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems for residential applications."
+        />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
@@ -99,7 +106,6 @@ export default function Residential() {
             <div className="resButtonContact" id="noSpace">
               <NavigateButton
                 color="lightgray"
-                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />
@@ -148,7 +154,6 @@ export default function Residential() {
             <div className="resButtonContact" id="noSpace">
               <NavigateButton
                 color="lightgray"
-                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

@@ -169,4 +169,12 @@ export const rows = [
   ["Rising Sun", "MD"],
   ["Warwick", "MD"],
   ["Elkton", "MD"],
+  ["Salem", "NJ"],
+  ["Bridgeton", "NJ"],
+  ["Millville", "NJ"],
+  ["Vineland", "NJ"],
+  ["Glassboro", "NJ"],
+  ["Hammonton", "NJ"],
+  ["Woodbury", "NJ"],
+  ["Swedesboro", "NJ"],
 ];

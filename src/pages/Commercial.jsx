@@ -53,7 +53,14 @@ export default function Commercial() {
     <div className="servicesNavContainer">
       <Helmet>
         <title>Commercial - Cloudburst Lawn Sprinkler Systems</title>
-        <link rel="canonical" href="https://cloudburstsprinkler.com/commercial" />
+        <link
+          rel="canonical"
+          href="https://cloudburstsprinkler.com/commercial"
+        />
+        <meta
+          name="description"
+          content="Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems for commercial applications."
+        />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur ? "servicesBlur" : null}>
@@ -101,7 +108,6 @@ export default function Commercial() {
             <div className="commButtonContact">
               <NavigateButton
                 color="lightgray"
-                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />
@@ -166,7 +172,6 @@ export default function Commercial() {
             <div className="commButtonContact" id="bottom">
               <NavigateButton
                 color="lightgray"
-                text=""
                 desc="CONTACT US"
                 nav="/contact"
               />

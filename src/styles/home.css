@@ -30,13 +30,9 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    color: #222222;
+    color: #e8e6e3;
     top: 11vw;
     gap: 1rem;
-}
-
-.homeCaptions.white {
-    color: #e8e6e3;
 }
 
 .homeCaptionTitle {
@@ -131,6 +127,7 @@
 @media screen and (min-width: 700px) and (max-width: 1023px) {
     .homePic {
         height: 100dvh;
+        object-position: 32%;
     }
 
     .homeCaptions {
@@ -169,6 +166,7 @@
 @media screen and (min-width: 415px) and (max-width: 699px) {
     .homePic {
         height: 100dvh;
+        object-position: 34%;
     }
 
     .homeCaptions {
@@ -196,8 +194,8 @@
     }
 
     #margin.homeSubCaption {
-        margin-bottom: 30vh;
-        margin-bottom: 30dvh;
+        margin-bottom: 4vh;
+        margin-bottom: 4dvh;
     }
 
     .homeButtons {
@@ -216,6 +214,7 @@
 @media screen and (min-width: 350px) and (max-width: 414px) {
     .homePic {
         height: 100dvh;
+        object-position: 34%;
     }
 
     .homeCaptions {
@@ -243,8 +242,8 @@
     }
 
     #margin.homeSubCaption {
-        margin-bottom: 30vh;
-        margin-bottom: 30dvh;
+        margin-bottom: 5vh;
+        margin-bottom: 5dvh;
     }
 
     .homeButtons {
@@ -263,6 +262,7 @@
 @media screen and (min-width: 320px) and (max-width: 349px) {
     .homePic {
         height: 100dvh;
+        object-position: 33%;
     }
 
     .homeCaptions {
@@ -290,8 +290,8 @@
     }
 
     #margin.homeSubCaption {
-        margin-bottom: 27vh;
-        margin-bottom: 27dvh;
+        margin-bottom: 4vh;
+        margin-bottom: 4dvh;
     }
 
     .homeButtons {

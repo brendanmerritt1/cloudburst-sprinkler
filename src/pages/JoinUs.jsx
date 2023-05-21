@@ -20,6 +20,10 @@ export default function JoinUs() {
       <Helmet>
         <title>Join Us - Cloudburst Lawn Sprinkler Systems</title>
         <link rel="canonical" href="https://cloudburstsprinkler.com/join-us" />
+        <meta
+          name="description"
+          content="Join us - Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems."
+        />
       </Helmet>
       <Navbar color="black" setIsOpenBlur={setIsOpenBlur} />
       <div className={isOpenBlur && "joinBlur"}>

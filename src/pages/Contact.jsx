@@ -21,6 +21,10 @@ export default function Contact() {
       <Helmet>
         <title>Contact Us - Cloudburst Lawn Sprinkler Systems</title>
         <link rel="canonical" href="https://cloudburstsprinkler.com/contact" />
+        <meta
+          name="description"
+          content="Contact us - Cloudburst has over 30 years of experience in the design and installation of underground irrigation systems."
+        />
       </Helmet>
       <Navbar color="white" setIsOpenBlur={setIsOpenBlur} />
       <img

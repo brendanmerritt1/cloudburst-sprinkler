@@ -17,7 +17,7 @@ export default function NavigateButton(props) {
           window.location.reload(false);
         }
       }}
-      className={"navigateButton" + props.text}
+      className="navigateButton"
       id={props.color}
     >
       {props.desc}
