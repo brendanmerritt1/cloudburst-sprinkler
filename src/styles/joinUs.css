@@ -87,6 +87,38 @@ a[href^="mailto:"]:hover {
   z-index: -1;
 }
 
+.contactFormContainer.join {
+  position: relative;
+  background-color: #f2f2f2;
+  width: 50rem;
+  top: 2rem;
+}
+
+.contactCommentForm.noReq::after {
+  content: "";
+}
+
+input[type="file"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+.joinFileButton {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contactFormInput.join .MuiInputLabel-standard {
+  overflow: visible;
+}
+
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
   .joinPicContainer {
     height: 94vh;
@@ -100,6 +132,50 @@ a[href^="mailto:"]:hover {
   .joinViewContainer {
     padding: 6rem 25rem;
   }
+
+  .contactFormContainer.join {
+    width: 55rem;
+  }
+
+  .contactFormTitle.join {
+    font-size: 2.5rem;
+  }
+
+  .contactFormSubTitle.join {
+    font-size: 1.5rem;
+  }
+
+  .requiredField.join {
+    font-size: 1.5rem;
+  }
+
+  .contactFormInput.join .MuiInputLabel-standard {
+    font-size: 1.25rem;
+  }
+
+  .contactFormInput.join .MuiInput-input {
+    font-size: 1.25rem;
+  }
+
+  .contactFormInput.join .MuiInputLabel-outlined {
+    font-size: 1.25rem;
+  }
+
+  .contactFormInput.join .MuiFormLabel-asterisk {
+    font-size: 1.25rem;
+  }
+
+  .contactFormInput.join .MuiOutlinedInput-input {
+    font-size: 1.25rem;
+  }
+
+  .contactCommentForm.join {
+    font-size: 1.5rem;
+  }
+
+  .captchaWrapper {
+    transform: scale(1.1);
+  }
 }
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
@@ -109,6 +185,18 @@ a[href^="mailto:"]:hover {
 
   .joinViewContainer {
     padding: 5rem 10rem;
+  }
+
+  .contactFormContainer.join {
+    width: 38rem;
+  }
+
+  .joinFileButton {
+    margin-bottom: 1rem;
+  }
+
+  .contactFormInput.join .MuiOutlinedInput-input {
+    font-size: 0.9rem;
   }
 }
 
@@ -157,6 +245,14 @@ a[href^="mailto:"]:hover {
   a[href^="mailto:"] {
     text-decoration: underline;
   }
+
+  .contactFormContainer.join {
+    width: 35rem;
+  }
+
+  .contactFormInput.join .MuiOutlinedInput-input {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1023px) {
@@ -170,7 +266,7 @@ a[href^="mailto:"]:hover {
 
   .joinViewContainer {
     padding: 5rem 3.2rem;
-    height: 50vh;
+    height: auto;
   }
 
   .joinCaption {
@@ -209,6 +305,14 @@ a[href^="mailto:"]:hover {
   a[href^="mailto:"] {
     text-decoration: underline;
   }
+
+  .contactFormContainer.join {
+    width: 35rem;
+  }
+
+  .contactFormInput.join .MuiOutlinedInput-input {
+    font-size: 0.8rem;
+  }
 }
 
 @media screen and (min-width: 415px) and (max-width: 699px) {
@@ -223,6 +327,7 @@ a[href^="mailto:"]:hover {
 
   .joinViewContainer {
     padding: 3rem 2rem;
+    margin-bottom: 1rem;
     gap: 2.5rem;
   }
 
@@ -269,6 +374,10 @@ a[href^="mailto:"]:hover {
   a[href^="mailto:"] {
     text-decoration: underline;
   }
+
+  .contactFormContainer.join {
+    width: 25rem;
+  }
 }
 
 @media screen and (min-width: 350px) and (max-width: 414px) {
@@ -283,6 +392,7 @@ a[href^="mailto:"]:hover {
 
   .joinViewContainer {
     padding: 3rem 1.5rem;
+    margin-bottom: 1rem;
     gap: 2rem;
   }
 
@@ -329,6 +439,14 @@ a[href^="mailto:"]:hover {
   a[href^="mailto:"] {
     text-decoration: underline;
   }
+
+  .contactFormContainer.join {
+    width: 22rem;
+  }
+
+  .contactFormInput.join .MuiInputLabel-outlined {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 349px) {
@@ -343,6 +461,7 @@ a[href^="mailto:"]:hover {
 
   .joinViewContainer {
     padding: 2rem 1.1rem;
+    margin-bottom: 2rem;
     gap: 1.5rem;
   }
 
@@ -389,5 +508,13 @@ a[href^="mailto:"]:hover {
   
   a[href^="mailto:"] {
     text-decoration: underline;
+  }
+
+  .contactFormContainer.join {
+    width: 19rem;
+  }
+
+  .contactFormInput.join .MuiOutlinedInput-input {
+    font-size: 0.8rem;
   }
 }

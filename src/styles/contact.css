@@ -241,8 +241,8 @@ button:active {
 
   .contactFormFields {
     margin-top: 5rem;
-    width: 70%;
-    height: 35%;
+    width: 60%;
+    height: auto;
     column-gap: 3.5rem;
     row-gap: 1rem;
   }
@@ -260,11 +260,6 @@ button:active {
   .requiredField {
     font-size: 0.75rem;
     top: 4.5rem;
-  }
-
-  .contactFormFields {
-    width: 60%;
-    height: auto;
   }
 
   .contactCommentForm {
@@ -355,8 +350,8 @@ button:active {
 
   .contactFormFields {
     margin-top: 5rem;
-    width: 70%;
-    height: 35%;
+    width: 60%;
+    height: auto;
     column-gap: 3.5rem;
     row-gap: 1rem;
   }
@@ -374,11 +369,6 @@ button:active {
   .requiredField {
     font-size: 0.75rem;
     top: 4.5rem;
-  }
-
-  .contactFormFields {
-    width: 60%;
-    height: auto;
   }
 
   .contactCommentForm {

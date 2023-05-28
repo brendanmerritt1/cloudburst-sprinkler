@@ -1,11 +1,17 @@
 const express = require("express");
 require("dotenv").config();
 const cors = require("cors");
+const multer = require("multer");
 const axios = require("axios");
 const nodemailer = require("nodemailer");
+
 const port = 4000;
 
 const app = express();
+
+const upload = multer({
+  storage: multer.memoryStorage(),
+});
 
 app.use(cors());
 app.use(express.json());
@@ -42,7 +48,7 @@ transporter.verify((err, success) => {
 });
 
 app.post("/api/contact", (req, res) => {
-  const email = "";
+  let email = "";
   if (req.body.formState.project == "Service Request (existing system)") {
     email = process.env.REACT_APP_EMAIL_SERVICE;
   } else {
@@ -63,6 +69,43 @@ app.post("/api/contact", (req, res) => {
     Affiliated company: ${req.body.formState.company}
     Current Cloudburst Sprinkler customer: ${req.body.formState.customer}
   `,
+  };
+
+  transporter.sendMail(mailOptions, (err, info) => {
+    if (err) {
+      console.error(err);
+    } else {
+      console.log("Email sent successfully: " + info.response);
+    }
+  });
+});
+
+app.post("/api/applicant", upload.single("resume"), (req, res) => {
+  let message = "";
+  if (req.body.message == "") {
+    message =
+      "The resume for my Cloudburst Sprinkler job application is attached to this email.";
+  } else {
+    message = req.body.message;
+  }
+
+  let mailOptions = {
+    from: `${req.body.firstName} ${req.body.lastName} <${process.env.REACT_APP_EMAIL_SALES}>`,
+    to: process.env.REACT_APP_EMAIL_SALES,
+    replyTo: `${req.body.email}`,
+    subject: `Job Application: ${req.body.firstName} ${req.body.lastName}`,
+    text: `
+    ${message}
+
+    Phone number: ${req.body.phone}
+    Applicant email: ${req.body.email}
+  `,
+    attachments: [
+      {
+        filename: req.file.originalname,
+        content: req.file.buffer,
+      },
+    ],
   };
 
   transporter.sendMail(mailOptions, (err, info) => {

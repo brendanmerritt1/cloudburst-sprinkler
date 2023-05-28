@@ -2,6 +2,7 @@ import "../styles/joinUs.css";
 import Navbar from "../components/navbar/Navbar";
 import Sitemap from "../components/sitemapFooter/Sitemap";
 import MobileSitemap from "../components/sitemapFooter/MobileSitemap";
+import JoinUsForm from "../components/forms/JoinUsForm";
 import { loadImage } from "../utils/imageLoader";
 import { windowResize } from "../utils/windowResize";
 import { useState, useEffect } from "react";
@@ -70,12 +71,8 @@ export default function JoinUs() {
                 (610) 640-4067
               </a>
             </span>
-            <span className="joinParagraphCaption">Or send us an email.</span>
-            <span className="joinParagraph">
-              <a href="mailto:sales@cloudburstsprinkler.com">
-                sales@cloudburstsprinkler.com
-              </a>
-            </span>
+            <span className="joinParagraphCaption">Or send us an email below.</span>
+            <JoinUsForm isOpenBlur={isOpenBlur} />
           </div>
         </div>
         {windowWidth >= 700 ? <Sitemap /> : <MobileSitemap />}
