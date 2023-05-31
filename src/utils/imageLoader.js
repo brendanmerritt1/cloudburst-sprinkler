@@ -108,6 +108,26 @@ const images = {
       alt: "residential-backyard-sprinklers",
       idx: 12
     },
+    {
+      src: require("../assets/carousel/sprinkler-baseball-field.jpg"),
+      alt: "sprinkler-baseball-field",
+      idx: 13
+    },
+    {
+      src: require("../assets/carousel/residential-frontyard-sprinklers.jpg"),
+      alt: "residential-frontyard-sprinklers",
+      idx: 14
+    },
+    {
+      src: require("../assets/carousel/cloudburst-labor.jpg"),
+      alt: "cloudburst-labor",
+      idx: 15
+    },
+        {
+      src: require("../assets/carousel/baseball-field-springfield.jpg"),
+      alt: "baseball-field-springfield",
+      idx: 16
+    },
   ],
 
   /* AREAS SERVICED */

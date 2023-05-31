@@ -11,7 +11,11 @@ const captions = {
     pic9: "Sprinkler system set up alongside a residential driveway.",
     pic10: "Landscaping done by Cloudburst Sprinklers for the office of a local business.",
     pic11: "Sprinkler system set up on commercial property.",
-    pic12: "Cloudburst Sprinklers construction on commercial property."
+    pic12: "Cloudburst Sprinklers construction on commercial property.",
+    pic13: "Local baseball field with Cloudburst's sprinkler system.",
+    pic14: "Sprinkler system set up in a residential front lawn.",
+    pic15: "Mid-installation by Cloudburst employees.",
+    pic16: "Haldermans Field (Springfield, PA).",
 }
 
 export function loadCaption(captionName) {
