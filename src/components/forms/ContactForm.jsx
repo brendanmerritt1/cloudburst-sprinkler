@@ -48,6 +48,9 @@ export default function ContactForm(props) {
     lastName: "",
     phone: "",
     email: "",
+    address: "",
+    city: "",
+    state: "",
     company: "",
     customer: "",
     project: "",
@@ -92,6 +95,9 @@ export default function ContactForm(props) {
         lastName: "",
         phone: "",
         email: "",
+        address: "",
+        city: "",
+        state: "",
         company: "",
         customer: "",
         project: "",
@@ -264,6 +270,39 @@ export default function ContactForm(props) {
             name="email"
             onChange={handleStateChange}
             value={formState.email}
+            sx={{ mt: "1rem" }}
+            className="contactFormInput"
+          />
+          <TextField
+            required
+            id="standard-basic"
+            label="Address"
+            variant="standard"
+            name="address"
+            onChange={handleStateChange}
+            value={formState.address}
+            sx={{ mt: "1rem" }}
+            className="contactFormInput"
+          />
+          <TextField
+            required
+            id="standard-basic"
+            label="City"
+            variant="standard"
+            name="city"
+            onChange={handleStateChange}
+            value={formState.city}
+            sx={{ mt: "1rem" }}
+            className="contactFormInput"
+          />
+          <TextField
+            required
+            id="standard-basic"
+            label="State"
+            variant="standard"
+            name="state"
+            onChange={handleStateChange}
+            value={formState.state}
             sx={{ mt: "1rem" }}
             className="contactFormInput"
           />

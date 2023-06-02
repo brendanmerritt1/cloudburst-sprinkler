@@ -66,6 +66,7 @@ app.post("/api/contact", (req, res) => {
     Project type: ${req.body.formState.project}
     Phone number: ${req.body.formState.phone}
     Customer email: ${req.body.formState.email}
+    Customer address: ${req.body.formState.address}, ${req.body.formState.city}, ${req.body.formState.state}
     Affiliated company: ${req.body.formState.company}
     Current Cloudburst Sprinkler customer: ${req.body.formState.customer}
   `,

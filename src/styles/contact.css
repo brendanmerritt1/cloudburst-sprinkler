@@ -7,7 +7,7 @@
 }
 
 .contactImg {
-  height: 95rem;
+  height: 100rem;
   width: 100%;
   object-fit: cover;
 }
@@ -137,6 +137,10 @@ button:active {
 }
 
 @media screen and (min-width: 2560px) and (max-width: 3760px) {
+  .contactImg {
+    height: 110rem;
+  }
+
   .navigateButton {
     width: 10vw;
     height: 2.5vw;
@@ -157,7 +161,7 @@ button:active {
 
 @media screen and (min-width: 1280px) and (max-width: 1919px) {
   .contactImg {
-    height: 85rem;
+    height: 95rem;
   }
 
   .contactFormContainer {
@@ -231,7 +235,7 @@ button:active {
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
   .contactImg {
-    height: 85rem;
+    height: 95rem;
   }
 
   .contactFormContainer {
@@ -340,7 +344,7 @@ button:active {
   }
 
   .contactImg {
-    height: 85rem;
+    height: 95rem;
   }
 
   .contactFormContainer {
@@ -426,7 +430,7 @@ button:active {
   }
 
   .contactImg {
-    height: 98rem;
+    height: 120rem;
   }
 
   .contactFormContainer {
@@ -516,7 +520,7 @@ button:active {
   }
 
   .contactImg {
-    height: 100rem;
+    height: 120rem;
   }
 
   .contactFormContainer {
@@ -606,7 +610,7 @@ button:active {
   }
 
   .contactImg {
-    height: 90rem;
+    height: 110rem;
   }
 
   .contactFormContainer {
