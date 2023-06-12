@@ -8,8 +8,6 @@ import {
   ThemeProvider,
   FormControl,
   FormLabel,
-  Alert,
-  Dialog,
 } from "@mui/material";
 import Swal from "sweetalert2/dist/sweetalert2.js";
 import "sweetalert2/dist/sweetalert2.css";
@@ -59,9 +57,6 @@ export default function ContactForm(props) {
     message: "",
   });
 
-  // const [openSuccess, setOpenSuccess] = useState(false);
-  // const [openError, setOpenError] = useState(false);
-
   const [verified, setVerified] = useState(false);
   const captchaRef = useRef(null);
 
@@ -75,29 +70,21 @@ export default function ContactForm(props) {
       .then(handleOpen("success"))
       .catch(() => {
         window.alert(
-          "We have already received your request! It seems like you have made a successful request to contact our team in the past couple minutes. If you need to make another request, please try again later."
+          "Duplicate Request -- We have already received your request, please try again later."
         );
-        handleOpen("info")
+        handleOpen("info");
       });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!verified) {
-      // setOpenError(true);
       handleOpen("error");
     } else {
       const token = captchaRef.current.getValue();
       await axiosInstance
         .post(process.env.REACT_APP_API_URL, { token })
-        // .then((res) => {
-        //   if (res.status && res.status === 429) {
-        //     // setOpenSuccess(true);
-        //     handleOpen("info");
-        //   }
-        // })
         .catch(() => {
-          // setOpenError(true);
           handleOpen("error");
         });
       submitEmail();
@@ -163,14 +150,6 @@ export default function ContactForm(props) {
       },
     });
   };
-
-  // const handleClose = () => {
-  //   if (openSuccess) {
-  //     setOpenSuccess(false);
-  //     setVerified(false);
-  //   }
-  //   setOpenError(false);
-  // };
 
   const dynamicMargin = () => {
     if (is700 || is1024) {
@@ -462,36 +441,6 @@ export default function ContactForm(props) {
               </button>
             </div>
           </div>
-
-          {/* <Dialog
-            open={openSuccess}
-            onClose={handleClose}
-            sx={{
-              "& .MuiDialog-container": {
-                alignItems: "flex-end",
-              },
-            }}
-          >
-            <Alert severity="success">
-              Your request has successfully been processed. Our team will email
-              you back shortly.
-            </Alert>
-          </Dialog>
-
-          <Dialog
-            open={openError}
-            onClose={handleClose}
-            sx={{
-              "& .MuiDialog-container": {
-                alignItems: "flex-end",
-              },
-            }}
-          >
-            <Alert severity="error">
-              An error occurred while submitting your request. Please check that
-              the reCAPTCHA verification was successful.
-            </Alert>
-          </Dialog> */}
         </form>
       </div>
     </ThemeProvider>

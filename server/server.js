@@ -15,7 +15,7 @@ const upload = multer({
 });
 
 const apiLimiter = rateLimit({
-  windowMs: 20000, // 20 sec
+  windowMs: 300000,
   max: 1,
   statusCode: 429,
   standardHeaders: true,
@@ -27,9 +27,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 app.set("trust proxy", 1);
-app.get('/api/ip', apiLimiter, (req, res) => {
-  res.send(req.ip);
-});
 
 app.post("/api/recaptcha", async (req, res) => {
   const { token } = req.body;

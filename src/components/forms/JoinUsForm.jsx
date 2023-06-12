@@ -4,10 +4,10 @@ import TextField from "@mui/material/TextField";
 import {
   createTheme,
   ThemeProvider,
-  Alert,
-  Dialog,
   Button,
 } from "@mui/material";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import { useState, useRef } from "react";
@@ -25,9 +25,6 @@ export default function JoinUsForm(props) {
       "The resume for my Cloudburst Sprinkler job application is attached to this email.",
   });
 
-  const [openSuccess, setOpenSuccess] = useState(false);
-  const [openError, setOpenError] = useState(false);
-
   const [verified, setVerified] = useState(false);
   const captchaRef = useRef(null);
 
@@ -42,26 +39,27 @@ export default function JoinUsForm(props) {
         "Content-Type": "multipart/form-data",
       },
     };
-    await axiosInstance.post(process.env.REACT_APP_APPLICATION_URL, fd, header);
+    await axiosInstance
+      .post(process.env.REACT_APP_APPLICATION_URL, fd, header)
+      .then(handleOpen("success"))
+      .catch(() => {
+        window.alert(
+          "Duplicate Request -- We have already received your request, please try again later."
+        );
+        handleOpen("info");
+      });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!verified) {
-      setOpenError(true);
+      handleOpen("error");
     } else {
       const token = captchaRef.current.getValue();
       await axiosInstance
         .post(process.env.REACT_APP_API_URL, { token })
-        .then((res) => {
-          if (res.status) {
-            setOpenSuccess(true);
-          } else {
-            setOpenError(true);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
+        .catch(() => {
+          handleOpen("error");
         });
       submitEmail();
       fdAddReset("reset");
@@ -111,12 +109,35 @@ export default function JoinUsForm(props) {
     }
   };
 
-  const handleClose = () => {
-    if (openSuccess) {
-      setOpenSuccess(false);
-      setVerified(false);
+  const handleOpen = (type) => {
+    let title,
+      text,
+      icon = "";
+    if (type === "success") {
+      title = "Success!";
+      text =
+        "Your request has successfully been processed. Our team will email you back shortly.";
+    } else if (type === "info") {
+      title = "Duplicate Request";
+      text =
+        "We have already received your request! It seems like you have made a successful request to contact our team in the past couple minutes. If you need to make another request, please try again later.";
+    } else {
+      title = "Error!";
+      text =
+        "An error occurred while submitting your request. Please check that the reCAPTCHA verification was successful.";
     }
-    setOpenError(false);
+
+    icon = type;
+
+    Swal.fire({
+      title: title,
+      text: text,
+      icon: icon,
+      confirmButtonText: "OK",
+      didClose: () => {
+        if (type !== "error") setVerified(false);
+      },
+    });
   };
 
   const handleFile = (e) => {
@@ -277,36 +298,6 @@ export default function JoinUsForm(props) {
               </button>
             </div>
           </div>
-
-          <Dialog
-            open={openSuccess}
-            onClose={handleClose}
-            sx={{
-              "& .MuiDialog-container": {
-                alignItems: "flex-end",
-              },
-            }}
-          >
-            <Alert severity="success">
-              Your request has successfully been processed. Our team will email
-              you back shortly.
-            </Alert>
-          </Dialog>
-
-          <Dialog
-            open={openError}
-            onClose={handleClose}
-            sx={{
-              "& .MuiDialog-container": {
-                alignItems: "flex-end",
-              },
-            }}
-          >
-            <Alert severity="error">
-              An error occurred while submitting your request. Please check that
-              the reCAPTCHA verification was successful.
-            </Alert>
-          </Dialog>
         </form>
       </div>
     </ThemeProvider>
