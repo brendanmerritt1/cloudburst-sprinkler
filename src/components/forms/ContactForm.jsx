@@ -11,6 +11,8 @@ import {
   Alert,
   Dialog,
 } from "@mui/material";
+import Swal from "sweetalert2/dist/sweetalert2.js";
+import "sweetalert2/dist/sweetalert2.css";
 import ReCAPTCHA from "react-google-recaptcha";
 import axios from "axios";
 import { useState, useRef, useEffect } from "react";
@@ -57,8 +59,8 @@ export default function ContactForm(props) {
     message: "",
   });
 
-  const [openSuccess, setOpenSuccess] = useState(false);
-  const [openError, setOpenError] = useState(false);
+  // const [openSuccess, setOpenSuccess] = useState(false);
+  // const [openError, setOpenError] = useState(false);
 
   const [verified, setVerified] = useState(false);
   const captchaRef = useRef(null);
@@ -68,26 +70,35 @@ export default function ContactForm(props) {
   });
 
   const submitEmail = async () => {
-    await axiosInstance.post(process.env.REACT_APP_SUBMIT_URL, { formState });
+    await axiosInstance
+      .post(process.env.REACT_APP_SUBMIT_URL, { formState })
+      .then(handleOpen("success"))
+      .catch(() => {
+        window.alert(
+          "We have already received your request! It seems like you have made a successful request to contact our team in the past couple minutes. If you need to make another request, please try again later."
+        );
+        handleOpen("info")
+      });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!verified) {
-      setOpenError(true);
+      // setOpenError(true);
+      handleOpen("error");
     } else {
       const token = captchaRef.current.getValue();
       await axiosInstance
         .post(process.env.REACT_APP_API_URL, { token })
-        .then((res) => {
-          if (res.status) {
-            setOpenSuccess(true);
-          } else {
-            setOpenError(true);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
+        // .then((res) => {
+        //   if (res.status && res.status === 429) {
+        //     // setOpenSuccess(true);
+        //     handleOpen("info");
+        //   }
+        // })
+        .catch(() => {
+          // setOpenError(true);
+          handleOpen("error");
         });
       submitEmail();
       setFormState({
@@ -122,13 +133,44 @@ export default function ContactForm(props) {
     }
   };
 
-  const handleClose = () => {
-    if (openSuccess) {
-      setOpenSuccess(false);
-      setVerified(false);
+  const handleOpen = (type) => {
+    let title,
+      text,
+      icon = "";
+    if (type === "success") {
+      title = "Success!";
+      text =
+        "Your request has successfully been processed. Our team will email you back shortly.";
+    } else if (type === "info") {
+      title = "Duplicate Request";
+      text =
+        "We have already received your request! It seems like you have made a successful request to contact our team in the past couple minutes. If you need to make another request, please try again later.";
+    } else {
+      title = "Error!";
+      text =
+        "An error occurred while submitting your request. Please check that the reCAPTCHA verification was successful.";
     }
-    setOpenError(false);
+
+    icon = type;
+
+    Swal.fire({
+      title: title,
+      text: text,
+      icon: icon,
+      confirmButtonText: "OK",
+      didClose: () => {
+        if (type !== "error") setVerified(false);
+      },
+    });
   };
+
+  // const handleClose = () => {
+  //   if (openSuccess) {
+  //     setOpenSuccess(false);
+  //     setVerified(false);
+  //   }
+  //   setOpenError(false);
+  // };
 
   const dynamicMargin = () => {
     if (is700 || is1024) {
@@ -421,7 +463,7 @@ export default function ContactForm(props) {
             </div>
           </div>
 
-          <Dialog
+          {/* <Dialog
             open={openSuccess}
             onClose={handleClose}
             sx={{
@@ -449,7 +491,7 @@ export default function ContactForm(props) {
               An error occurred while submitting your request. Please check that
               the reCAPTCHA verification was successful.
             </Alert>
-          </Dialog>
+          </Dialog> */}
         </form>
       </div>
     </ThemeProvider>

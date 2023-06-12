@@ -166,7 +166,7 @@ button:active {
 
   .contactFormContainer {
     top: 9rem;
-    width: 38rem;
+    width: 45rem;
   }
 
   .contactFormTitle {
@@ -185,7 +185,7 @@ button:active {
     width: 70%;
     height: auto;
     margin-top: 6rem;
-    column-gap: 6rem;
+    column-gap: 9rem;
     row-gap: 0.5rem;
   }
 

@@ -4,6 +4,7 @@ const cors = require("cors");
 const multer = require("multer");
 const axios = require("axios");
 const nodemailer = require("nodemailer");
+const rateLimit = require("express-rate-limit");
 
 const port = 4000;
 
@@ -13,9 +14,22 @@ const upload = multer({
   storage: multer.memoryStorage(),
 });
 
+const apiLimiter = rateLimit({
+  windowMs: 20000, // 20 sec
+  max: 1,
+  statusCode: 429,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.set("trust proxy", 1);
+app.get('/api/ip', apiLimiter, (req, res) => {
+  res.send(req.ip);
+});
 
 app.post("/api/recaptcha", async (req, res) => {
   const { token } = req.body;
@@ -47,7 +61,7 @@ transporter.verify((err, success) => {
   }
 });
 
-app.post("/api/contact", (req, res) => {
+app.post("/api/contact", apiLimiter, (req, res) => {
   let email = "";
   if (req.body.formState.project == "Service Request (existing system)") {
     email = process.env.REACT_APP_EMAIL_SERVICE;
@@ -81,7 +95,7 @@ app.post("/api/contact", (req, res) => {
   });
 });
 
-app.post("/api/applicant", upload.single("resume"), (req, res) => {
+app.post("/api/applicant", upload.single("resume"), apiLimiter, (req, res) => {
   let message = "";
   if (req.body.message == "") {
     message =
