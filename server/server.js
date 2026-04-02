@@ -42,11 +42,11 @@ app.post("/api/recaptcha", async (req, res) => {
 });
 
 let transporter = nodemailer.createTransport({
-  host: "smtp.sendgrid.net",
-  port: 587,
+  host: "mail.smtp2go.com",
+  port: 2525 || 587,
   auth: {
-    user: "apikey",
-    pass: process.env.REACT_APP_SG_API_KEY,
+    user: process.env.REACT_APP_SMTP2GO_USERNAME,
+    pass: process.env.REACT_APP_SMTP2GO_API_KEY,
   },
 });
 
