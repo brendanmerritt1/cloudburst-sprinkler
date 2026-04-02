@@ -46,7 +46,7 @@ let transporter = nodemailer.createTransport({
   port: 2525 || 587,
   auth: {
     user: process.env.REACT_APP_SMTP2GO_USERNAME,
-    pass: process.env.REACT_APP_SMTP2GO_API_KEY,
+    pass: process.env.REACT_APP_SMTP2GO_PASSWORD,
   },
 });
 
@@ -67,7 +67,8 @@ app.post("/api/contact", apiLimiter, (req, res) => {
   }
 
   let mailOptions = {
-    from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${email}>`,
+    // from: `${req.body.formState.firstName} ${req.body.formState.lastName} <${email}>`,
+    from: `Cloudburst Sprinkler <sales@cloudburstsprinkler.com>`,
     to: email,
     replyTo: `${req.body.formState.email}`,
     subject: `Message from: ${req.body.formState.firstName} ${req.body.formState.lastName}`,
